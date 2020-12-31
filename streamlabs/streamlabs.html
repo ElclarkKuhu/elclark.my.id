@@ -1,0 +1,110 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    * {
+        font-family: 'Comfortaa', cursive;
+    }
+    
+    html {
+        background-color: #232323;
+    }
+
+    .text-container {
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        margin: auto;
+        text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px;
+    }
+
+    .row-top {
+        height: 100px;
+        width: 400px;
+        margin: 3px;
+    }
+
+    .center-container {
+        color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .progress {
+        opacity: 0;
+        position: relative;
+        height: 5px;
+        display: block;
+        width: 400px;
+        background-color: transparent;
+        background-clip: padding-box;
+        margin: 0;
+        margin-top: -8px;
+        overflow: hidden; 
+    }
+
+    .progress .determinate {
+        position: absolute;
+        background-color: inherit;
+        top: 0;
+        bottom: 0;
+        background-color: rgb(255, 255, 255); 
+        transition: width .3s linear; 
+    }
+</style>
+
+<div class="text-container center-container">
+    <div class="row-top center-container" id="boxlogo" style="background-color:rgb(202, 0, 0); opacity: 0; overflow: hidden; transition: all 0.5s ease;">
+        <img src="https://elclark.my.id/src/img/elclark-white.png" alt="Loading_Logo" style="height: 100px;">
+    </div>
+    <div class="row-top center-container" id="more" style="background-color:rgb(202, 0, 0); opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease;">
+        <span style="margin-right: 15px; margin-left: 15px; text-align: center; color: white;"><b id="username-container" style="color: rgb(161, 205, 255);"></b> just subscribed!</span>
+    </div>
+    <div class="progress" id="progress">
+        <div id="prog" class="determinate"></div>
+      </div>
+</div>
+
+<div class="text-container center-container">
+    <div class="row-top center-container" id="boxlogo" style="background-color:rgb(202, 0, 0); opacity: 0; overflow: hidden; transition: all 0.5s ease;">
+        <img src="https://elclark.my.id/src/img/elclark-white.png" alt="Loading_Logo" style="height: 100px;">
+    </div>
+    <div class="row-top center-container" id="more" style="background-color:rgb(202, 0, 0); opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease;">
+        <span style="margin-right: 15px; margin-left: 15px; text-align: center; color: white;"><b id="username-container" style="color: rgb(161, 205, 255);"></b> Tipped <b id="amount-container" style="color: rgb(161, 205, 255);"></b></span>
+    </div>
+    <div class="progress" id="progress">
+        <div id="prog" class="determinate"></div>
+    </div>
+    <div class="row-top center-container" id="more" style="background-color:rgb(202, 0, 0); opacity: 0; height: 0px; overflow: hidden; transition: all 0.5s ease;">
+        <span style="margin-right: 15px; margin-left: 15px; text-align: center; color: white;">Thank You for the tip. This will help me so much!</span>
+    </div>
+</div>
+
+<script>
+    var progr = 101;
+
+    updateProg();
+
+    function updateProg() {
+        progr = progr - 1;
+        document.getElementById('prog').style.width = progr + '%';
+        if (progr != 0) {
+            setTimeout(function() {
+                updateProg();
+                console.log(progr);
+            }, 100);
+        }
+    }
+
+    document.getElementById('boxlogo').style.opacity = '1';
+    setTimeout(function() {
+        document.getElementById('more').style.height = '70px';
+        setTimeout(function() {
+            document.getElementById('more').style.transition = 'all 1s ease';
+            document.getElementById('more').style.opacity = '1';
+            document.getElementById('progress').style.transition = 'all 1s ease';
+            document.getElementById('progress').style.opacity = '1';
+        }, 500);
+    }, 500);
+</script>
