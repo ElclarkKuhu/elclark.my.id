@@ -15,10 +15,11 @@
 }
 
 h1 {
-    font-weight: normal;
-    color: rgba(202, 0, 0, 1);
+    display: none;
+    /*font-weight: normal;
+    color: rgba(202, 202, 202, 1);
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px;*/
 }
 
 .p1 {
@@ -90,4 +91,10 @@ button:hover {
     height: 40px;
 
     text-decoration: none;
+}
+
+.conts {
+    max-width: 450px;
+    text-align: center;
+    margin: 10px 0 15px;
 }

@@ -1,22 +1,20 @@
 <html lang = "id">
     <head>
         <meta charset="utf-8">
-        <title>Elclark - Perfect or Nothing.</title>
+        <title>Elclark - Happy New Year.</title>
 
-        <link rel="canonical" href="https://elclark.my.id/"/>
-
-        <meta name="title" content="Elclark - Perfect or Nothing.">
+        <meta name="title" content="Elclark - Happy New Year.">
         <meta name="description" content="Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.">
 
         <meta property="og:type" content="website">
-        <meta property="og:url" content="https://elclark.my.id/">
+        <meta property="og:url" content="https://elclark.my.id/2021">
         <meta property="og:title" content="Elclark - Perfect or Nothing.">
         <meta property="og:description" content="Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.">
         <meta property="og:image" content="https://elclark.my.id/assets/img/elclark-square.png">
 
         <meta property="twitter:card" content="https://elclark.my.id/assets/img/elclark-square.png">
-        <meta property="twitter:url" content="https://elclark.my.id/">
-        <meta property="twitter:title" content="Elclark - Perfect or Nothing.">
+        <meta property="twitter:url" content="https://elclark.my.id/2021">
+        <meta property="twitter:title" content="Elclark - Happy New Year.">
         <meta property="twitter:description" content="Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.">
         <meta property="twitter:image" content="https://elclark.my.id/assets/img/elclark-square.png">
 
@@ -31,18 +29,30 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link rel="stylesheet" href="/src/css/elclark.css">
+        <link rel="stylesheet" href="/index.css">
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <div class="center-container">
-            <a href="#"><img height="75px" src="https://elclark.my.id/src/img/elclark_red.png"></a>
+        <div class="center-container" id="imgs">
+            <a href="#"><img height="75px" src="https://elclark.my.id/src/img/elclark_red.png" style="margin-bottom: 20px;"></a>
+            <h1 style="display: inline; color: rgb(202,0,0); margin: 5px;">HAPPY NEW YEAR 2021</h1>
             <div class="center conts">
-                <h1>This Is Elclark</h1>
-                <h2>Hi, I am <span style="color: rgb(202,0,0);">Elclark Kuhu</span> and i am <span id="age" style="color: rgb(202,0,0);"></span> years old. I love <span style="color: rgb(202,0,0);">Music</span> and figuring things out. i also can <a href="https://github.com/ElclarkKuhu/" style="color: rgb(202,0,0);">Code.</a> You can <a href="https://bagi.me/elclark" style="color: rgb(202,0,0);">support me</a> here!</h2>
+                <h2 style="font-weight: normal;" >The future belongs to those who believe in the beauty of their dreams.</h2>
             </div>
-            <h5 style="font-weight: normal;">Copyright &#169; 2020 Elclark</h5>
+            <h6 style="font-weight: normal; margin-top: 20px;">Copyright &#169; 2020 Elclark</h6>
         </div>
-        <script src="index.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                setTimeout(function() {
+                    $('#imgs').fireworks();
+                });
+            });
+        </script>
+
         <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ddd23c6a36ad4ace8614a21f3359a934"}'></script>
     </body>
 </html>
