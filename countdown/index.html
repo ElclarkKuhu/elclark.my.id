@@ -1,9 +1,9 @@
 <html lang = "id">
     <head>
         <meta charset="utf-8">
-        <title>Elclark - Happy New Year.</title>
+        <title>Elclark - New Year Countdown.</title>
 
-        <meta name="title" content="Elclark - Happy New Year.">
+        <meta name="title" content="Elclark - New Year Countdown.">
         <meta name="description" content="Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.">
 
         <meta property="og:type" content="website">
@@ -14,7 +14,7 @@
 
         <meta property="twitter:card" content="https://elclark.my.id/assets/img/elclark-square.png">
         <meta property="twitter:url" content="https://elclark.my.id/2021">
-        <meta property="twitter:title" content="Elclark - Happy New Year.">
+        <meta property="twitter:title" content="Elclark - New Year Countdown.">
         <meta property="twitter:description" content="Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.">
         <meta property="twitter:image" content="https://elclark.my.id/assets/img/elclark-square.png">
 
@@ -30,32 +30,18 @@
 
         <link rel="stylesheet" href="/src/css/elclark.css">
         <link rel="stylesheet" href="/index.css">
-        <link rel="stylesheet" href="index.css">
     </head>
     <body>
         <div class="center-container" id="imgs">
-            <a href="#"><img height="75px" src="https://elclark.my.id/src/img/elclark_red.png" style="margin-bottom: 20px;"></a>
-            <h1 style="display: inline; color: rgb(202,0,0); margin: 5px;">HAPPY NEW YEAR 2021</h1>
             <div class="center conts">
-                <h2 style="font-weight: normal;" >The future belongs to those who believe in the beauty of their dreams.</h2>
+                <h1 id="countdown" style="display: inline; color: #fff; font-size: 55px;"></h1>
+                <h2 id="countdown2" style="display: inline; color: #fff; font-size: 45px;"></h2>
             </div>
-            <div style="display: none;">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/QVnqzIORXI0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <h6 style="font-weight: normal; margin-top: 20px;">Copyright &#169; 2020 Elclark</h6>
+            <h4 style="font-weight: normal;">Until New Year!</h4>
+            <button id="start" onclick="start();">START</button>
         </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function(){
-                setTimeout(function() {
-                    $('#imgs').fireworks();
-                });
-            });
-        </script>
-
         <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "ddd23c6a36ad4ace8614a21f3359a934"}'></script>
     </body>
 </html>
