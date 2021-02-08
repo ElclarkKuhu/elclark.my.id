@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #232323;
+    background-color: #181818;
     color: white;
     font-family: 'Comfortaa', cursive;
 }
@@ -73,6 +73,28 @@ a:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.progress {
+    opacity: 0;
+    position: relative;
+    height: 5px;
+    display: block;
+    width: 400px;
+    background-color: transparent;
+    background-clip: padding-box;
+    margin: 0;
+    margin-top: -8px;
+    overflow: hidden; 
+}
+
+.progress .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255); 
+    transition: width .3s linear; 
 }
 
 ::-webkit-scrollbar {
