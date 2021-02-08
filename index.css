@@ -98,17 +98,3 @@ button:hover {
     text-align: center;
     margin: 10px 0 20px;
 }
-
-.notif {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-}
-
-.notif-box {
-    background-color:rgb(202, 0, 0);
-    transition: all 0.5s ease;
-    overflow: hidden;
-    opacity: 0;
-    height: 0px;
-}
