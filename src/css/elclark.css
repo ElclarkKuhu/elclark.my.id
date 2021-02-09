@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap');
+
+/*
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Open Sans', sans-serif;  
+*/
 
 * {
     margin: 0;
@@ -98,6 +103,8 @@ a:hover {
 }
 
 .textNotif {
+    font-family: 'Open Sans', sans-serif; 
+
     width: calc(100% - 30px);
 
     margin-right: 15px;
@@ -135,7 +142,7 @@ a:hover {
     top: 0;
     bottom: 0;
     background-color: rgb(255, 255, 255); 
-    transition: all 0.1s ease; 
+    transition: all 0.5s;
 }
 
 ::-webkit-scrollbar {

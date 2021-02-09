@@ -5,4 +5,4 @@ setInterval(() => {
 	age.innerText = time.toString().substring(0, 12);
 }, 50);
 
-createNotif("Website Dalam Pengembangan!", "Mohon maaf website kami sedang dalam perbaikan.", 1000);
+createNotif("Website Dalam Pengembangan!", "Mohon maaf website kami sedang dalam perbaikan.");
