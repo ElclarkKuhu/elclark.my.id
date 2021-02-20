@@ -1,0 +1,48 @@
+body {
+    position: relative;
+}
+
+.main {
+    min-height: 100vh;
+    max-width: 950px;
+
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+    height: auto;
+
+    background: rgb(202, 0, 0);
+}
+
+.header h1 { 
+    margin: 20px;
+}
+
+h1, h2 {
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
