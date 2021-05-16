@@ -4,7 +4,7 @@
 //  Add This Html To Enable Notif
 
 //  <div class="notif" id="notif"></div>
-//  <script src="src/js/notif.js"></script> 
+//  <script src="/src/js/notif.js"></script> 
 
 
 var notifInProgress = 0;
