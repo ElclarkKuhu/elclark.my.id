@@ -1,0 +1,33 @@
+{
+  "dir": "ltr",
+  "lang": "Indonesian",
+  "name": "Elclark - Perfect or Nothing.",
+  "short_name": "Elclark",
+  "scope": "/",
+  "display": "fullscreen",
+  "start_url": "https://elclark.my.id/",
+  "background_color": "transparent",
+  "theme_color": "transparent",
+  "description": "Elclark selalu mencoba untuk membuat dan menjadi yang terbaik. Apapun rintangannya dan apapun halangannya kita akan selalu mencoba tanpa takut gagal.",
+  "orientation": "any",
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "icons": [
+      {
+          "src": "https://elclark.my.id/assets/img/favicon/favicon.png",
+          "sizes": "16x16",
+          "type": "image/png"
+      },
+      {
+          "src": "https://elclark.my.id/assets/img/favicon/favicon32x32.png",
+          "sizes": "32x32",
+          "type": "image/png"
+      },
+      {
+          "src": "https://elclark.my.id/assets/img/favicon/favicon96x96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+      }
+  ],
+  "url": "https://elclark.my.id"
+}

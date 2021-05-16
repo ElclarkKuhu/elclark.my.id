@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <script src="../assets/js/config.js"></script>
+    <meta charset="utf-8">
+    <title>Elclark - Ian Sudarmo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/elclark.css">
+    <link rel="icon" href="../assets/img/favicon/favicon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../assets/img/favicon/favicon32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/img/favicon/favicon96x96.png" type="image/png" sizes="96x96">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Kanit|PT+Sans+Caption&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="preload" class="preload">
+      <img src="../assets/img/elclark.png" alt="Loading_Logo" class="llogo">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+    </div>
+    <div class="center-container" style="text-align: center; font-family: 'Comfortaa', cursive;">
+        <img src="..\assets\img\undraw_happy_birthday_s72n.svg" alt="" style="width: 75%; max-height: 25%; display: inline-block;">
+        <p style="margin-left: 10px; margin-right: 10px;"><b>Happy Birthday <a href="https://www.instagram.com/christinelintjewas_/?hl=id" style="text-decoration: none;">Christine</a> <a href="/" style="text-decoration: none;">&#38;</a> <a href="https://www.instagram.com/ricooandriy/?hl=id" style="text-decoration: none;">Rico</a></b>
+        <br> Wish you all the best from <a href="https://www.instagram.com/iansudarmo/" style="text-decoration: none;">Ian</a></p>
+    </div>
+  </body>
+  <script>
+    function loading_done(){
+      setTimeout(function() {
+        document.getElementById("preload").className = "preload preload-finish";
+  
+        setTimeout(function() {
+            document.getElementById("preload").className = "preload-hide";
+            console.log("Hiding Loading Done.");
+        }, 500);
+      console.log("Loading Animation Done.");
+      }, 2000);
+    }
+
+    if (!skipLoading) {
+      window.onload = loading_done();
+    } else {
+      loading_done();
+    }
+  </script>
+</html>

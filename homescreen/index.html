@@ -1,0 +1,177 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Elclark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../assets/css/elclark-dark.css">
+    <link rel="stylesheet" href="../assets/css/homescreen.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Kanit|PT+Sans+Caption&display=swap">
+
+    <link rel="icon" href="../assets/img/favicon/favicon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="../assets/img/favicon/favicon32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../assets/img/favicon/favicon96x96.png" type="image/png" sizes="96x96">
+  </head>
+  <body>
+
+    <div class="center-container" id="your-element-selector">
+        <div class="row center-container-row">
+            <a target="_blank" href="https://elclark.my.id" class="row-top center-container" style="background-color:rgb(202, 0, 0);">
+                <img src="../assets/img/elclark-white.png" alt="Loading_Logo" style="height: 60px;">
+                <div id="selamat"></div>
+            </a>
+            <a class="box-jam center-container" onclick="set_time_status();" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <div id="jam"></div>
+                <div id="hari"></div>
+            </a>
+        </div>
+
+        <div class="row center-container-row">
+            <a target="_blank" href="https://google.co.id/" class="box center-container" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fab fa-google fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://youtube.co.id" class="box-2 center-container-row" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fab fa-youtube fa-2x" style="margin-right: 5px;"></i> YouTube
+            </a>
+            <a target="_blank" href="https://gmail.com" class="box center-container" style="background-color:rgb(202, 0, 0) ; color:#fff;" >
+                <i class="far fa-envelope fa-2x"></i>
+            </a>
+            
+            <a target="_blank" href="https://drive.google.com/" class="box center-container" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fab fa-google-drive fa-2x"></i>
+            </a>
+        </div>
+        
+        <div class="row center-container-row">
+            <a target="_blank" href="https://translate.google.co.id/" class="box center-container" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fas fa-language fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://facebook.com" class="box center-container" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a target="_blank" href="https://music.youtube.com" class="box-2 center-container-row" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fab fa-youtube fa-2x" style="margin-right: 5px;"></i> Music
+            </a>
+            <a target="_blank" href="https://maps.google.co.id/" class="box center-container" style="background-color:rgb(202, 0, 0); color:#fff;" >
+                <i class="fas fa-map-marker-alt fa-2x"></i>
+            </a>
+        </div>
+
+        <div class="row-bottom" style="background-color: rgb(202, 0, 0);"></div>
+        <div style="font-size: x-small; font-family: 'Comfortaa', cursive; color: #aaa;" > Copyright &copy; 2018-2020 Elclark</div>
+    </div>
+
+    <script src="three.r95.min.js"></script>
+    <script src="vanta.net.min.js"></script>
+    <script>
+        var time_state = false;
+        var runtime = 0;
+        var rtm = 0;
+        var rts = 0;
+        var rth = 0;
+
+        var weekday = new Array(7);
+            weekday[0] = "Minggu";
+            weekday[1] = "Senin";
+            weekday[2] = "Selasa";
+            weekday[3] = "Rabu";
+            weekday[4] = "Kamis";
+            weekday[5] = "Jumat";
+            weekday[6] = "Sabtu";
+
+        function set_time_status() {
+            if (time_state) {
+                time_state = false;
+            } else {
+                time_state = true;
+            }
+            console.debug("time_state has been updated to " + time_state);
+        }
+
+        function startTime() {
+            var today = new Date();
+            var hh = today.getHours();
+            var mm = today.getMinutes();
+            var ampm = hh >= 12 ? 'PM' : 'AM';
+
+            if (0 <= hh && hh <= 4) {
+                selamat = "Udah Subuh Nih";
+            } else if (5 <= hh && hh <= 10) {
+                selamat = "Selamat Pagi";
+            } else if (11 <= hh && hh <= 15) {
+                selamat = "Selamat Siang";
+            } else if (16 <= hh && hh <= 18) {
+                selamat = "Selamat Sore" ;
+            } else if (hh == 19) {
+                selamat = "Selamat Petang" ;
+            } else if (20 <= hh && hh <= 24) {
+                selamat = "Selamat Malam" ;
+            } else {
+                selamat = "(Error)";
+            }
+
+            hh = hh % 12 || 12;
+
+            var hari = weekday[today.getDay()];
+
+            var dd = today.getDate();
+            var bb = today.getMonth()+1; 
+            var tttt = today.getFullYear();
+
+            dd = checkTime(dd);
+            bb = checkTime(bb);
+
+            if (time_state) {
+                document.getElementById("hari").innerHTML = hari + ", " + dd + '/' + bb + '/' + tttt;
+            } else {
+                document.getElementById("hari").innerHTML = hari;
+            }
+
+            document.getElementById("selamat").innerHTML = "Halo, " + selamat + "!";
+            
+            mm = checkTime(mm);
+            document.getElementById('jam').innerHTML = hh + ":" + mm + " " + ampm;
+
+            runtime = runtime + 1;
+
+            rth = ~~(runtime / 3600);
+            rtm = ~~((runtime % 3600) / 60);
+            rtm = checkTime(rtm);
+            rts = ~~runtime % 60;
+            rts = checkTime(rts);
+
+            var t = setTimeout(startTime, 1000);
+        }
+
+        function getruntime() {
+            console.log("Runtime = " + rth + ":" + rtm + ":" + rts);
+            return "Runtime = " + rth + ":" + rtm + ":" + rts;
+        }
+
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+            return i;
+        }
+
+        startTime();
+    </script>
+    <script>
+        VANTA.NET({
+        el: "#your-element-selector",
+        mouseControls: false,
+        touchControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xffffff,
+        backgroundColor: 0x35363a,
+        points: 10.00,
+        maxDistance: 10.00,
+        showDots: false,
+        spacing: 14.00
+        })
+    </script>
+  </body>
+</html>

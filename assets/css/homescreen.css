@@ -1,0 +1,85 @@
+.row {
+    height: 100px;
+    margin: 3px;
+}
+
+.row-top {
+    height: 100px;
+    width: 312px;
+    margin: 3px;
+}
+
+.row-bottom {
+    height: 2px;
+    width: 524px;
+    margin: 3px;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    margin: 3px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.box:hover {
+    height: 108px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.box-2 {
+    height: 100px;
+    width: 206px;
+    margin: 3px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.box-2:hover {
+    height: 108px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+
+.box-jam {
+    height: 100px;
+    width: 206px;
+    margin: 3px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+#jam {
+    font-size: x-large;
+}
+
+#hari {
+    font-size: small;
+}
+
+#selamat {
+    font-size: small;
+    color: #fff;
+}

@@ -1,2 +1,4 @@
+Sitemap: https://elclark.my.id/sitemap.xml
 User-agent: *
-Disallow: /streamlabs/
+Disallow: 
+Disallow: /cgi-bin/

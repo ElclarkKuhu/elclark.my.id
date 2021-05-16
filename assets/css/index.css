@@ -1,0 +1,291 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  background-image: url('../img/blake-connally.jpg');
+  font-family: 'Comfortaa', cursive; 
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.aa {
+  text-decoration: none;
+  opacity: 1;
+  border-bottom:1px solid white;
+  padding-bottom:0.5px;
+}
+
+.aa:hover {
+  opacity: 0.8;
+  color: #fff;
+}
+
+#s1, #s2, #s3, #s4, #s5, #s6, #s7 {
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+#s2 {
+  background: url('../img/branko-stancevic.jpg');
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#s4 {
+  background: url('../img/prateek-katyal.jpg');
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#s5 {
+  background: rgba(35,35,35,0.8);
+}
+
+#s6 {
+  background: url('../img/yancy-min.jpg');
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bg-dark {
+  background: rgba(35, 35, 35, 0.8);
+}
+
+.scroll {
+  display: inline-block;
+  font-size: 14px;
+  margin: 0;
+  margin-top: -50px;
+  height: 50px;
+  color: #fff;
+}
+
+.header {
+  background: rgba(35, 35, 35, 1);
+  height: 10%;
+}
+
+.header > a {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-decoration: none;
+}
+
+.blog-link {
+  display: inline-block;
+  padding: 0 5vw;
+  margin-top: 100px;
+  max-width: 700px;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+}
+
+.blog-container {
+  opacity: 0;
+  max-height: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.blog-container-show {
+  max-height: 175px;
+  transition: all 0.5s ease-in-out;
+}
+
+.fade-on {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.bg {
+  background-color: rgba(35, 35, 35, 1);
+  transition: all 0.5s ease-in-out;
+}
+
+.bg-show {
+  background-color: rgba(35, 35, 35, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+#blog-ttl {
+  font-size: 1.75em;
+}
+
+.pon {
+  font-weight: normal;
+  font-size: large;
+}
+
+#tentang {
+  padding: 0 5vw;
+  max-width: 700px;
+}
+
+#tentang-text {
+  text-align: start;
+  width: 100%;
+}
+
+.tentang-center {
+  height: 250px; 
+  margin-left: 25px;
+}
+
+.dc-text {
+  margin-left: 25px;
+  text-align: left;
+}
+
+.socials a{
+  opacity: 0.8;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.socials a i {
+  margin: 10px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+}
+
+.box:hover {
+  opacity: 1;
+}
+
+.yt-container {
+  max-width: 700px;
+}
+
+.yt-text {
+  text-align: right;
+}
+
+.project-cards-container {
+  flex-wrap: nowrap;
+  overflow: auto;
+  width: 80%;
+}
+
+.project-cards {
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  color: #232323;
+  background: rgba(225, 225, 225, 0.8);
+  border-radius: 5px;
+  padding: 25px;
+  margin: 20px 0;
+  margin-right: 20px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-cards:hover {
+  background: rgba(225, 225, 225, 1);
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+
+}
+
+.project-cards h2 {
+  margin: 10px 0;
+}
+
+.project-cards a {
+  color: #232323;
+}
+
+.project-cards-a {
+  display: inline-flex;
+  width: 80%;
+  height: 35px;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: #232323;
+  border: 1px solid #232323;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-cards-a:hover {
+  background-color: rgba(23, 23, 23, 0.5);
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 800px) {
+  #blog-ttl {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  
+  #blog-desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 8; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  #tentang {
+    flex-direction: column;
+  }
+
+  #tentang-text {
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .tentang-center {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+
+  .dc-container {
+    flex-direction: column;
+  }
+
+  .dc-text {
+    text-align: center;
+    margin-top: 25px;
+    margin-left: 0;
+    max-width: 350px;
+  }
+
+  .socials {
+    flex-direction: column;
+  }
+  
+  .project-cards-container {
+    justify-content: start;
+  }
+}
+
+@media (max-height: 650px) {
+  .dc-text {
+    display: none;
+  }
+}
