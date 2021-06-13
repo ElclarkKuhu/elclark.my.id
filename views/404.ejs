@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Elclark - 404 Not Found</title>
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://elclark.my.id/src/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://elclark.my.id/src/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://elclark.my.id/src/img/favicon/favicon-googletv.png">
+
+    <link rel="apple-touch-icon-precomposed" sizes="120x120"
+        href="https://elclark.my.id/src/img/favicon/apple-touch-icon-120x120-precomposed.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://elclark.my.id/src/img/favicon/apple-touch-icon.png"
+        type="image/png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152"
+        href="https://elclark.my.id/src/img/favicon/apple-touch-icon-152x152-precomposed.png" type="image/png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            height: 100vh;
+        }
+
+        .center-container {
+            height: calc(100% - 64px);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* label focus color */
+        .input-field input[type=text]:focus+label {
+            color: rgb(202, 0, 0);
+        }
+
+        /* label underline focus color */
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid rgb(202, 0, 0);
+            box-shadow: 0 1px 0 0 rgb(202, 0, 0);
+        }
+    </style>
+</head>
+
+<body class="grey darken-4 white-text">
+    <div class="center-container">
+        <div class="container">
+            <h4>404 Not Found!</h4>
+            <p>Opps you went the wrong way!</p>
+            <a href="/" class="btn red darken-4 waves-effect waves-light">HOME</a>
+        </div>
+    </div>
+    <div class="notif" id="notif"></div>
+    <script src="/src/js/notif.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

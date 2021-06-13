@@ -1,0 +1,40 @@
+{
+  "name": "elclark.my.id",
+  "version": "0.0.1",
+  "description": "Elclark Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElclarkKuhu/elclark-links.git"
+  },
+  "keywords": [
+    "elclark",
+    "link",
+    "redirect",
+    "short",
+    "shorter"
+  ],
+  "author": "Elclark",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ElclarkKuhu/elclark-links/issues"
+  },
+  "homepage": "https://github.com/ElclarkKuhu/elclark-links#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,100 @@
+.main {
+    height: 100vh;
+    width: calc(100% - 250px);
+    text-align: center;
+}
+
+.nav {
+
+    background-color: #303030;
+
+    height: 100vh;
+    width: 250px;
+
+    text-align: center;
+}
+
+h1 {
+    display: none;
+    /*font-weight: normal;
+    color: rgba(202, 202, 202, 1);
+    font-weight: bold;
+    margin-bottom: 10px;*/
+}
+
+.p1 {
+    width: calc(100% - 500px);
+    height: 100%;
+
+    padding: 0 250px;
+
+    /*
+    background: url(assets/img/luis-gomes.jpg);
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.logo-main {
+    display: inline-block;
+
+    height: 60px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    display: inline-block;
+
+    padding: 10px 25px;
+    margin: 5px;
+    margin-top: 10px;
+
+    background: rgba(202, 0, 0, 1);
+    color: white;
+
+    font-size: 14px;
+    font-family: 'Comfortaa', cursive;
+
+    border: 0;
+    border-radius: 2.5px;
+
+    opacity: 0.9;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+button:hover {
+    font-size: 15px;
+
+    opacity: 1;
+
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+}
+
+.buts > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40px;
+
+    text-decoration: none;
+}
+
+.conts {
+    max-width: 450px;
+    text-align: center;
+    margin: 10px 0 20px;
+}
