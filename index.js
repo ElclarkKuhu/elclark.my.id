@@ -116,7 +116,7 @@ setInterval(() => {
             });
         }
     });
-}, 3000000);
+}, 3600000);
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
