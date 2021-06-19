@@ -5,6 +5,10 @@ const ClickSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    time: {
+		type: String,
+		required: true
+	},
     ip: {
 		type: String,
 		required: false

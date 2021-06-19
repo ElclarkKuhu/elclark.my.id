@@ -202,6 +202,7 @@ app.get('/:short/', (req, res) => {
                         res.redirect(link[0].url);
                         const saveClick = new click({
                             short: req.params.short,
+                            time: Date.now(),
                             ip: req.header('x-forwarded-for') || req.socket.remoteAddress,
                         });
             
