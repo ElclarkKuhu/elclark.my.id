@@ -87,7 +87,7 @@ function isLoggedOut(req, res, next) {
     res.redirect('/');
 }
 
-setInterval(() => {
+function updateCounts() {
     link.find(function (err, links) {
         if (err) {
             console.log(err);
@@ -116,6 +116,10 @@ setInterval(() => {
             });
         }
     });
+}
+
+setInterval(() => {
+    updateCounts();
 }, 3600000);
 
 app.get('/', (req, res) => {
@@ -127,6 +131,7 @@ app.get('/links/', isLoggedIn, (req, res) => {
 });
 
 app.get('/links/manage/', isLoggedIn, (req, res) => {
+    updateCounts();
     link.find(function (err, links) {
         if (err) {
             console.log(err);
