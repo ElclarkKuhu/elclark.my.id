@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Open+Sans&family=Source+Code+Pro&display=swap');
 /*
     font-family: 'Comfortaa', cursive;
     font-family: 'Open Sans', sans-serif;  
@@ -13,7 +12,7 @@
 body {
     background-color: #181818;
     color: white;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
 
 html, body{

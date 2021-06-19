@@ -138,12 +138,11 @@ app.get('/login/', isLoggedOut, (req, res) => {
 })
 
 app.post('/login/', isLoggedOut, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: '/links/',
     failureRedirect: '/login?error=true'
 }));
 
 app.post('/addlink/', isLoggedIn, (req, res) => {
-
     link.exists({
         short: req.body.short
     }, function (err, doc) {
