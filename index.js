@@ -111,7 +111,6 @@ function count(short, ip) {
 }
 
 function addClick(short, cClick) {
-    console.log(short, cClick + 1);
     link.updateOne({
         short: short
     }, {
@@ -119,8 +118,6 @@ function addClick(short, cClick) {
     }, function (err, docs) {
         if (err) {
             console.log(err)
-        } else {
-            console.log("Count Updated!");
         }
     });
 }
@@ -150,7 +147,7 @@ app.post('/addlink/', isLoggedIn, (req, res) => {
             console.log(err);
         } else {
             if (doc) {
-                res.redirect('/?error=' + "The shortlink is taken");
+                res.redirect('/?error=' + "The+shortlink+is+taken");
             } else {
                 const addLink = new link({
                     creator: mongoose.Types.ObjectId(req.user._id),
