@@ -87,40 +87,36 @@ function isLoggedOut(req, res, next) {
     res.redirect('/');
 }
 
-function count(short, ip) {
-    link.find({
-        short: short
-    }, function (err, links) {
+setInterval(() => {
+    link.find(function (err, links) {
         if (err) {
             console.log(err);
+            res.sendStatus(500);
         } else {
-            const saveClick = new click({
-                short: short,
-                ip: ip,
-            });
-
-            saveClick.save(function (err, data) {
-                if (err) {
-                    console.log(err);
-                } else {
-                    addClick(short, links[0].click)
-                }
+            links.forEach(short => {
+                click.countDocuments({
+                    short: short.short
+                }, function (err, count) {
+                    if (err) {
+                        console.log(err)
+                    }
+                    else {
+                        link.updateOne({
+                            short: short.short
+                        }, {
+                            click: count
+                        }, function (err, docs) {
+                            if (err) {
+                                console.log(err)
+                            }
+                        });
+                        console.log(short.short, "clicked", count, "times")
+                    }
+                });
             });
         }
     });
-}
-
-function addClick(short, cClick) {
-    link.updateOne({
-        short: short
-    }, {
-        click: cClick + 1
-    }, function (err, docs) {
-        if (err) {
-            console.log(err)
-        }
-    });
-}
+}, 3000000);
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
@@ -128,6 +124,19 @@ app.get('/', (req, res) => {
 
 app.get('/links/', isLoggedIn, (req, res) => {
     res.render('links.ejs');
+});
+
+app.get('/links/manage/', isLoggedIn, (req, res) => {
+    link.find(function (err, links) {
+        if (err) {
+            console.log(err);
+            res.sendStatus(500);
+        } else {
+            res.render('list.ejs', {
+                shorts: links,
+            });
+        }
+    });
 });
 
 app.get('/login/', isLoggedOut, (req, res) => {
@@ -186,7 +195,16 @@ app.get('/:short/', (req, res) => {
                         res.sendStatus(500);
                     } else {
                         res.redirect(link[0].url);
-                        count(req.params.short, req.header('x-forwarded-for') || req.socket.remoteAddress)
+                        const saveClick = new click({
+                            short: req.params.short,
+                            ip: req.header('x-forwarded-for') || req.socket.remoteAddress,
+                        });
+            
+                        saveClick.save(function (err, data) {
+                            if (err) {
+                                console.log(err);
+                            }
+                        });
                     }
                 });
             } else {
@@ -209,7 +227,6 @@ app.get('/setup/', async (req, res) => {
     bcrypt.genSalt(10, function (err, salt) {
         if (err)
             return next(err);
-
 
         bcrypt.hash(process.env.ADMIN_PASSWORD, salt, function (err, hash) {
             if (err)

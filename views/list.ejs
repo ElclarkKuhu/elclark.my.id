@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Elclark - Login</title>
+    <title>Elclark - Links</title>
 
     <link rel="icon" type="image/png" sizes="16x16" href="https://elclark.my.id/src/img/favicon/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://elclark.my.id/src/img/favicon/favicon-32x32.png">
@@ -49,39 +49,33 @@
 <body class="grey darken-4 white-text">
     <nav>
         <div class="nav-wrapper grey darken-4">
-            <a href="/links" class="brand-logo center"><img src="/src/img/elclark_red/250x75.png"
-                    height="60px" alt="Elclark Logo"></a>
+            <a href="/links" class="brand-logo center"><img src="/src/img/elclark_red/250x75.png" height="60px"
+                    alt="Elclark Logo"></a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/links/manage/">Manage</a></li>
+                <li><a href="/logout/">Logout</a></li>
+            </ul>
         </div>
     </nav>
 
     <div class="center-container">
         <div class="container">
             <div class="row">
-                <form class="col s12" action="/login" method="post">
-                    <h4>Login</h4>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input class="white-text" id="username" name="username" type="text" class="validate"
-                                required>
-                            <label for="username">Username</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input class="white-text" id="password" name="password" type="password" class="validate"
-                                required>
-                            <label for="password">Password</label>
-                        </div>
-                    </div>
-                    <button class="btn red darken-4 waves-effect waves-light col s12" style="height: 100%;"
-                        type="submit">LOGIN</button>
-                </form>
+                <ul class="collection with-header">
+                    <li class="collection-header grey darken-4 white-text">
+                        <h4>Links</h4>
+                    </li>
+                    <li class="collection-item grey darken-4 white-text">
+                        <%  shorts.forEach(short => { %>
+                            <a href="<%=short.url%>"><div><%=short.short%><span class="secondary-content"><%=short.click%></span></div></a>
+                        <% }); %>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="notif" id="notif"></div>
     </div>
+    <div class="notif" id="notif"></div>
     <script src="/src/js/notif.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 
 </html>
