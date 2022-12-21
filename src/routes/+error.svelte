@@ -1,13 +1,17 @@
 <div>
 	<article>
-		<h1>Temporary Downtime</h1>
+		<h1>Website Maintenance</h1>
 		<p>
-			We are currently in the process of rebuilding our website using SvelteKit 1.0. In order to
-			complete this process, we will need to take down the old website temporarily. We apologize for
-			any inconvenience this may cause and thank you for your patience while we work on improving
-			our online presence. We look forward to sharing the new and improved website with you as soon
-			as it is ready.
+			We are currently performing maintenance on our website to improve its performance and
+			functionality. We apologize for any inconvenience this may cause and appreciate your patience
+			while we work to improve your online experience.
 		</p>
+		<p>
+			If you are interested in following our progress or contributing to the project, you can check
+			out our
+			<a href="https://github.com/ElclarkCodes/Elclark">GitHub repository</a>.
+		</p>
+		<p>We will be back online as soon as possible. Thank you for your understanding.</p>
 	</article>
 </div>
 
@@ -23,10 +27,13 @@
 
 	article {
 		max-width: 32rem;
-		margin: 1.5rem;
 	}
 
 	h1 {
 		color: rgb(255, 179, 179);
+	}
+
+	a {
+		color: currentColor;
 	}
 </style>
