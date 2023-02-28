@@ -1,7 +1,22 @@
+<script>
+	const time = new Date().getHours();
+	let greeting = 'Good Day';
+
+	if (time >= 0 && time < 12) {
+		greeting = 'Good Morning';
+	} else if (time >= 12 && time < 18) {
+		greeting = 'Good Afternoon';
+	} else if (time >= 18 && time < 24) {
+		greeting = 'Good Evening';
+	} else {
+		greeting = 'Good Night';
+	}
+</script>
+
 <header>
 	<div>
 		<h1>Elclark</h1>
-		<p>Hi, Good Morning!</p>
+		<p>Hi, {greeting}!</p>
 	</div>
 
 	<a href="/profile">
@@ -37,8 +52,10 @@
 
 	header a:hover {
 		background-color: var(--md-sys-color-surface-5);
+	}
 
-		filter: none;
+	header a:active {
+		background-color: var(--md-sys-color-surface-2);
 	}
 
 	header h1 {
