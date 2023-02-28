@@ -1,0 +1,13 @@
+################
+#  Hello Bot   #
+# It's Elclark #
+################
+
+User-agent: *
+allow: /*
+allow: /blog/*
+Disallow: /files/*
+
+#############
+#  See Yaa  #
+#############
