@@ -1,13 +1,9 @@
-<script>
-	import Button from '../../../components/button.svelte';
-</script>
-
 <div class="container">
 	<main>
 		<h1>Coming Soon!</h1>
 		<p>This page is currently under construction. Please check back later!</p>
 		<div class="right-button">
-			<Button href="/" color="filled-tonal">Go Back</Button>
+			<a href="/">Go Back</a>
 		</div>
 	</main>
 </div>

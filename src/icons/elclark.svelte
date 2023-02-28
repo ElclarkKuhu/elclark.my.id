@@ -5,9 +5,10 @@
 	export let height = size;
 	export let color = 'currentColor';
 	export let viewBox = '0 0 1200 1200';
+	export let style = '';
 </script>
 
-<svg {width} {height} {viewBox} class={className}>
+<svg {width} {height} {viewBox} class={className} {style}>
 	<path
 		fill={color}
 		d="M1107.57,279.92,951.49,370a419.15,419.15,0,0,1,26.42,46.5l156.19-90.18Q1121.86,302.5,1107.57,279.92Z"

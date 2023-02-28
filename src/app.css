@@ -36,6 +36,7 @@ body {
 	/* overflow-y: scroll; */
 
 	font-family: 'Outfit', sans-serif;
+	/* font-family: 'Golos Text', sans-serif; */
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -57,11 +58,6 @@ a {
 	display: inline-block;
 	color: #8ab4f8;
 	text-decoration: none;
-	transition: all 200ms ease;
-}
-
-a:hover {
-	filter: drop-shadow(0 0 0.1rem currentColor);
 }
 
 .antialiased {

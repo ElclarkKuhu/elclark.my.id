@@ -1,6 +1,6 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
-	import ripple from '../lib/ripple.js';
+	import ripple from '../../lib/ripple.js';
 
 	export let href = '/journal/why-rebuild-again';
 	// export let type = 'blog'
@@ -21,44 +21,46 @@
 </script>
 
 <a {href} on:click={ripple}>
-	<img src={image} alt={title} />
 	<div>
-		<h2>{title}</h2>
+		<h2 class="title-large">{title}</h2>
 		<p>
 			<span>{author}</span> &bullet;
 			{formatDate(date)}
 		</p>
 	</div>
+
+	<img src={image} alt={title} />
 </a>
 
 <style>
 	a {
 		display: grid;
-		grid-template-columns: auto 1fr;
+		grid-template-columns: 1fr max-content;
 
 		overflow: hidden;
 		transition: none;
-		border-radius: 0.5rem;
+		border-radius: 1.5rem;
 
 		position: relative;
-		padding: 0.25rem;
-		margin: 0.5rem 0;
+		padding: 1.5rem;
+		margin: 1rem auto;
 
 		color: currentColor;
-		/* background-color: rgba(var(--raw-on-background), 0.1); */
-
-		transition: background-color 200ms ease;
+		background-color: var(--md-sys-color-surface-1);
 	}
 
 	a:hover {
-		filter: none;
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--md-sys-color-surface-3);
+	}
+
+	a:active {
+		background-color: var(--md-sys-color-surface-2);
 	}
 
 	img {
 		width: 5rem;
 		height: 5rem;
-		border-radius: 0.4rem;
+		border-radius: 1rem;
 		object-fit: cover;
 
 		pointer-events: none;
@@ -70,18 +72,11 @@
 		align-items: flex-start;
 		justify-content: space-between;
 
-		padding: 0 1rem;
-
 		pointer-events: none;
 	}
 
 	h2 {
-		font-size: 1.25rem;
-		font-weight: 500;
-		line-height: 1.25rem;
-
 		margin: 0;
-		margin-top: 0.25rem;
 	}
 
 	p {
@@ -91,8 +86,6 @@
 
 		padding: 0.25rem 1rem;
 		margin: 0;
-		margin-top: 0.25rem;
-		margin-bottom: 0.25rem;
 
 		border-radius: 1rem;
 
