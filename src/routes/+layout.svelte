@@ -1,6 +1,7 @@
 <script>
 	import Modal from '$lib/modal.svelte';
-	import Sidebar from '$lib/sidebar.svelte';
+	import Container from '$lib/container.svelte';
+	import Trailer from '$lib/trailer.svelte';
 </script>
 
 <Modal closable="Okay!">
@@ -18,51 +19,8 @@
 	<p>We will be back online as soon as possible. Thank you for your understanding.</p>
 </Modal>
 
-<div class="container">
-	<div class="sidebar">
-		<Sidebar />
-	</div>
-	<div class="content">
-		<slot />
-	</div>
-</div>
+<Container>
+	<slot />
+</Container>
 
-<style>
-	.container {
-		display: flex;
-		margin: 0 auto;
-		position: relative;
-		max-width: 768px;
-	}
-
-	.sidebar {
-		max-width: 20%;
-		width: auto;
-		position: relative;
-	}
-
-	.content {
-		padding: 1rem;
-	}
-
-	@media (max-width: 480px) {
-		.container {
-			max-width: 480px;
-		}
-	}
-
-	h1 {
-		margin-top: 0;
-		color: rgb(255, 179, 179);
-	}
-
-	a {
-		color: currentColor;
-
-		transition: color 200ms ease;
-	}
-
-	a:hover {
-		color: rgb(255, 179, 179);
-	}
-</style>
+<Trailer />
