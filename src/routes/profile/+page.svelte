@@ -1,16 +1,14 @@
-<div class="container">
-	<main>
-		<h1>Coming Soon!</h1>
-		<p>This page is currently under construction. Please check back later!</p>
-		<div class="right-button">
-			<a href="/" color="filled-tonal">Go Back</a>
-		</div>
-	</main>
-</div>
+<main>
+	<h1>Coming Soon!</h1>
+	<p>This page is currently under construction. Please check back later!</p>
+	<div class="right-button">
+		<a href="/" color="filled-tonal">Go Back</a>
+	</div>
+</main>
 
 <style>
 	main {
-		margin: 2.5rem 0;
+		padding-top: 2.5rem;
 	}
 
 	h1 {
