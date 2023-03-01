@@ -1,34 +1,52 @@
 <script lang="ts">
 	const defaultKeywords = [
 		'Elclark',
-		'elclark.my.id',
 		'website',
 		'personal',
-		'personal website',
 		'portfolio',
-		'portfolio website',
 		'open source',
-		'open source website',
-		'software engineer',
+		'Software Engineer',
+		'Web Developer',
+		'UI/UX Designer',
+		'System Administrator',
+		'Manado',
+		'Indonesia',
+		'JavaScript',
+		'React.js',
+		'Svelte',
+		'Java',
+		'Android',
+		'Lua',
+		'Linux',
+		'Windows',
+		'OpenWRT',
+		'MikroTik',
+		'C++',
+		'Python',
+		'UI design',
+		'UX design',
+		'gaming',
+		'music',
 		'technology',
 		'science',
-		'music',
-		'gaming',
-		'ui',
-		'ux',
-		'ui/ux',
-		'ui designer',
-		'ux designer',
-		'ui/ux designer'
+		'collaboration'
 	];
 
-	const defaultCategorys = ['technology', 'science', 'portfolio'];
+	const defaultCategorys = [
+		'Technology',
+		'Software Development',
+		'Web Development',
+		'UI/UX Design',
+		'System Administration',
+		'science',
+		'portfolio'
+	];
 
 	export let type = 'website';
-	export let title = 'Elclark';
+	export let title = 'Elclark - Software Engineer & Web Developer based in Manado, Indonesia';
 	export let image: string | undefined = undefined;
 	export let description =
-		"Hi, I'm Elclark, I'm a software engineer and designer. I also do system administration, and designing UI and UX. I'm still learning and trying new things. I'm passionate about technology, science, music, and gaming.";
+		'Elclark is a versatile tech professional based in Manado, Indonesia. He specializes in Web development and UI/UX design, with a passion for creating beautiful interfaces. He stays informed about the latest technological trends and is always eager to take on new challenges.';
 
 	export let path = '/';
 	export let domain = 'elclark.my.id';
