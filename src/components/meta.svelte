@@ -46,7 +46,7 @@
 	export let title = 'Elclark - Software Engineer & Web Developer based in Manado, Indonesia';
 	export let image: string | undefined = undefined;
 	export let description =
-		'Elclark is a versatile tech professional based in Manado, Indonesia. He specializes in Web development and UI/UX design, with a passion for creating beautiful interfaces. He stays informed about the latest technological trends and is always eager to take on new challenges.';
+		'Elclark is a versatile tech professional. He specializes in Web & UI/UX. He stays informed about the latest technological trends and eager to take on new challenges.';
 
 	export let path = '/';
 	export let domain = 'elclark.my.id';
