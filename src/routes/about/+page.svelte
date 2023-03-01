@@ -2,21 +2,21 @@
 <article>
 	<h2>Introduction</h2>
 	<p>
-		Hi there! My name is Elclark Kuhu and I'm a Software & Web Developer, UI & UX Designer, and
-		SysAdmin based in Manado, Indonesia.
+		Hello! My name is Elclark Kuhu, I am a software and web developer, UI and UX designer and system
+		administrator in Manado, Indonesia
 	</p>
 
 	<h2>Background</h2>
 	<p>
-		I'm currently a university student, studying computer science and honing my skills in software
-		development, web development, and systems administration. In my free time, I enjoy exploring new
-		technologies and experimenting with new programming languages and frameworks.
+		I am currently a college student studying computer science and improving my software
+		development, website development and system administration skills. In my spare time I like to
+		explore new technologies and experiment with new programming languages and frameworks
 	</p>
 
 	<h2>Skills and Expertise</h2>
 	<p>
-		I have a diverse set of skills and experience across several programming languages, frameworks,
-		and technologies, including:
+		I have a wide range of skills and experience working with a variety of programming languages,
+		frameworks and technologies, including:
 	</p>
 
 	<ul>
