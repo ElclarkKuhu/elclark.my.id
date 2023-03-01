@@ -2,8 +2,13 @@
 <article>
 	<h2>Introduction</h2>
 	<p>
-		Hello! My name is Elclark Kuhu, I am a software and web developer, UI and UX designer and system
-		administrator in Manado, Indonesia
+		Hello! My name is Elclark Kuhu, a Software Engineer, Web Developer, UI/UX designer, and system
+		administrator based on Manado, Indonesia.
+	</p>
+
+	<p>
+		I enjoy designing user interfaces and managing systems, and I'm passionate about technology and
+		science. In my free time, I like gaming and listening to music.
 	</p>
 
 	<h2>Background</h2>
@@ -30,7 +35,7 @@
 			<b>Game Development</b>: Lua
 		</li>
 		<li>
-			<b>System Administration</b>: Linux, Windows, OpenWRT, Microtik
+			<b>System Administration</b>: Linux, Windows, OpenWRT, MikroTik
 		</li>
 		<li>
 			<b>Other Languages</b>: C++, Python
