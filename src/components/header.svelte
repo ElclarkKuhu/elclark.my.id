@@ -15,7 +15,7 @@
 
 <header>
 	<div>
-		<h1 class="display-small">Elclark</h1>
+		<h2 class="display-small">Elclark</h2>
 		<p>Hi, {greeting}!</p>
 	</div>
 
@@ -62,7 +62,7 @@
 		background-color: var(--md-sys-color-surface-2);
 	}
 
-	header h1 {
+	header h2 {
 		margin: 0;
 		font-weight: 600;
 	}
