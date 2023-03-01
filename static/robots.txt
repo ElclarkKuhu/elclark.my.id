@@ -5,7 +5,7 @@
 
 User-agent: *
 allow: /*
-allow: /blog/*
+allow: /journal/*
 Disallow: /files/*
 
 #############
