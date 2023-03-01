@@ -15,7 +15,7 @@
 
 <header>
 	<div>
-		<h1>Elclark</h1>
+		<h1 class="display-small">Elclark</h1>
 		<p>Hi, {greeting}!</p>
 	</div>
 
@@ -33,7 +33,11 @@
 		width: 100%;
 		height: 5rem;
 
-		margin: 1rem auto;
+		margin: auto;
+		margin-top: 1rem;
+		margin-bottom: 0.5rem;
+
+		padding: 0.5rem;
 	}
 
 	header a {
@@ -60,6 +64,7 @@
 
 	header h1 {
 		margin: 0;
+		font-weight: 600;
 	}
 
 	header p {

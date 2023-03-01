@@ -22,7 +22,7 @@
 
 <a {href} on:click={ripple}>
 	<div>
-		<h2 class="title-large">{title}</h2>
+		<h2>{title}</h2>
 		<p>
 			<span>{author}</span> &bullet;
 			{formatDate(date)}
@@ -39,11 +39,11 @@
 
 		overflow: hidden;
 		transition: none;
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 
 		position: relative;
 		padding: 1.5rem;
-		margin: 1rem auto;
+		margin: 0.5rem auto;
 
 		color: currentColor;
 		background-color: var(--md-sys-color-surface-1);
@@ -77,15 +77,25 @@
 
 	h2 {
 		margin: 0;
+
+		font-style: Medium;
+		font-weight: 500;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		letter-spacing: 0.15px;
 	}
 
 	p {
 		display: inline-block;
-		font-size: 0.875rem;
+
+		font-size: 0.75rem;
 		font-weight: 300;
+		line-height: 1rem;
+		letter-spacing: 0.4px;
 
 		padding: 0.25rem 1rem;
 		margin: 0;
+		margin-top: 0.1rem;
 
 		border-radius: 1rem;
 
@@ -101,17 +111,22 @@
 			width: 6rem;
 			height: 6rem;
 		}
-	}
 
-	@keyframes scale {
-		0% {
-			width: 0;
-			height: 0;
+		h2 {
+			font-style: Regular;
+			font-weight: 400;
+			font-size: 1.375rem;
+			line-height: 1.75rem;
+			letter-spacing: 0px;
 		}
-		100% {
-			width: 15rem;
-			height: 15rem;
-			opacity: 0;
+
+		p {
+			font-size: 0.875rem;
+			font-weight: 300;
+		}
+
+		a {
+			padding: 1.5rem;
 		}
 	}
 </style>

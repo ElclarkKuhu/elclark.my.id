@@ -12,11 +12,45 @@
 <About />
 
 <Blog />
+<Blog />
+<Blog />
+<Blog />
 
-<footer>Copyright &copy; 2023 Elclark</footer>
+<a href="/journal">More Posts</a>
+
+<footer class="body-medium">Copyright &copy; 2023 Elclark</footer>
 
 <style>
+	a {
+		display: block;
+		margin: 0 auto;
+
+		text-align: center;
+
+		padding: 1.5rem;
+		border-radius: 1.5rem;
+
+		width: 100%;
+
+		font-size: 1.1rem;
+		font-weight: 400;
+		margin: 0.5rem auto;
+
+		color: currentColor;
+		background-color: var(--md-sys-color-surface-1);
+	}
+
+	a:hover {
+		background-color: var(--md-sys-color-surface-3);
+	}
+
+	a:active {
+		background-color: var(--md-sys-color-surface-2);
+	}
+
 	footer {
 		text-align: center;
+		margin: 0.5rem;
+		padding-bottom: 1rem;
 	}
 </style>

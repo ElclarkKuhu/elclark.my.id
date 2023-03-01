@@ -26,10 +26,11 @@
 	article {
 		background-color: var(--md-sys-color-surface-1);
 		border-radius: 1.5rem;
+		margin: 0.5rem 0;
 	}
 
 	.more {
-		padding: 0 1.5rem 1.5rem 1.5rem;
+		padding: 1rem 1.5rem 1.5rem 1.5rem;
 	}
 
 	.more p {
@@ -43,7 +44,6 @@
 		gap: 1rem;
 
 		padding: 1rem;
-		margin: 1rem 0;
 
 		color: currentColor;
 		background-color: var(--md-sys-color-surface-1);
