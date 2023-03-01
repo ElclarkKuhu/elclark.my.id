@@ -119,21 +119,45 @@
 		things.
 	</p>
 </article>
+<footer>
+	<a href="/">Go Back</a>
+</footer>
 
 <style>
-	article {
-		padding-bottom: 1rem;
-	}
-
 	li {
 		margin-bottom: 0.25rem;
 	}
 
-	a {
+	h1 a {
 		color: currentColor;
 	}
 
-	a:hover {
+	h1 a:hover {
 		text-decoration: underline;
+	}
+
+	footer {
+		margin-top: 2rem;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+
+	footer a {
+		color: currentColor;
+		background-color: var(--md-sys-color-surface-1);
+
+		font-weight: 500;
+		padding: 0.75rem 2rem;
+		border-radius: 2rem;
+	}
+
+	footer a:hover {
+		color: var(--md-sys-color-primary);
+		background-color: var(--md-sys-color-surface-3);
+	}
+
+	footer a:active {
+		/* color: var(--md-sys-color-primary); */
+		background-color: var(--md-sys-color-surface-2);
 	}
 </style>

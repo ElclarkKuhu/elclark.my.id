@@ -39,7 +39,7 @@
 
 		overflow: hidden;
 		transition: none;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 
 		position: relative;
 		padding: 1.5rem;
