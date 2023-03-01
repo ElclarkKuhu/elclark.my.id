@@ -11,12 +11,12 @@
 	export let date = '2022-08-20T21:27:47Z';
 
 	function formatDate(date: string) {
-		// check if date is longger than a year
-		if (dayjs().diff(date, 'year') > 0) {
-			return dayjs(date).format('MMMM D, YYYY');
+		// check if date is the same year
+		if (dayjs(date).format('YYYY') === dayjs().format('YYYY')) {
+			return dayjs(date).format('MMMM D');
 		}
 
-		return dayjs(date).format('MMMM DD');
+		return dayjs(date).format('MMMM D, YYYY');
 	}
 </script>
 
