@@ -1,4 +1,11 @@
+<script>
+	import Meta from '../../components/meta.svelte';
+</script>
+
+<Meta image="https://elclark.my.id/images/elclark.png" keywords={['about', 'me']} />
+
 <h1><a href="/">About Me</a></h1>
+
 <article>
 	<h2>Introduction</h2>
 	<p>
