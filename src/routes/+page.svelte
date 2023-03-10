@@ -16,7 +16,7 @@
 <Blog />
 <Blog />
 
-<a href="/journal">More Posts</a>
+<a href="/blog">More Posts</a>
 
 <footer class="body-medium">Copyright &copy; 2023 Elclark</footer>
 
