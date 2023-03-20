@@ -1,9 +1,9 @@
 <script lang="ts">
+	import dayjs from 'dayjs';
 	import { version, dev } from '$app/environment';
 
 	function buildDate() {
-		const date = new Date().toISOString().split('T')[0];
-		return date.replace(/-/g, '/');
+		return dayjs().format('YYYY/MM/DD');
 	}
 </script>
 
