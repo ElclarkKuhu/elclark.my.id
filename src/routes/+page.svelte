@@ -3,6 +3,7 @@
 	import Header from '../components/header.svelte';
 	import About from '../components/cards/about.svelte';
 	import Blog from '../components/cards/blog.svelte';
+	import Footer from '../components/footer.svelte';
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['landing', 'home', 'homepage']} />
@@ -18,7 +19,7 @@
 
 <a href="/blog">More Posts</a>
 
-<footer class="body-medium">Copyright &copy; 2023 Elclark</footer>
+<Footer />
 
 <style>
 	a {
@@ -46,11 +47,5 @@
 
 	a:active {
 		background-color: var(--md-sys-color-surface-2);
-	}
-
-	footer {
-		text-align: center;
-		margin: 0.5rem;
-		padding-bottom: 1rem;
 	}
 </style>
