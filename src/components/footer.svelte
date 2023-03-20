@@ -17,7 +17,7 @@
 		&bull;
 		<span>{buildDate()}</span>
 		&bull;
-		{#if !dev}
+		{#if dev}
 			<span>Development</span>
 		{:else}
 			<span>Produnction</span>
