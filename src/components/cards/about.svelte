@@ -2,8 +2,8 @@
 	import Elclark from '../../icons/elclark.svelte';
 </script>
 
-<article>
-	<a class="card" href="/about">
+<a href="/about">
+	<div class="card">
 		<div class="profile">
 			<Elclark color="var(--md-sys-color-on-primary)" />
 		</div>
@@ -12,7 +12,7 @@
 			<h1 class="headline-medium">Elclark Kuhu</h1>
 			<p class="title-medium">Developer & Designer</p>
 		</div>
-	</a>
+	</div>
 
 	<div class="more">
 		<p class="body-large">
@@ -20,13 +20,29 @@
 			learning. I love gaming, music, technology, and science!
 		</p>
 	</div>
-</article>
+</a>
 
 <style>
-	article {
+	a {
 		background-color: var(--md-sys-color-surface-1);
 		border-radius: 1.5rem;
-		margin: 0.5rem 0;
+		color: currentColor;
+	}
+
+	a:hover {
+		background-color: var(--md-sys-color-surface-3);
+	}
+
+	a:hover .card {
+		background-color: var(--md-sys-color-surface-3);
+	}
+
+	a:active {
+		background-color: var(--md-sys-color-surface-2);
+	}
+
+	a:active .card {
+		background-color: var(--md-sys-color-surface-2);
 	}
 
 	.more {
@@ -51,14 +67,6 @@
 		border-radius: 1.5rem;
 
 		cursor: pointer;
-	}
-
-	.card:hover {
-		background-color: var(--md-sys-color-surface-3);
-	}
-
-	.card:active {
-		background-color: var(--md-sys-color-surface-2);
 	}
 
 	.card h1 {
