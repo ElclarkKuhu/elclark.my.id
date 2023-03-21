@@ -22,7 +22,7 @@
 
 <a {href} on:click={ripple}>
 	<div>
-		<h2 class="headline-small">{title}</h2>
+		<h2 class="title-large">{title}</h2>
 		<p>
 			<span>{author}</span> &bullet;
 			{formatDate(date)}
