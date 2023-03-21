@@ -4,8 +4,8 @@ import { redirect } from '@sveltejs/kit';
 export const ssr = false;
 export const prerender = false;
 
-export const load = (async () => {
-	const res = await fetch('https://api.elclark.my.id/v1/editor', {
+export const load = (async ({ params }) => {
+	const res = await fetch(`https://api.elclark.my.id/v1/blog/${params.slug}`, {
 		credentials: 'include'
 	});
 
