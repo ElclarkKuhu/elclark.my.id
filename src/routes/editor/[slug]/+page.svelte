@@ -1,0 +1,1 @@
+<!-- EDITING PAGE OF THE BLOG -->
