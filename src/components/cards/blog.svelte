@@ -22,7 +22,7 @@
 
 <a {href} on:click={ripple}>
 	<div>
-		<h2>{title}</h2>
+		<h2 class="headline-small">{title}</h2>
 		<p>
 			<span>{author}</span> &bullet;
 			{formatDate(date)}
@@ -58,8 +58,8 @@
 	}
 
 	img {
-		width: 5rem;
-		height: 5rem;
+		width: 6rem;
+		height: 6rem;
 		border-radius: 1rem;
 		object-fit: cover;
 
@@ -77,18 +77,12 @@
 
 	h2 {
 		margin: 0;
-
-		font-style: Medium;
-		font-weight: 500;
-		font-size: 1rem;
-		line-height: 1.5rem;
-		letter-spacing: 0.15px;
 	}
 
 	p {
 		display: inline-block;
 
-		font-size: 0.75rem;
+		font-size: 0.875rem;
 		font-weight: 300;
 		line-height: 1rem;
 		letter-spacing: 0.4px;
@@ -104,29 +98,5 @@
 
 	span {
 		font-weight: 500;
-	}
-
-	@media (min-width: 480px) {
-		img {
-			width: 6rem;
-			height: 6rem;
-		}
-
-		h2 {
-			font-style: Regular;
-			font-weight: 400;
-			font-size: 1.375rem;
-			line-height: 1.75rem;
-			letter-spacing: 0px;
-		}
-
-		p {
-			font-size: 0.875rem;
-			font-weight: 300;
-		}
-
-		a {
-			padding: 1.5rem;
-		}
 	}
 </style>
