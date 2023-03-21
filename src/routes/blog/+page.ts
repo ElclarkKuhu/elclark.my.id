@@ -6,7 +6,7 @@ export const load = (async () => {
 	if (!res.ok) {
 		return {
 			status: res.status,
-			error: await res.json()
+			error: await res.text()
 		};
 	}
 
