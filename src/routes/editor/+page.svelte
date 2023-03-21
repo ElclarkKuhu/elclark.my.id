@@ -1,4 +1,4 @@
-<!-- LIST OF THE LATEST BLOG (AND SEARCH + FILTER LATER) -->
+<!-- LIST OF BLOGS THAT YOU HAVE ACCESS TO -->
 <script lang="ts">
 	import type { PageData } from './$types';
 
