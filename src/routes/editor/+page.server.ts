@@ -21,6 +21,6 @@ export const load = (async ({ cookies }) => {
 	const data = await res.json();
 
 	return {
-		data
+		...data
 	};
 }) satisfies PageServerLoad;

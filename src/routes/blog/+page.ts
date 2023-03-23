@@ -11,6 +11,6 @@ export const load = (async () => {
 	const data = await res.json();
 
 	return {
-		data
+		...data
 	};
 }) satisfies PageLoad;
