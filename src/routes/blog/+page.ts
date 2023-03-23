@@ -1,19 +1,16 @@
+import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
 	const res = await fetch('https://api.elclark.my.id/v1/blog');
 
 	if (!res.ok) {
-		return {
-			status: res.status,
-			error: await res.text()
-		};
+		throw error(res.status, res.statusText);
 	}
 
 	const data = await res.json();
 
 	return {
-		status: res.status,
 		data
 	};
 }) satisfies PageLoad;
