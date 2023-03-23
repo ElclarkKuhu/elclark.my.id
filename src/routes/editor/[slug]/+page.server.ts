@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types';
 
 export const load = (async ({ params, cookies }) => {
 	const { slug } = params;
-	const token = cookies.get('token');
+	const token = cookies.get('session');
 
 	if (!slug) {
 		throw error(404, 'Not found');

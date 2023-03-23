@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
 export const load = (async ({ cookies }) => {
-	const token = cookies.get('token');
+	const token = cookies.get('session');
 
 	if (!token) {
 		throw error(401, 'Unauthorized');
