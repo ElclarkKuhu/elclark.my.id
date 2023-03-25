@@ -109,6 +109,22 @@
 		grid-area: title;
 
 		margin: 0;
+
+		/* max 2 line */
+		overflow: hidden;
+		text-overflow: ellipsis;
+
+		display: box;
+		line-clamp: 2;
+		box-orient: vertical;
+
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+
+		display: -moz-box;
+		-moz-line-clamp: 2;
+		-moz-box-orient: vertical;
 	}
 
 	.pill {
