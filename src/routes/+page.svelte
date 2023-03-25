@@ -10,19 +10,29 @@
 	export let data: PageData;
 </script>
 
-<Meta image="https://elclark.my.id/images/elclark.png" keywords={['landing', 'home', 'homepage']} />
+<article>
+	<Meta
+		image="https://elclark.my.id/images/elclark.png"
+		keywords={['landing', 'home', 'homepage']}
+	/>
 
-<Header />
+	<Header />
 
-<About />
+	<About />
 
-<Posts posts={data.posts} />
+	<Posts posts={data.posts} />
 
-<a href="/blog">More Posts</a>
+	<a href="/blog">More Posts</a>
 
-<Footer />
+	<Footer />
+</article>
 
 <style>
+	article {
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
 	a {
 		display: block;
 		margin: 0 auto;
