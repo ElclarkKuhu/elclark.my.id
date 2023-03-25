@@ -121,6 +121,10 @@
 		background-color: var(--md-sys-color-surface-2);
 	}
 
+	.pill span {
+		font-weight: 500;
+	}
+
 	img {
 		grid-area: image;
 		align-self: center;

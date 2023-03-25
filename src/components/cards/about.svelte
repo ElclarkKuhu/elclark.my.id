@@ -15,7 +15,7 @@
 	</div>
 
 	<div class="more">
-		<p class="body-large">
+		<p>
 			I'm a Software Engineer with a passion for UI/UX design, system administration, and lifelong
 			learning. I love gaming, music, technology, and science!
 		</p>
