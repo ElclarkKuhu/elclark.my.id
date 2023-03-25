@@ -79,3 +79,10 @@
 		{@html data.content}
 	{/if}
 </article>
+
+<style>
+	:global(img) {
+		max-width: 100%;
+		border-radius: 1.5rem;
+	}
+</style>
