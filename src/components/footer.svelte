@@ -1,9 +1,14 @@
 <script lang="ts">
-	import dayjs from 'dayjs';
 	import { version, dev } from '$app/environment';
 
 	function buildDate() {
-		return dayjs().format('YYYY/MM/DD');
+		const date = new Date();
+
+		const month = date.getMonth() + 1;
+		const day = date.getDate();
+		const year = date.getFullYear();
+
+		return `${year}/${month}/${day}`;
 	}
 </script>
 
