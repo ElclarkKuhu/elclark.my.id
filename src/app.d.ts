@@ -12,10 +12,12 @@ declare namespace App {
 
 	interface Post {
 		title: string;
-		slug: string;
+		featuredImage?: string;
 		author: User;
 		date: string;
-		content: string;
+		slug: string;
+		updated?: string;
+		content?: string;
 		visibility: string;
 	}
 

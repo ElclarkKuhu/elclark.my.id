@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 
-	import Loading from '../components/loading.svelte';
+	import Loading from '$lib/components/loading.svelte';
 </script>
 
 <Loading />

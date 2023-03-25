@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Meta from '../components/meta.svelte';
-	import Header from '../components/header.svelte';
-	import About from '../components/cards/about.svelte';
-	import Posts from '../components/posts.svelte';
-	import Footer from '../components/footer.svelte';
+	import Meta from '$lib/components/meta.svelte';
+	import Header from '$lib/components/header.svelte';
+	import About from '$lib/components/cards/about.svelte';
+	import Posts from '$lib/components/posts.svelte';
+	import Footer from '$lib/components/footer.svelte';
 
 	import type { PageData } from './$types';
 

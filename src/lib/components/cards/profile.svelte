@@ -1,10 +1,10 @@
 <script>
-	import Elclark from '../../icons/elclark.svelte';
+	import Elclark from '$lib/icons/elclark.svelte';
 
-	import Twitter from '../../icons/twitter.svelte';
-	import Facebook from '../../icons/facebook.svelte';
-	import Instagram from '../../icons/instagram.svelte';
-	import Linkedin from '../../icons/linkedin.svelte';
+	import Twitter from '$lib/icons/twitter.svelte';
+	import Facebook from '$lib/icons/facebook.svelte';
+	import Instagram from '$lib/icons/instagram.svelte';
+	import Linkedin from '$lib/icons/linkedin.svelte';
 </script>
 
 <div class="card">

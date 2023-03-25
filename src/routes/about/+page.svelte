@@ -1,5 +1,5 @@
 <script>
-	import Meta from '../../components/meta.svelte';
+	import Meta from '$lib/components/meta.svelte';
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['about', 'me']} />

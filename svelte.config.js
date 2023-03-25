@@ -11,7 +11,7 @@ const config = {
 		adapter: adapter(),
 		version: {
 			name: process.env.npm_package_version
-		}
+		},
 	}
 };
 

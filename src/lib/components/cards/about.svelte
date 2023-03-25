@@ -1,5 +1,5 @@
 <script>
-	import Elclark from '../../icons/elclark.svelte';
+	import Elclark from '$lib/icons/elclark.svelte';
 </script>
 
 <a href="/about">
