@@ -1,7 +1,7 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
-export const load = (async ({ params, cookies }) => {
+export const load = (async ({ fetch, params, cookies }) => {
 	const { slug } = params;
 	const token = cookies.get('session');
 
