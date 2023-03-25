@@ -1,10 +1,9 @@
 <!-- LIST OF BLOGS THAT YOU HAVE ACCESS TO -->
 <script lang="ts">
+	import Posts from '../../components/posts.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
 </script>
 
-<pre>
-    {JSON.stringify(data, null, 2)}
-</pre>
+<Posts posts={data.posts} />

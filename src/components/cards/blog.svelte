@@ -1,17 +1,14 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
-	import ripple from '../../lib/ripple.js';
 
-	export let href = '/blog/why-rebuild-again';
-	// export let type = 'blog'
-
-	export let image = '/images/elclark.png';
-	export let title = 'This website is currently still under construction, why?';
-	export let author = 'Elclark Kuhu';
-	export let date = '2022-08-20T21:27:47Z';
+	export let href: string;
+	export let image: string | undefined = undefined;
+	export let title: string;
+	export let author: string;
+	export let date: string;
+	export let blogPath = '/blog';
 
 	function formatDate(date: string) {
-		// check if date is the same year
 		if (dayjs(date).format('YYYY') === dayjs().format('YYYY')) {
 			return dayjs(date).format('MMMM D');
 		}
@@ -20,33 +17,44 @@
 	}
 </script>
 
-<a {href} on:click={ripple}>
-	<div>
-		<h2 class="title-large">{title}</h2>
-		<p>
-			<span>{author}</span> &bullet;
-			{formatDate(date)}
-		</p>
+<a href={`${blogPath}/${href}`} class:a-with-image={image}>
+	<h2 class="title-large">{title}</h2>
+
+	<div class="pill">
+		<span>{author}</span> &bullet;
+		{formatDate(date)}
 	</div>
 
-	<img src={image} alt={title} />
+	{#if image}
+		<img src={image} alt={title} />
+	{/if}
 </a>
 
 <style>
 	a {
 		display: grid;
+
+		gap: 0.5rem;
 		grid-template-columns: 1fr max-content;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			'title title'
+			'pill unknown';
 
 		overflow: hidden;
-		transition: none;
-		border-radius: 1.5rem;
 
-		position: relative;
-		padding: 1.5rem;
+		padding: 1rem 1.5rem;
 		margin: 0.5rem auto;
+		border-radius: 1.5rem;
 
 		color: currentColor;
 		background-color: var(--md-sys-color-surface-1);
+	}
+
+	.a-with-image {
+		grid-template-areas:
+			'title image'
+			'pill image';
 	}
 
 	a:hover {
@@ -57,46 +65,30 @@
 		background-color: var(--md-sys-color-surface-2);
 	}
 
+	h2 {
+		grid-area: title;
+
+		margin: 0;
+	}
+
+	.pill {
+		grid-area: pill;
+
+		border-radius: 1rem;
+		width: max-content;
+		padding: 0.25rem 1rem;
+
+		background-color: var(--md-sys-color-surface-2);
+	}
+
 	img {
+		grid-area: image;
+		align-self: center;
+
 		width: 6rem;
 		height: 6rem;
-		border-radius: 1rem;
 		object-fit: cover;
 
-		pointer-events: none;
-	}
-
-	div {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		justify-content: space-between;
-
-		pointer-events: none;
-	}
-
-	h2 {
-		margin: 0;
-	}
-
-	p {
-		display: inline-block;
-
-		font-size: 0.875rem;
-		font-weight: 300;
-		line-height: 1rem;
-		letter-spacing: 0.4px;
-
-		padding: 0.25rem 1rem;
-		margin: 0;
-		margin-top: 0.1rem;
-
 		border-radius: 1rem;
-
-		background-color: var(--md-sys-color-surface-1);
-	}
-
-	span {
-		font-weight: 500;
 	}
 </style>

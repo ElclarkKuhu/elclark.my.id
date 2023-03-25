@@ -2,8 +2,12 @@
 	import Meta from '../components/meta.svelte';
 	import Header from '../components/header.svelte';
 	import About from '../components/cards/about.svelte';
-	import Blog from '../components/cards/blog.svelte';
+	import Posts from '../components/posts.svelte';
 	import Footer from '../components/footer.svelte';
+
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['landing', 'home', 'homepage']} />
@@ -12,10 +16,7 @@
 
 <About />
 
-<Blog />
-<Blog />
-<Blog />
-<Blog />
+<Posts posts={data.posts} />
 
 <a href="/blog">More Posts</a>
 

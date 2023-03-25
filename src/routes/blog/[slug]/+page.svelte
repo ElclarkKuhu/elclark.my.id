@@ -5,6 +5,12 @@
 	export let data: PageData;
 </script>
 
-<pre>
-    {JSON.stringify(data, null, 2)}
-</pre>
+<h1>
+	{data.title}
+</h1>
+
+<article>
+	{#if data.content}
+		{@html data.content}
+	{/if}
+</article>
