@@ -2,9 +2,12 @@ import fetch from 'node-fetch';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-let posts = await fetch('https://api.elclark.my.id/v1/blog');
-posts = await posts.json();
+const res = await fetch('https://api.elclark.my.id/v1/blog');
+if (!res.ok) {
+	throw new Error(`HTTP error! status: ${res.status}`);
+}
 
+const posts = await res.json();
 const postsSlugs = posts.posts.map((post) => `/blog/${post.slug}`);
 
 /** @type {import('@sveltejs/kit').Config} */
