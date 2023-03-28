@@ -10,7 +10,7 @@
 			href={post.slug}
 			title={post.title}
 			date={post.date}
-			author={post.author.displayName}
+			author={post.author.name}
 			image={post.featuredImage}
 		/>
 	{/each}

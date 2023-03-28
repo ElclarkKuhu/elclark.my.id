@@ -25,7 +25,7 @@ declare namespace App {
 		username: string;
 		email: string;
 		verified: boolean;
-		displayName: string;
+		name: string;
 		profile: string;
 		created: string;
 		updated?: string;

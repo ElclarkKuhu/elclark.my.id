@@ -32,7 +32,7 @@
 <p>
 	Published {dateStr} by
 	<!-- {`https://account.elclark.my.id/user/${data.author.username}`} -->
-	<a href="/">{data.author.displayName}</a>
+	<a href="/">{data.author.name}</a>
 
 	{#if updatedStr}
 		&bull; Updated {updatedStr}
