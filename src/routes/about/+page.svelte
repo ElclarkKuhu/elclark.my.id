@@ -1,6 +1,7 @@
 <script>
 	import Meta from '$lib/components/meta.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import FloatingBar from './floating-bar.svelte';
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['about', 'me']} />
@@ -133,6 +134,7 @@
 	</p>
 </article>
 
+<FloatingBar />
 <Footer />
 
 <style>
