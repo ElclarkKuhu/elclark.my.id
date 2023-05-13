@@ -7,12 +7,12 @@
 	export let title: string;
 	export let author: string;
 	export let date: string;
-	export let blogPath = '/blog';
+	export let blog_path = '/post';
 
-	let dateStr: string = relative(date);
+	let date_str: string = relative(date);
 
 	const interval = setInterval(() => {
-		dateStr = relative(date);
+		date_str = relative(date);
 	}, 1000);
 
 	onDestroy(() => {
@@ -20,12 +20,12 @@
 	});
 </script>
 
-<a href={`${blogPath}/${href}`} class:a-with-image={image}>
+<a href={`${blog_path}/${href}`} class:a-with-image={image}>
 	<h2 class="title-large">{title}</h2>
 
 	<div class="pill">
 		<span>{author}</span> &bullet;
-		<time datetime={date}>{dateStr}</time>
+		<time datetime={date}>{date_str}</time>
 	</div>
 
 	{#if image}
@@ -51,7 +51,7 @@
 		border-radius: 1.5rem;
 
 		color: currentColor;
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--color-surface-1);
 	}
 
 	.a-with-image {
@@ -61,11 +61,11 @@
 	}
 
 	a:hover {
-		background-color: var(--md-sys-color-surface-3);
+		background-color: var(--color-surface-3);
 	}
 
 	a:active {
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 
 	h2 {
@@ -97,7 +97,7 @@
 		width: max-content;
 		padding: 0.25rem 1rem;
 
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 
 	.pill span {

@@ -58,8 +58,8 @@
 		margin: 0 0.25rem;
 		border-radius: 0.5rem;
 
-		filter: drop-shadow(0 0 0.5rem var(--md-sys-color-primary));
-		background-color: var(--md-sys-color-primary);
+		filter: drop-shadow(0 0 0.5rem var(--color-primary));
+		background-color: var(--color-primary);
 	}
 
 	.bar:nth-child(1) {

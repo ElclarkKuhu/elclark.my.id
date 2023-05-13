@@ -11,7 +11,7 @@
 			title={post.title}
 			date={post.date}
 			author={post.author.name}
-			image={post.featuredImage}
+			image={post.featured_image}
 		/>
 	{/each}
 {/if}

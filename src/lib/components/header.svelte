@@ -19,7 +19,7 @@
 		<p>Hi, {greeting}!</p>
 	</div>
 
-	<a href="/profile">
+	<a href="/user/elclark">
 		<img src="/images/elclark.png" alt="Elclark's Profile" />
 	</a>
 </header>
@@ -50,18 +50,18 @@
 		width: 4rem;
 		height: 4rem;
 
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--color-surface-1);
 		padding: 0.3rem;
 
 		border-radius: 50%;
 	}
 
 	header a:hover {
-		background-color: var(--md-sys-color-surface-5);
+		background-color: var(--color-surface-5);
 	}
 
 	header a:active {
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 
 	header h2 {

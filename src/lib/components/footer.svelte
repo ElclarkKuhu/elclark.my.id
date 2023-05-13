@@ -1,27 +1,23 @@
 <script lang="ts">
 	import { version, dev } from '$app/environment';
-
-	function buildDate() {
-		const date = new Date();
-
-		const month = date.getMonth() + 1;
-		const day = date.getDate();
-		const year = date.getFullYear();
-
-		return `${year}/${month}/${day}`;
-	}
 </script>
 
 <footer class="body-medium">
 	<p>
-		<a href="https://github.com/elclarkcodes/elclark" target="_blank" rel="noopener noreferrer"
-			>Source Code</a
+		<a
+			href="https://github.com/ElclarkKuhu/elclark.my.id"
+			target="_blank"
+			rel="noopener noreferrer"
 		>
+			Source Code
+		</a>
+
 		&bull;
+
 		<span>v{version}</span>
+
 		&bull;
-		<span>{buildDate()}</span>
-		&bull;
+
 		{#if dev}
 			<span>Development</span>
 		{:else}
@@ -35,7 +31,6 @@
 	footer {
 		text-align: center;
 		margin: 1rem;
-		padding-bottom: 2rem;
 	}
 
 	a {

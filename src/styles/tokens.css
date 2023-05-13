@@ -110,246 +110,198 @@
 	--md-ref-palette-error100: #ffffff;
 
 	/* light */
-	--md-sys-color-primary-light: #9c4145;
-	--md-sys-color-primary-light-rgb: 156 65 69;
-	--md-sys-color-on-primary-light: #ffffff;
-	--md-sys-color-on-primary-light-rgb: 255 255 255;
-	--md-sys-color-primary-container-light: #ffdad9;
-	--md-sys-color-primary-container-light-rgb: 255 218 217;
-	--md-sys-color-on-primary-container-light: #400009;
-	--md-sys-color-on-primary-container-light-rgb: 64 0 9;
-	--md-sys-color-secondary-light: #775656;
-	--md-sys-color-secondary-light-rgb: 119 86 86;
-	--md-sys-color-on-secondary-light: #ffffff;
-	--md-sys-color-on-secondary-light-rgb: 255 255 255;
-	--md-sys-color-secondary-container-light: #ffdad9;
-	--md-sys-color-secondary-container-light-rgb: 255 218 217;
-	--md-sys-color-on-secondary-container-light: #2c1515;
-	--md-sys-color-on-secondary-container-light-rgb: 44 21 21;
-	--md-sys-color-tertiary-light: #755a2f;
-	--md-sys-color-tertiary-light-rgb: 117 90 47;
-	--md-sys-color-on-tertiary-light: #ffffff;
-	--md-sys-color-on-tertiary-light-rgb: 255 255 255;
-	--md-sys-color-tertiary-container-light: #ffddae;
-	--md-sys-color-tertiary-container-light-rgb: 255 221 174;
-	--md-sys-color-on-tertiary-container-light: #281800;
-	--md-sys-color-on-tertiary-container-light-rgb: 40 24 0;
-	--md-sys-color-error-light: #ba1a1a;
-	--md-sys-color-error-light-rgb: 186 26 26;
-	--md-sys-color-error-container-light: #ffdad6;
-	--md-sys-color-error-container-light-rgb: 255 218 214;
-	--md-sys-color-on-error-light: #ffffff;
-	--md-sys-color-on-error-light-rgb: 255 255 255;
-	--md-sys-color-on-error-container-light: #410002;
-	--md-sys-color-on-error-container-light-rgb: 65 0 2;
-	--md-sys-color-background-light: #fffbff;
-	--md-sys-color-background-light-rgb: 255 251 255;
-	--md-sys-color-on-background-light: #201a1a;
-	--md-sys-color-on-background-light-rgb: 32 26 26;
-	--md-sys-color-surface-light: #fffbff;
-	--md-sys-color-surface-light-rgb: 255 251 255;
-	--md-sys-color-on-surface-light: #201a1a;
-	--md-sys-color-on-surface-light-rgb: 32 26 26;
-	--md-sys-color-surface-variant-light: #f4dddc;
-	--md-sys-color-surface-variant-light-rgb: 244 221 220;
-	--md-sys-color-on-surface-variant-light: #524343;
-	--md-sys-color-on-surface-variant-light-rgb: 82 67 67;
-	--md-sys-color-outline-light: #857372;
-	--md-sys-color-outline-light-rgb: 133 115 114;
-	--md-sys-color-inverse-on-surface-light: #fbeeed;
-	--md-sys-color-inverse-on-surface-light-rgb: 251 238 237;
-	--md-sys-color-inverse-surface-light: #362f2e;
-	--md-sys-color-inverse-surface-light-rgb: 54 47 46;
-	--md-sys-color-inverse-primary-light: #ffb3b3;
-	--md-sys-color-inverse-primary-light-rgb: 255 179 179;
-	--md-sys-color-shadow-light: #000000;
-	--md-sys-color-shadow-light-rgb: 0 0 0;
-	--md-sys-color-surface-tint-light: #9c4145;
-	--md-sys-color-surface-tint-light-rgb: 156 65 69;
-	--md-sys-color-outline-variant-light: #d7c1c1;
-	--md-sys-color-outline-variant-light-rgb: 215 193 193;
-	--md-sys-color-scrim-light: #000000;
-	--md-sys-color-scrim-light-rgb: 0 0 0;
+	--color-primary-light: 156 65 69;
+	--color-on-primary-light: 255 255 255;
+	--color-primary-container-light: 255 218 217;
+	--color-on-primary-container-light: 64 0 9;
+	--color-secondary-light: 119 86 86;
+	--color-on-secondary-light: 255 255 255;
+	--color-secondary-container-light: 255 218 217;
+	--color-on-secondary-container-light: 44 21 21;
+	--color-tertiary-light: 117 90 47;
+	--color-on-tertiary-light: 255 255 255;
+	--color-tertiary-container-light: 255 221 174;
+	--color-on-tertiary-container-light: 40 24 0;
+	--color-error-light: 186 26 26;
+	--color-error-container-light: 255 218 214;
+	--color-on-error-light: 255 255 255;
+	--color-on-error-container-light: 65 0 2;
+	--color-background-light: 255 251 255;
+	--color-on-background-light: 32 26 26;
+	--color-surface-light: 255 251 255;
+	--color-on-surface-light: 32 26 26;
+	--color-surface-variant-light: 244 221 220;
+	--color-on-surface-variant-light: 82 67 67;
+	--color-outline-light: 133 115 114;
+	--color-inverse-on-surface-light: 251 238 237;
+	--color-inverse-surface-light: 54 47 46;
+	--color-inverse-primary-light: 255 179 179;
+	--color-shadow-light: 0 0 0;
+	--color-surface-tint-light: 156 65 69;
+	--color-outline-variant-light: 215 193 193;
+	--color-scrim-light: 0 0 0;
 
 	/* dark */
-	--md-sys-color-primary-dark: #ffb3b3;
-	--md-sys-color-primary-dark-rgb: 255 179 179;
-	--md-sys-color-on-primary-dark: #5f131b;
-	--md-sys-color-on-primary-dark-rgb: 95 19 27;
-	--md-sys-color-primary-container-dark: #7e2a2f;
-	--md-sys-color-primary-container-dark-rgb: 126 42 47;
-	--md-sys-color-on-primary-container-dark: #ffdad9;
-	--md-sys-color-on-primary-container-dark-rgb: 255 218 217;
-	--md-sys-color-secondary-dark: #e6bdbc;
-	--md-sys-color-secondary-dark-rgb: 230 189 188;
-	--md-sys-color-on-secondary-dark: #442929;
-	--md-sys-color-on-secondary-dark-rgb: 68 41 41;
-	--md-sys-color-secondary-container-dark: #5d3f3f;
-	--md-sys-color-secondary-container-dark-rgb: 93 63 63;
-	--md-sys-color-on-secondary-container-dark: #ffdad9;
-	--md-sys-color-on-secondary-container-dark-rgb: 255 218 217;
-	--md-sys-color-tertiary-dark: #e5c18d;
-	--md-sys-color-tertiary-dark-rgb: 229 193 141;
-	--md-sys-color-on-tertiary-dark: #422c05;
-	--md-sys-color-on-tertiary-dark-rgb: 66 44 5;
-	--md-sys-color-tertiary-container-dark: #5b421a;
-	--md-sys-color-tertiary-container-dark-rgb: 91 66 26;
-	--md-sys-color-on-tertiary-container-dark: #ffddae;
-	--md-sys-color-on-tertiary-container-dark-rgb: 255 221 174;
-	--md-sys-color-error-dark: #ffb4ab;
-	--md-sys-color-error-dark-rgb: 255 180 171;
-	--md-sys-color-error-container-dark: #93000a;
-	--md-sys-color-error-container-dark-rgb: 147 0 10;
-	--md-sys-color-on-error-dark: #690005;
-	--md-sys-color-on-error-dark-rgb: 105 0 5;
-	--md-sys-color-on-error-container-dark: #ffdad6;
-	--md-sys-color-on-error-container-dark-rgb: 255 218 214;
-	--md-sys-color-background-dark: #201a1a;
-	--md-sys-color-background-dark-rgb: 32 26 26;
-	--md-sys-color-on-background-dark: #ece0df;
-	--md-sys-color-on-background-dark-rgb: 236 224 223;
-	--md-sys-color-surface-dark: #201a1a;
-	--md-sys-color-surface-dark-rgb: 32 26 26;
-	--md-sys-color-on-surface-dark: #ece0df;
-	--md-sys-color-on-surface-dark-rgb: 236 224 223;
-	--md-sys-color-surface-variant-dark: #524343;
-	--md-sys-color-surface-variant-dark-rgb: 82 67 67;
-	--md-sys-color-on-surface-variant-dark: #d7c1c1;
-	--md-sys-color-on-surface-variant-dark-rgb: 215 193 193;
-	--md-sys-color-outline-dark: #a08c8c;
-	--md-sys-color-outline-dark-rgb: 160 140 140;
-	--md-sys-color-inverse-on-surface-dark: #201a1a;
-	--md-sys-color-inverse-on-surface-dark-rgb: 32 26 26;
-	--md-sys-color-inverse-surface-dark: #ece0df;
-	--md-sys-color-inverse-surface-dark-rgb: 236 224 223;
-	--md-sys-color-inverse-primary-dark: #9c4145;
-	--md-sys-color-inverse-primary-dark-rgb: 156 65 69;
-	--md-sys-color-shadow-dark: #000000;
-	--md-sys-color-shadow-dark-rgb: 0 0 0;
-	--md-sys-color-surface-tint-dark: #ffb3b3;
-	--md-sys-color-surface-tint-dark-rgb: 255 179 179;
-	--md-sys-color-outline-variant-dark: #524343;
-	--md-sys-color-outline-variant-dark-rgb: 82 67 67;
-	--md-sys-color-scrim-dark: #000000;
-	--md-sys-color-scrim-dark-rgb: 0 0 0;
+	--color-primary-dark: 255 179 179;
+	--color-on-primary-dark: 95 19 27;
+	--color-primary-container-dark: 126 42 47;
+	--color-on-primary-container-dark: 255 218 217;
+	--color-secondary-dark: 230 189 188;
+	--color-on-secondary-dark: 68 41 41;
+	--color-secondary-container-dark: 93 63 63;
+	--color-on-secondary-container-dark: 255 218 217;
+	--color-tertiary-dark: 229 193 141;
+	--color-on-tertiary-dark: 66 44 5;
+	--color-tertiary-container-dark: 91 66 26;
+	--color-on-tertiary-container-dark: 255 221 174;
+	--color-error-dark: 255 180 171;
+	--color-error-container-dark: 147 0 10;
+	--color-on-error-dark: 105 0 5;
+	--color-on-error-container-dark: 255 218 214;
+	--color-background-dark: 32 26 26;
+	--color-on-background-dark: 236 224 223;
+	--color-surface-dark: 32 26 26;
+	--color-on-surface-dark: 236 224 223;
+	--color-surface-variant-dark: 82 67 67;
+	--color-on-surface-variant-dark: 215 193 193;
+	--color-outline-dark: 160 140 140;
+	--color-inverse-on-surface-dark: 32 26 26;
+	--color-inverse-surface-dark: 236 224 223;
+	--color-inverse-primary-dark: 156 65 69;
+	--color-shadow-dark: 0 0 0;
+	--color-surface-tint-dark: 255 179 179;
+	--color-outline-variant-dark: 82 67 67;
+	--color-scrim-dark: 0 0 0;
 
 	/* display - large */
-	--md-sys-typescale-display-large-font-family-name: Outfit;
-	--md-sys-typescale-display-large-font-family-style: Regular;
-	--md-sys-typescale-display-large-font-weight: 400;
-	--md-sys-typescale-display-large-font-size: 3.563rem; /* converted from 57px */
-	--md-sys-typescale-display-large-line-height: 4rem; /* converted from 64px */
-	--md-sys-typescale-display-large-letter-spacing: -0.25px;
+	--typescale-display-large-font-family-name: Outfit;
+	--typescale-display-large-font-family-style: Regular;
+	--typescale-display-large-font-weight: 400;
+	--typescale-display-large-font-size: 57px;
+	--typescale-display-large-line-height: 64px;
+	--typescale-display-large-letter-spacing: -0.25px;
 
 	/* display - medium */
-	--md-sys-typescale-display-medium-font-family-name: Outfit;
-	--md-sys-typescale-display-medium-font-family-style: Regular;
-	--md-sys-typescale-display-medium-font-weight: 400;
-	--md-sys-typescale-display-medium-font-size: 2.813rem; /* converted from 45px */
-	--md-sys-typescale-display-medium-line-height: 3.25rem; /* converted from 52px */
-	--md-sys-typescale-display-medium-letter-spacing: 0px;
+	--typescale-display-medium-font-family-name: Outfit;
+	--typescale-display-medium-font-family-style: Regular;
+	--typescale-display-medium-font-weight: 400;
+	--typescale-display-medium-font-size: 45px;
+	--typescale-display-medium-line-height: 52px;
+	--typescale-display-medium-letter-spacing: 0px;
 
 	/* display - small */
-	--md-sys-typescale-display-small-font-family-name: Outfit;
-	--md-sys-typescale-display-small-font-family-style: Regular;
-	--md-sys-typescale-display-small-font-weight: 400;
-	--md-sys-typescale-display-small-font-size: 2.25rem; /* converted from 36px */
-	--md-sys-typescale-display-small-line-height: 2.75rem; /* converted from 44px */
-	--md-sys-typescale-display-small-letter-spacing: 0px;
+	--typescale-display-small-font-family-name: Outfit;
+	--typescale-display-small-font-family-style: Regular;
+	--typescale-display-small-font-weight: 400;
+	--typescale-display-small-font-size: 36px;
+	--typescale-display-small-line-height: 44px;
+	--typescale-display-small-letter-spacing: 0px;
 
 	/* headline - large */
-	--md-sys-typescale-headline-large-font-family-name: Outfit;
-	--md-sys-typescale-headline-large-font-family-style: Regular;
-	--md-sys-typescale-headline-large-font-weight: 400;
-	--md-sys-typescale-headline-large-font-size: 2rem; /* converted from 32px */
-	--md-sys-typescale-headline-large-line-height: 2.5rem; /* converted from 40px */
-	--md-sys-typescale-headline-large-letter-spacing: 0px;
+	--typescale-headline-large-font-family-name: Outfit;
+	--typescale-headline-large-font-family-style: Regular;
+	--typescale-headline-large-font-weight: 400;
+	--typescale-headline-large-font-size: 32px;
+	--typescale-headline-large-line-height: 40px;
+	--typescale-headline-large-letter-spacing: 0px;
 
 	/* headline - medium */
-	--md-sys-typescale-headline-medium-font-family-name: Outfit;
-	--md-sys-typescale-headline-medium-font-family-style: Regular;
-	--md-sys-typescale-headline-medium-font-weight: 400;
-	--md-sys-typescale-headline-medium-font-size: 1.75rem; /* converted from 28px */
-	--md-sys-typescale-headline-medium-line-height: 2.25rem; /* converted from 36px */
-	--md-sys-typescale-headline-medium-letter-spacing: 0px;
+	--typescale-headline-medium-font-family-name: Outfit;
+	--typescale-headline-medium-font-family-style: Regular;
+	--typescale-headline-medium-font-weight: 400;
+	--typescale-headline-medium-font-size: 28px;
+	--typescale-headline-medium-line-height: 36px;
+	--typescale-headline-medium-letter-spacing: 0px;
 
 	/* headline - small */
-	--md-sys-typescale-headline-small-font-family-name: Outfit;
-	--md-sys-typescale-headline-small-font-family-style: Regular;
-	--md-sys-typescale-headline-small-font-weight: 400;
-	--md-sys-typescale-headline-small-font-size: 1.5rem; /* converted from 24px */
-	--md-sys-typescale-headline-small-line-height: 2rem; /* converted from 32px */
-	--md-sys-typescale-headline-small-letter-spacing: 0px;
+	--typescale-headline-small-font-family-name: Outfit;
+	--typescale-headline-small-font-family-style: Regular;
+	--typescale-headline-small-font-weight: 400;
+	--typescale-headline-small-font-size: 24px;
+	--typescale-headline-small-line-height: 32px;
+	--typescale-headline-small-letter-spacing: 0px;
 
 	/* body - large */
-	--md-sys-typescale-body-large-font-family-name: Outfit;
-	--md-sys-typescale-body-large-font-family-style: Regular;
-	--md-sys-typescale-body-large-font-weight: 400;
-	--md-sys-typescale-body-large-font-size: 1rem; /*16px ÷ 16px = 1rem*/
-	--md-sys-typescale-body-large-line-height: 1.5rem; /*24px ÷ 16px = 1.5rem*/
-	--md-sys-typescale-body-large-letter-spacing: 0.03125rem; /*0.5px ÷ 16px = 0.03125rem*/
-
+	--typescale-body-large-font-family-name: Outfit;
+	--typescale-body-large-font-family-style: Regular;
+	--typescale-body-large-font-weight: 400;
+	--typescale-body-large-font-size: 16px;
+	--typescale-body-large-line-height: 24px;
+	--typescale-body-large-letter-spacing: 0.5px;
 	/* body - medium */
-	--md-sys-typescale-body-medium-font-family-name: Outfit;
-	--md-sys-typescale-body-medium-font-family-style: Regular;
-	--md-sys-typescale-body-medium-font-weight: 400;
-	--md-sys-typescale-body-medium-font-size: 0.875rem; /*14px ÷ 16px = 0.875rem*/
-	--md-sys-typescale-body-medium-line-height: 1.25rem; /*20px ÷ 16px = 1.25rem*/
-	--md-sys-typescale-body-medium-letter-spacing: 0.015625rem; /*0.25px ÷ 16px = 0.015625rem*/
+
+	--typescale-body-medium-font-family-name: Outfit;
+	--typescale-body-medium-font-family-style: Regular;
+	--typescale-body-medium-font-weight: 400;
+	--typescale-body-medium-font-size: 14px;
+	--typescale-body-medium-line-height: 20px;
+	--typescale-body-medium-letter-spacing: 0.25px;
 
 	/* body - small */
-	--md-sys-typescale-body-small-font-family-name: Outfit;
-	--md-sys-typescale-body-small-font-family-style: Regular;
-	--md-sys-typescale-body-small-font-weight: 400;
-	--md-sys-typescale-body-small-font-size: 0.75rem; /*12px ÷ 16px = 0.75rem*/
-	--md-sys-typescale-body-small-line-height: 1rem; /*16px ÷ 16px = 1rem*/
-	--md-sys-typescale-body-small-letter-spacing: 0.025rem; /*0.4px ÷ 16px = 0.025rem*/
+	--typescale-body-small-font-family-name: Outfit;
+	--typescale-body-small-font-family-style: Regular;
+	--typescale-body-small-font-weight: 400;
+	--typescale-body-small-font-size: 12px;
+	--typescale-body-small-line-height: 16px;
+	--typescale-body-small-letter-spacing: 0.4px;
 
 	/* label - large */
-	--md-sys-typescale-label-large-font-family-name: Outfit;
-	--md-sys-typescale-label-large-font-family-style: Medium;
-	--md-sys-typescale-label-large-font-weight: 500;
-	--md-sys-typescale-label-large-font-size: 0.875rem; /* 14px ÷ 16px = 0.875rem */
-	--md-sys-typescale-label-large-line-height: 1.25rem; /* 20px ÷ 16px = 1.25rem */
-	--md-sys-typescale-label-large-letter-spacing: 0.00625rem; /* 0.1px ÷ 16px = 0.00625rem */
+	--typescale-label-large-font-family-name: Outfit;
+	--typescale-label-large-font-family-style: Medium;
+	--typescale-label-large-font-weight: 500;
+	--typescale-label-large-font-size: 14px;
+	--typescale-label-large-line-height: 20px;
+	--typescale-label-large-letter-spacing: 0.1px;
 
 	/* label - medium */
-	--md-sys-typescale-label-medium-font-family-name: Outfit;
-	--md-sys-typescale-label-medium-font-family-style: Medium;
-	--md-sys-typescale-label-medium-font-weight: 500;
-	--md-sys-typescale-label-medium-font-size: 0.75rem; /* 12px ÷ 16px = 0.75rem */
-	--md-sys-typescale-label-medium-line-height: 1rem; /* 16px ÷ 16px = 1rem */
-	--md-sys-typescale-label-medium-letter-spacing: 0.03125rem; /* 0.5px ÷ 16px = 0.03125rem */
+	--typescale-label-medium-font-family-name: Outfit;
+	--typescale-label-medium-font-family-style: Medium;
+	--typescale-label-medium-font-weight: 500;
+	--typescale-label-medium-font-size: 12px;
+	--typescale-label-medium-line-height: 16px;
+	--typescale-label-medium-letter-spacing: 0.5px;
 
 	/* label - small */
-	--md-sys-typescale-label-small-font-family-name: Outfit;
-	--md-sys-typescale-label-small-font-family-style: Medium;
-	--md-sys-typescale-label-small-font-weight: 500;
-	--md-sys-typescale-label-small-font-size: 0.6875rem; /* 11px ÷ 16px = 0.6875rem */
-	--md-sys-typescale-label-small-line-height: 1rem; /* 16px ÷ 16px = 1rem */
-	--md-sys-typescale-label-small-letter-spacing: 0.03125rem; /* 0.5px ÷ 16px = 0.03125rem */
+	--typescale-label-small-font-family-name: Outfit;
+	--typescale-label-small-font-family-style: Medium;
+	--typescale-label-small-font-weight: 500;
+	--typescale-label-small-font-size: 11px;
+	--typescale-label-small-line-height: 16px;
+	--typescale-label-small-letter-spacing: 0.5px;
 
 	/* title - large */
-	--md-sys-typescale-title-large-font-family-name: Outfit;
-	--md-sys-typescale-title-large-font-family-style: Regular;
-	--md-sys-typescale-title-large-font-weight: 400;
-	--md-sys-typescale-title-large-font-size: 1.375rem;
-	--md-sys-typescale-title-large-line-height: 1.75rem;
-	--md-sys-typescale-title-large-letter-spacing: 0rem;
+	--typescale-title-large-font-family-name: Outfit;
+	--typescale-title-large-font-family-style: Regular;
+	--typescale-title-large-font-weight: 400;
+	--typescale-title-large-font-size: 22px;
+	--typescale-title-large-line-height: 28px;
+	--typescale-title-large-letter-spacing: 0px;
 
 	/* title - medium */
-	--md-sys-typescale-title-medium-font-family-name: Outfit;
-	--md-sys-typescale-title-medium-font-family-style: Medium;
-	--md-sys-typescale-title-medium-font-weight: 500;
-	--md-sys-typescale-title-medium-font-size: 1rem;
-	--md-sys-typescale-title-medium-line-height: 1.5rem;
-	--md-sys-typescale-title-medium-letter-spacing: 0.009375rem;
+	--typescale-title-medium-font-family-name: Outfit;
+	--typescale-title-medium-font-family-style: Medium;
+	--typescale-title-medium-font-weight: 500;
+	--typescale-title-medium-font-size: 16px;
+	--typescale-title-medium-line-height: 24px;
+	--typescale-title-medium-letter-spacing: 0.15px;
 
 	/* title - small */
-	--md-sys-typescale-title-small-font-family-name: Outfit;
-	--md-sys-typescale-title-small-font-family-style: Medium;
-	--md-sys-typescale-title-small-font-weight: 500;
-	--md-sys-typescale-title-small-font-size: 0.875rem;
-	--md-sys-typescale-title-small-line-height: 1.25rem;
-	--md-sys-typescale-title-small-letter-spacing: 0.00625rem;
+	--typescale-title-small-font-family-name: Outfit;
+	--typescale-title-small-font-family-style: Medium;
+	--typescale-title-small-font-weight: 500;
+	--typescale-title-small-font-size: 14px;
+	--typescale-title-small-line-height: 20px;
+	--typescale-title-small-letter-spacing: 0.1px;
+
+	/* light */
+	--typescale-font-weight-light: 300;
+
+	/* regular */
+	--typescale-font-weight-regular: 400;
+
+	/* medium */
+	--typescale-font-weight-medium: 500;
+
+	/* bold */
+	--typescale-font-weight-bold: 700;
 }

@@ -5,9 +5,7 @@
 	import Posts from '$lib/components/posts.svelte';
 	import Footer from '$lib/components/footer.svelte';
 
-	import type { PageData } from './$types';
-
-	export let data: PageData;
+	export let data;
 </script>
 
 <article>
@@ -17,12 +15,12 @@
 	/>
 
 	<Header />
-
 	<About />
+	<Posts posts={data.blogs} />
 
-	<Posts posts={data.posts} />
-
-	<a href="/blog">More Posts</a>
+	{#if data.blogs.length > 4}
+		<a href="/post">More Posts</a>
+	{/if}
 
 	<Footer />
 </article>
@@ -49,14 +47,14 @@
 		margin: 0.5rem auto;
 
 		color: currentColor;
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--color-surface-1);
 	}
 
 	a:hover {
-		background-color: var(--md-sys-color-surface-3);
+		background-color: var(--color-surface-3);
 	}
 
 	a:active {
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 </style>

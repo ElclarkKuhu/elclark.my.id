@@ -1,16 +1,16 @@
-import fetch from 'node-fetch';
 import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
-const res = await fetch('https://api.elclark.my.id/v1/blog');
-if (!res.ok) {
-	throw new Error(`HTTP error! status: ${res.status}`);
-}
+import dotenv from 'dotenv';
+dotenv.config();
 
-const posts = await res.json();
-const postsSlugs = posts.posts.map((post) => `/blog/${post.slug}`);
+const cdn = process.env.PUBLIC_CDN;
 
-/** @type {import('@sveltejs/kit').Config} */
+import fetch from 'node-fetch';
+let posts = await fetch(`${cdn}/posts.json`).then((res) => res.json());
+posts = posts.map((post) => `/post/${post.slug}`);
+
+/** @type {import('@sveltejs/kit').Config} **/
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
@@ -22,7 +22,7 @@ const config = {
 			name: process.env.npm_package_version
 		},
 		prerender: {
-			entries: ['/', '/about', '/blog', ...postsSlugs]
+			entries: ['/', '/about', '/post', ...posts]
 		}
 	}
 };

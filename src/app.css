@@ -4,17 +4,6 @@
 @import url(styles/theme.light.css) (prefers-color-scheme: light);
 @import url(styles/theme.dark.css) (prefers-color-scheme: dark);
 
-:root {
-	color: var(--md-sys-color-on-background);
-	background-color: var(--md-sys-color-background);
-
-	--md-sys-color-surface-1: rgb(var(--md-sys-color-primary-rgb) / 0.05);
-	--md-sys-color-surface-2: rgb(var(--md-sys-color-primary-rgb) / 0.08);
-	--md-sys-color-surface-3: rgb(var(--md-sys-color-primary-rgb) / 0.11);
-	--md-sys-color-surface-4: rgb(var(--md-sys-color-primary-rgb) / 0.12);
-	--md-sys-color-surface-5: rgb(var(--md-sys-color-primary-rgb) / 0.14);
-}
-
 * {
 	box-sizing: border-box;
 }
@@ -26,37 +15,12 @@ html {
 
 body {
 	margin: 0;
-
 	width: 100%;
-	height: 100vh;
-	min-height: 100vh;
 
 	overflow: auto;
 
-	font-family: 'Outfit', sans-serif;
-	/* font-family: 'Golos Text', sans-serif; */
-
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.container {
-	margin: auto;
-	padding: 0 1rem;
-
-	height: 100%;
-}
-
-@media (min-width: 480px) {
-	.container {
-		max-width: 480px;
-	}
-}
-
-@media (min-width: 640px) {
-	.container {
-		max-width: 640px;
-	}
 }
 
 a {
@@ -82,7 +46,7 @@ a {
 	left: 0;
 
 	border-radius: 50%;
-	background-color: var(--md-sys-color-surface-5);
+	background-color: var(--color-surface-5);
 	transform: translate(-50%, -50%);
 	animation: scale 300ms ease-out;
 }

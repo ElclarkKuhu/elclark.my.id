@@ -5,7 +5,7 @@
 <a href="/about">
 	<div class="card">
 		<div class="profile">
-			<Elclark color="var(--md-sys-color-on-primary)" />
+			<Elclark color="var(--color-on-primary)" />
 		</div>
 
 		<div>
@@ -24,25 +24,25 @@
 
 <style>
 	a {
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--color-surface-1);
 		border-radius: 1.5rem;
 		color: currentColor;
 	}
 
 	a:hover {
-		background-color: var(--md-sys-color-surface-3);
+		background-color: var(--color-surface-3);
 	}
 
 	a:hover .card {
-		background-color: var(--md-sys-color-surface-3);
+		background-color: var(--color-surface-3);
 	}
 
 	a:active {
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 
 	a:active .card {
-		background-color: var(--md-sys-color-surface-2);
+		background-color: var(--color-surface-2);
 	}
 
 	.more {
@@ -62,7 +62,7 @@
 		padding: 1rem;
 
 		color: currentColor;
-		background-color: var(--md-sys-color-surface-1);
+		background-color: var(--color-surface-1);
 
 		border-radius: 1.5rem;
 
@@ -88,7 +88,7 @@
 
 		padding: 0.5rem;
 
-		background-color: var(--md-sys-color-primary);
+		background-color: var(--color-primary);
 		border-radius: 1.5rem;
 	}
 </style>
