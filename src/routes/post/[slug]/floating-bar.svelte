@@ -103,17 +103,20 @@
 		cursor: pointer;
 	}
 
-	.toolbar > *:hover {
-		color: var(--color-primary);
-		text-decoration: none;
-	}
-
 	.toolbar > *.active {
 		color: var(--color-primary);
 	}
 
 	.toolbar > *:hover {
+		text-decoration: none;
+
+		color: var(--color-primary);
 		background-color: var(--color-surface-5);
+	}
+
+	.toolbar > *:active {
+		background-color: var(--color-surface-2);
+		transform: scale(0.95);
 	}
 
 	.toolbar > * {
