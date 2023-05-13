@@ -1,5 +1,6 @@
 <script>
 	import Meta from '$lib/components/meta.svelte';
+	import Footer from '$lib/components/footer.svelte';
 </script>
 
 <Meta image="https://elclark.my.id/images/elclark.png" keywords={['about', 'me']} />
@@ -131,9 +132,8 @@
 		things.
 	</p>
 </article>
-<footer>
-	<a href="/">Go Back</a>
-</footer>
+
+<Footer />
 
 <style>
 	li {
@@ -146,30 +146,5 @@
 
 	h1 a:hover {
 		text-decoration: underline;
-	}
-
-	footer {
-		margin-top: 2rem;
-		padding-bottom: 2rem;
-		text-align: center;
-	}
-
-	footer a {
-		color: currentColor;
-		background-color: var(--color-surface-1);
-
-		font-weight: 500;
-		padding: 0.75rem 2rem;
-		border-radius: 2rem;
-	}
-
-	footer a:hover {
-		color: var(--color-primary);
-		background-color: var(--color-surface-3);
-	}
-
-	footer a:active {
-		/* color: var(--color-primary); */
-		background-color: var(--color-surface-2);
 	}
 </style>
