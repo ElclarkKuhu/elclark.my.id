@@ -9,17 +9,18 @@
 </script>
 
 <div class="toolbar">
-	<a href="/">
+	<a href="/" aria-label="Back to Homepage">
 		<Elclark size="1.5em" />
 		<span>Elclark</span>
 	</a>
 
-	<button class="share">
+	<button class="share" aria-label="Share this post">
 		<Share size="1.5em" />
 	</button>
 
 	<button
 		class="love"
+		aria-label="Love this post"
 		class:active={loved}
 		on:click={() => {
 			loved = !loved;
@@ -31,6 +32,7 @@
 	<button
 		class="done"
 		class:active={done}
+		aria-label="Mark this post as done"
 		on:click={() => {
 			done = !done;
 		}}
