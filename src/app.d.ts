@@ -12,13 +12,12 @@ declare namespace App {
 
 	interface Post {
 		title: string;
-		featuredImage?: string;
-		author: User;
+		featured_image?: string;
+		author: string | User;
 		date: string;
 		slug: string;
 		updated?: string;
 		content?: string;
-		visibility: string;
 	}
 
 	interface User {
@@ -26,10 +25,9 @@ declare namespace App {
 		email: string;
 		verified: boolean;
 		name: string;
-		profile: string;
+		avatar: string;
 		created: string;
 		updated?: string;
 		banned: boolean;
-		role: string;
 	}
 }
