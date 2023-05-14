@@ -35,7 +35,7 @@
 
 	<ul>
 		<li>
-			<b>Web Development</b>: JavaScript, React.js, Svelte
+			<b>Web Development</b>: JavaScript, TypeScript, React.js, Svelte
 		</li>
 		<li>
 			<b>Mobile Development</b>: Java, Android
