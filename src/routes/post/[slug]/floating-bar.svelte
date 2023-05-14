@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import Love from '$lib/icons/love.svelte';
 	import Share from '$lib/icons/share.svelte';
 	import Elclark from '$lib/icons/elclark.svelte';
@@ -6,6 +7,18 @@
 
 	let loved = false;
 	let done = false;
+
+	function share() {
+		try {
+			const title = document.querySelector('h1').textContent || document.title || 'Elclark';
+			navigator.share({
+				title,
+				url: window.location.href,
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	}
 </script>
 
 <div class="toolbar">
@@ -14,7 +27,7 @@
 		<span>Elclark</span>
 	</a>
 
-	<button class="share" aria-label="Share this post">
+	<button class="share" aria-label="Share this post" on:click={share}>
 		<Share size="1.5em" />
 	</button>
 

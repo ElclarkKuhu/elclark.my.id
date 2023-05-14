@@ -4,6 +4,18 @@
 	import Elclark from '$lib/icons/elclark.svelte';
 	import CheckCircle from '$lib/icons/check-circle.svelte';
 
+	function share() {
+		try {
+			const title = document.querySelector('h1').textContent || document.title || 'Elclark';
+			navigator.share({
+				title,
+				url: window.location.href,
+			});
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 	let loved = false;
 	let done = false;
 </script>
@@ -14,7 +26,7 @@
 		<span>Elclark</span>
 	</a>
 
-	<button class="share" aria-label="Share this post">
+	<button class="share" aria-label="Share this post" on:click={share}>
 		<Share size="1.5em" />
 	</button>
 
