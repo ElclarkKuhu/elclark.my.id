@@ -1,19 +1,24 @@
 import { error } from '@sveltejs/kit';
 import { PUBLIC_CDN } from '$env/static/public';
 
-const limit = 5;
-
 export const load = async ({ fetch }) => {
-	const res = await fetch(`${PUBLIC_CDN}/posts.json`);
+	const res = await fetch(`${PUBLIC_CDN}/posts.5.json`);
 
 	if (!res.ok) {
 		throw error(res.status, res.statusText);
 	}
 
 	const blogs = await res.json();
+	const authors: any[] = [];
 
 	for (let i = 0; i < blogs.length; i++) {
 		const blog = blogs[i];
+
+		let author = authors.find((author) => author === blog.author);
+		if (author) {
+			blog.author = author;
+			continue;
+		}
 
 		const getAuthorData = await fetch(`${PUBLIC_CDN}/user/${blog.author}.json`);
 
@@ -21,13 +26,8 @@ export const load = async ({ fetch }) => {
 			throw error(getAuthorData.status, getAuthorData.statusText);
 		}
 
-		const author = await getAuthorData.json();
-
+		author = await getAuthorData.json();
 		blog.author = author;
-
-		if (i >= limit) {
-			blogs.splice(blogs.indexOf(blog), 1);
-		}
 	}
 
 	return {
