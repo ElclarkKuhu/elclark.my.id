@@ -1,8 +1,8 @@
 <!-- BLOG PAGE -->
 <script lang="ts">
 	import Meta from '$lib/components/meta.svelte';
-	import FloatingBar from './floating-bar.svelte';
 	import Footer from '$lib/components/footer.svelte';
+	import FloatingBar from '$lib/components/floating-bar.svelte';
 
 	import Verified from '$lib/icons/verified.svelte';
 
@@ -79,7 +79,7 @@
 	{@html data.content}
 </article>
 
-<FloatingBar />
+<FloatingBar mark={true} />
 <Footer />
 
 <style>

@@ -1,23 +1,39 @@
 <script lang="ts">
+	export let share = true;
+	export let love = true;
+	export let mark = false;
+
+	export let loved = false;
+	export let marked = false;
 
 	import Love from '$lib/icons/love.svelte';
 	import Share from '$lib/icons/share.svelte';
 	import Elclark from '$lib/icons/elclark.svelte';
 	import CheckCircle from '$lib/icons/check-circle.svelte';
 
-	let loved = false;
-	let done = false;
-
-	function share() {
+	function handleShare() {
 		try {
 			const title = document.querySelector('h1').textContent || document.title || 'Elclark';
 			navigator.share({
 				title,
-				url: window.location.href,
+				url: window.location.href
 			});
 		} catch (error) {
 			console.error(error);
+			// TODO: Fallback to share component
 		}
+	}
+
+	function toggleLove() {
+		loved = !loved;
+
+		// TODO: Do something
+	}
+
+	function toggleMark() {
+		marked = !marked;
+
+		// TODO: Do something
 	}
 </script>
 
@@ -27,31 +43,28 @@
 		<span>Elclark</span>
 	</a>
 
-	<button class="share" aria-label="Share this post" on:click={share}>
-		<Share size="1.5em" />
-	</button>
+	{#if share}
+		<button class="share" aria-label="Share this post" on:click={handleShare}>
+			<Share size="1.5em" />
+		</button>
+	{/if}
 
-	<button
-		class="love"
-		aria-label="Love this post"
-		class:active={loved}
-		on:click={() => {
-			loved = !loved;
-		}}
-	>
-		<Love size="1.5em" fill={loved} />
-	</button>
+	{#if love}
+		<button class="love" class:active={loved} aria-label="Love this post" on:click={toggleLove}>
+			<Love size="1.5em" fill={loved} />
+		</button>
+	{/if}
 
-	<button
-		class="done"
-		class:active={done}
-		aria-label="Mark this post as done"
-		on:click={() => {
-			done = !done;
-		}}
-	>
-		<CheckCircle size="1.5em" />
-	</button>
+	{#if mark}
+		<button
+			class="done"
+			class:active={marked}
+			aria-label="Mark this post as done"
+			on:click={toggleMark}
+		>
+			<CheckCircle size="1.5em" />
+		</button>
+	{/if}
 </div>
 
 <style>
