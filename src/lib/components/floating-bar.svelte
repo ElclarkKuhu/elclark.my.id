@@ -13,7 +13,7 @@
 
 	function handleShare() {
 		try {
-			const title = document.querySelector('h1').textContent || document.title || 'Elclark';
+			const title = document.querySelector('h1')?.textContent || document.title || 'Elclark';
 			navigator.share({
 				title,
 				url: window.location.href
