@@ -179,11 +179,6 @@
 		margin: 1rem 0;
 	}
 
-	article {
-		line-height: 1.5rem;
-		font-weight: 300;
-	}
-
 	article :global(img) {
 		max-width: 100%;
 		border-radius: 1.5rem;

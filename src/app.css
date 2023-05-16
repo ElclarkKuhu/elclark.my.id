@@ -29,6 +29,54 @@ a {
 	text-decoration: none;
 }
 
+b {
+	font-family: var(--typescale-body-medium-font-family-name);
+	font-style: var(--typescale-body-medium-font-family-style);
+	font-weight: var(--typescale-font-weight-medium);
+	font-size: var(--typescale-body-medium-font-size);
+	letter-spacing: var(--typescale-body-medium-letter-spacing);
+	line-height: var(--typescale-body-medium-line-height);
+	text-transform: var(--typescale-body-medium-text-transform);
+	text-decoration: var(--typescale-body-medium-text-decoration);
+}
+
+h1 {
+	font-family: var(--typescale-headline-large-font-family-name);
+	font-style: var(--typescale-headline-large-font-family-style);
+	font-weight: var(--typescale-headline-large-font-weight);
+	font-size: var(--typescale-headline-large-font-size);
+	letter-spacing: var(--typescale-headline-large-letter-spacing);
+	line-height: var(--typescale-headline-large-line-height);
+	text-transform: var(--typescale-headline-large-text-transform);
+	text-decoration: var(--typescale-headline-large-text-decoration);
+}
+
+h2 {
+	font-family: var(--typescale-headline-medium-font-family-name);
+	font-style: var(--typescale-headline-medium-font-family-style);
+	font-weight: var(--typescale-headline-medium-font-weight);
+	font-size: var(--typescale-headline-medium-font-size);
+	letter-spacing: var(--typescale-headline-medium-letter-spacing);
+	line-height: var(--typescale-headline-medium-line-height);
+	text-transform: var(--typescale-headline-medium-text-transform);
+	text-decoration: var(--typescale-headline-medium-text-decoration);
+
+	margin: 1rem 0;
+}
+
+h3 {
+	font-family: var(--typescale-headline-small-font-family-name);
+	font-style: var(--typescale-headline-small-font-family-style);
+	font-weight: var(--typescale-headline-small-font-weight);
+	font-size: var(--typescale-headline-small-font-size);
+	letter-spacing: var(--typescale-headline-small-letter-spacing);
+	line-height: var(--typescale-headline-small-line-height);
+	text-transform: var(--typescale-headline-small-text-transform);
+	text-decoration: var(--typescale-headline-small-text-decoration);
+
+	margin: 0.75rem 0;
+}
+
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
