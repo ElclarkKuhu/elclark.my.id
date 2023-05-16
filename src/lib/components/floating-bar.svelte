@@ -40,7 +40,7 @@
 <div class="toolbar">
 	<a href="/" aria-label="Back to Homepage">
 		<Elclark size="1.5em" />
-		<span>Elclark</span>
+		<span class="font-medium">Elclark</span>
 	</a>
 
 	{#if share}

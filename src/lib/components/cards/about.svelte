@@ -10,7 +10,7 @@
 
 		<div>
 			<h1 class="headline-medium">Elclark Kuhu</h1>
-			<p class="title-medium">Developer & Designer</p>
+			<p class="body-medium">Developer & Designer</p>
 		</div>
 	</div>
 
@@ -71,7 +71,6 @@
 
 	.card h1 {
 		margin: 0;
-		font-weight: 500;
 	}
 
 	.card p {

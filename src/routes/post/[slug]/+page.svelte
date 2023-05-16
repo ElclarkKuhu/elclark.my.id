@@ -67,7 +67,7 @@
 				</span>
 			{/if}
 		</a>
-		<span class="title label-large">{data.author.title}</span>
+		<span class="title body-small">{data.author.title}</span>
 	</div>
 </header>
 

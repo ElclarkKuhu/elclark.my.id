@@ -15,11 +15,11 @@
 
 <header>
 	<div>
-		<h2 class="display-small">Elclark</h2>
+		<h2 class="headline-large">Elclark</h2>
 		<p>Hi, {greeting}!</p>
 	</div>
 
-	<a href="/user/elclark">
+	<a href="/user/elclark_kuhu">
 		<img src="/images/elclark.png" alt="Elclark's Profile" />
 	</a>
 </header>
@@ -66,7 +66,6 @@
 
 	header h2 {
 		margin: 0;
-		font-weight: 600;
 	}
 
 	header p {
