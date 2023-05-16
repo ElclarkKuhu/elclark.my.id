@@ -1,0 +1,12 @@
+################
+#  Hello Bot   #
+# It's Elclark #
+################
+
+User-agent: *
+allow: /*
+allow: /post/*
+
+#############
+#  See Yaa  #
+#############

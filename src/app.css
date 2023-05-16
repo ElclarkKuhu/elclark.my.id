@@ -1,0 +1,65 @@
+@import url(styles/tokens.css);
+@import url(styles/colors.module.css);
+@import url(styles/typography.module.css);
+@import url(styles/theme.light.css) (prefers-color-scheme: light);
+@import url(styles/theme.dark.css) (prefers-color-scheme: dark);
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	width: 100%;
+
+	overflow: auto;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	display: inline-block;
+	color: #8ab4f8;
+	text-decoration: none;
+}
+
+.antialiased {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.subpixel-antialiased {
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+.ripple {
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+
+	border-radius: 50%;
+	background-color: var(--color-surface-5);
+	transform: translate(-50%, -50%);
+	animation: scale 300ms ease-out;
+}
+
+@keyframes scale {
+	0% {
+		width: 0;
+		height: 0;
+	}
+
+	100% {
+		width: 20rem;
+		height: 20rem;
+		opacity: 0;
+	}
+}
