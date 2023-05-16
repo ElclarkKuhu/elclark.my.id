@@ -19,7 +19,7 @@
 
 		&bull;
 
-		{#if !dev}
+		{#if !dev && PUBLIC_PREVIEW !== 'yes'}
 			<span>Production</span>
 		{:else if PUBLIC_PREVIEW === 'yes'}
 			<span>Public Preview</span>
