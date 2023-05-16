@@ -225,24 +225,24 @@
 	--typescale-body-large-font-family-name: Outfit;
 	--typescale-body-large-font-family-style: Regular;
 	--typescale-body-large-font-weight: 400;
-	--typescale-body-large-font-size: 16px;
+	--typescale-body-large-font-size: 18px;
 	--typescale-body-large-line-height: 24px;
 	--typescale-body-large-letter-spacing: 0.5px;
 
 	/* body - medium */
 	--typescale-body-medium-font-family-name: Outfit;
 	--typescale-body-medium-font-family-style: Regular;
-	--typescale-body-medium-font-weight: 400;
-	--typescale-body-medium-font-size: 14px;
-	--typescale-body-medium-line-height: 20px;
+	--typescale-body-medium-font-weight: 300;
+	--typescale-body-medium-font-size: 16px;
+	--typescale-body-medium-line-height: 24px;
 	--typescale-body-medium-letter-spacing: 0.25px;
 
 	/* body - small */
 	--typescale-body-small-font-family-name: Outfit;
 	--typescale-body-small-font-family-style: Regular;
 	--typescale-body-small-font-weight: 400;
-	--typescale-body-small-font-size: 12px;
-	--typescale-body-small-line-height: 16px;
+	--typescale-body-small-font-size: 14px;
+	--typescale-body-small-line-height: 18px;
 	--typescale-body-small-letter-spacing: 0.4px;
 
 	/* label - large */
