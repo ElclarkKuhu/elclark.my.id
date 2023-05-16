@@ -23,7 +23,7 @@
 
 <Meta
 	image={data.featured_image}
-	title={`Elclark - ${data.title}`}
+	title={`${data.title} - ${data.author.name.split(' ')[0]}`}
 	keywords={['blog', ...data.tags]}
 	categorys={data.categorys}
 />
