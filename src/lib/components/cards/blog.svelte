@@ -2,10 +2,13 @@
 	import { relative } from '$lib/date';
 	import { onDestroy } from 'svelte';
 
-	export let href: string;
-	export let image: string | undefined = undefined;
+	export let slug: string;
+	export let featured_image: string | undefined = undefined;
 	export let title: string;
-	export let author: string;
+	export let author: {
+		name: string;
+		username: string;
+	};
 	export let date: string;
 	export let blog_path = '/post';
 
@@ -20,16 +23,16 @@
 	});
 </script>
 
-<a href={`${blog_path}/${href}`} class:a-with-image={image}>
+<a href={`${blog_path}/${slug}`} class:a-with-image={featured_image}>
 	<h2 class="title-large">{title}</h2>
 
 	<div class="pill">
-		<span>{author}</span> &bullet;
+		<span>{author.name}</span> &bullet;
 		<time datetime={date}>{date_str}</time>
 	</div>
 
-	{#if image}
-		<img src={image} alt={title} />
+	{#if featured_image}
+		<img src={featured_image} alt={title} />
 	{/if}
 </a>
 

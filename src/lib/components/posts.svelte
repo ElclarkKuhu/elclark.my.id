@@ -6,12 +6,6 @@
 
 {#if posts}
 	{#each posts as post}
-		<Blog
-			href={post.slug}
-			title={post.title}
-			date={post.date}
-			author={post.author.name}
-			image={post.featured_image}
-		/>
+		<Blog {...post} />
 	{/each}
 {/if}
