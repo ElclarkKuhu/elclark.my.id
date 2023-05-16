@@ -60,6 +60,8 @@ h2 {
 	line-height: var(--typescale-headline-medium-line-height);
 	text-transform: var(--typescale-headline-medium-text-transform);
 	text-decoration: var(--typescale-headline-medium-text-decoration);
+
+	margin: 1rem 0;
 }
 
 h3 {
@@ -71,6 +73,8 @@ h3 {
 	line-height: var(--typescale-headline-small-line-height);
 	text-transform: var(--typescale-headline-small-text-transform);
 	text-decoration: var(--typescale-headline-small-text-decoration);
+
+	margin: 0.75rem 0;
 }
 
 .antialiased {
