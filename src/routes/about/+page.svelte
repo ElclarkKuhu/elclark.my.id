@@ -4,7 +4,11 @@
 	import FloatingBar from '$lib/components/floating-bar.svelte';
 </script>
 
-<Meta image="https://elclark.my.id/images/elclark.png" keywords={['about', 'me']} />
+<Meta
+	image="https://elclark.my.id/images/elclark.png"
+	title="Elclark - About Me"
+	keywords={['about', 'me']}
+/>
 
 <h1><a href="/">About Me</a></h1>
 
