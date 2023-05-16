@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { version, dev } from '$app/environment';
+	import { PUBLIC_PREVIEW } from '$env/static/public';
 </script>
 
 <footer class="body-medium">
@@ -18,10 +19,12 @@
 
 		&bull;
 
-		{#if dev}
-			<span>Development</span>
+		{#if !dev}
+			<span>Production</span>
+		{:else if PUBLIC_PREVIEW === 'yes'}
+			<span>Public Preview</span>
 		{:else}
-			<span>Produnction</span>
+			<span>Development</span>
 		{/if}
 	</p>
 	<p>Copyright &copy; 2023 <a href="https://elclark.my.id/">Elclark</a>.</p>
