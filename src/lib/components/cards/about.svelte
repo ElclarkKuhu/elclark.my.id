@@ -50,6 +50,7 @@
 	}
 
 	.more p {
+		line-height: 20px;
 		margin: 0;
 	}
 
@@ -70,11 +71,13 @@
 	}
 
 	.card h1 {
+		line-height: 32px;
 		margin: 0;
 	}
 
 	.card p {
-		margin: 0;
+		line-height: 18px;
+		margin: 0 0.1rem;
 	}
 
 	.card .profile {
