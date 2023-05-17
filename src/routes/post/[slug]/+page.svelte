@@ -142,6 +142,7 @@
 
 		display: flex;
 		align-items: center;
+		line-height: 18px;
 
 		gap: 0.25rem;
 	}

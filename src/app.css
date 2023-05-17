@@ -29,7 +29,8 @@ a {
 	text-decoration: none;
 }
 
-b {
+b,
+strong {
 	font-family: var(--typescale-body-medium-font-family-name);
 	font-style: var(--typescale-body-medium-font-family-style);
 	font-weight: var(--typescale-font-weight-medium);

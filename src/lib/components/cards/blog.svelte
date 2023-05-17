@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { relative } from '$lib/date';
 	import { onDestroy } from 'svelte';
 
 	export let slug: string;
@@ -12,10 +11,54 @@
 	export let date: string;
 	export let blog_path = '/post';
 
-	let date_str: string = relative(date);
+	let date_str: string = relativeTime(date);
+
+	function formatDate(date: string) {
+		const d = new Date(date);
+
+		const pad = (n: number) => (n < 10 ? `0${n}` : n);
+
+		const year = d.getFullYear();
+		const month = d.toLocaleString('default', { month: 'long' });
+		const day = pad(d.getDate());
+
+		return `${month} ${day}, ${year}`;
+	}
+
+	function relativeTime(date: string) {
+		const now = new Date();
+		const then = new Date(date);
+
+		const diff = now.getTime() - then.getTime();
+
+		const seconds = Math.floor(diff / 1000);
+		const minutes = Math.floor(seconds / 60);
+		const hours = Math.floor(minutes / 60);
+		const days = Math.floor(hours / 24);
+		const weeks = Math.floor(days / 7);
+
+		if (seconds < 60) {
+			if (seconds === 1) return 'Just now';
+			return `${seconds} seconds ago`;
+		} else if (minutes < 60) {
+			if (minutes === 1) return 'a minute ago';
+			return `${minutes} minutes ago`;
+		} else if (hours < 24) {
+			if (hours === 1) return 'an hour ago';
+			return `${hours} hours ago`;
+		} else if (days < 7) {
+			if (days === 1) return 'Yesterday';
+			return `${days} days ago`;
+		} else if (weeks < 4) {
+			if (weeks === 1) return 'a week ago';
+			return `${weeks} weeks ago`;
+		} else {
+			return formatDate(date);
+		}
+	}
 
 	const interval = setInterval(() => {
-		date_str = relative(date);
+		date_str = relativeTime(date);
 	}, 1000);
 
 	onDestroy(() => {
