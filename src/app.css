@@ -1,44 +1,21 @@
 @import url(styles/tokens.css);
-@import url(styles/colors.module.css);
-@import url(styles/typography.module.css);
+
+@import url(styles/modules/colors.module.css);
+@import url(styles/modules/typography.module.css);
+
 @import url(styles/theme.light.css) (prefers-color-scheme: light);
 @import url(styles/theme.dark.css) (prefers-color-scheme: dark);
 
-* {
-	box-sizing: border-box;
-}
-
-html {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	margin: 0;
-	width: 100%;
-
-	overflow: auto;
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
 a {
 	display: inline-block;
+
 	color: #8ab4f8;
+
 	text-decoration: none;
 }
 
-b,
-strong {
-	font-family: var(--typescale-body-medium-font-family-name);
-	font-style: var(--typescale-body-medium-font-family-style);
-	font-weight: var(--typescale-font-weight-medium);
-	font-size: var(--typescale-body-medium-font-size);
-	letter-spacing: var(--typescale-body-medium-letter-spacing);
-	line-height: var(--typescale-body-medium-line-height);
-	text-transform: var(--typescale-body-medium-text-transform);
-	text-decoration: var(--typescale-body-medium-text-decoration);
+a:hover {
+	text-decoration: underline;
 }
 
 h1 {
@@ -78,6 +55,18 @@ h3 {
 	margin: 0.75rem 0;
 }
 
+b,
+strong {
+	font-family: var(--typescale-body-medium-font-family-name);
+	font-style: var(--typescale-body-medium-font-family-style);
+	font-weight: var(--typescale-font-weight-medium);
+	font-size: var(--typescale-body-medium-font-size);
+	letter-spacing: var(--typescale-body-medium-letter-spacing);
+	line-height: var(--typescale-body-medium-line-height);
+	text-transform: var(--typescale-body-medium-text-transform);
+	text-decoration: var(--typescale-body-medium-text-decoration);
+}
+
 .antialiased {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -86,29 +75,4 @@ h3 {
 .subpixel-antialiased {
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
-}
-
-.ripple {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-
-	border-radius: 50%;
-	background-color: var(--color-surface-5);
-	transform: translate(-50%, -50%);
-	animation: scale 300ms ease-out;
-}
-
-@keyframes scale {
-	0% {
-		width: 0;
-		height: 0;
-	}
-
-	100% {
-		width: 20rem;
-		height: 20rem;
-		opacity: 0;
-	}
 }

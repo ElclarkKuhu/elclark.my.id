@@ -6,17 +6,30 @@
 
 		<meta name="viewport" content="width=device-width" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			html {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				margin: 0;
+				width: 100%;
+			}
+		</style>
 
 		%sveltekit.head%
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap"
-			rel="stylesheet"
-		/>
+		<link href="/fonts/outfit/stylesheet.css" rel="stylesheet" />
 	</head>
-	<body data-sveltekit-preload-data="hover" class="body-medium background on-background-text">
+	<body
+		data-sveltekit-preload-data="hover"
+		class="body-medium antialiased background on-background-text"
+	>
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
