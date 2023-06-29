@@ -5,29 +5,36 @@
 	--color-on-primary: rgb(var(--color-on-primary-light));
 	--color-primary-container: rgb(var(--color-primary-container-light));
 	--color-on-primary-container: rgb(var(--color-on-primary-container-light));
+
 	--color-secondary: rgb(var(--color-secondary-light));
 	--color-on-secondary: rgb(var(--color-on-secondary-light));
 	--color-secondary-container: rgb(var(--color-secondary-container-light));
 	--color-on-secondary-container: rgb(var(--color-on-secondary-container-light));
+
 	--color-tertiary: rgb(var(--color-tertiary-light));
 	--color-on-tertiary: rgb(var(--color-on-tertiary-light));
 	--color-tertiary-container: rgb(var(--color-tertiary-container-light));
 	--color-on-tertiary-container: rgb(var(--color-on-tertiary-container-light));
+
 	--color-error: rgb(var(--color-error-light));
 	--color-error-container: rgb(var(--color-error-container-light));
 	--color-on-error: rgb(var(--color-on-error-light));
 	--color-on-error-container: rgb(var(--color-on-error-container-light));
+
 	--color-background: rgb(var(--color-background-light));
 	--color-on-background: rgb(var(--color-on-background-light));
+
 	--color-surface: rgb(var(--color-surface-light));
 	--color-on-surface: rgb(var(--color-on-surface-light));
 	--color-surface-variant: rgb(var(--color-surface-variant-light));
 	--color-on-surface-variant: rgb(var(--color-on-surface-variant-light));
-	--color-outline: rgb(var(--color-outline-light));
+
 	--color-inverse-on-surface: rgb(var(--color-inverse-on-surface-light));
 	--color-inverse-surface: rgb(var(--color-inverse-surface-light));
 	--color-inverse-primary: rgb(var(--color-inverse-primary-light));
+
 	--color-shadow: rgb(var(--color-shadow-light));
+	--color-outline: rgb(var(--color-outline-light));
 	--color-surface-tint: rgb(var(--color-surface-tint-light));
 	--color-outline-variant: rgb(var(--color-outline-variant-light));
 	--color-scrim: rgb(var(--color-scrim-light));
@@ -37,4 +44,10 @@
 	--color-surface-3: rgb(var(--color-primary-light) / 0.11);
 	--color-surface-4: rgb(var(--color-primary-light) / 0.12);
 	--color-surface-5: rgb(var(--color-primary-light) / 0.14);
+
+	--color-surface-1s: rgb(250, 241, 246);
+	--color-surface-2s: rgb(247, 236, 240);
+	--color-surface-3s: rgb(244, 230, 235);
+	--color-surface-4s: rgb(243, 228, 232);
+	--color-surface-5s: rgb(241, 225, 229);
 }

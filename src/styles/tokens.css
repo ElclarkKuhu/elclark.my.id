@@ -1,113 +1,113 @@
 :root {
-	--md-source: #ffb3b3;
+	--source: #ffb3b3;
 
 	/* primary */
-	--md-ref-palette-primary0: #000000;
-	--md-ref-palette-primary10: #400009;
-	--md-ref-palette-primary20: #5f131b;
-	--md-ref-palette-primary25: #6e1e25;
-	--md-ref-palette-primary30: #7e2a2f;
-	--md-ref-palette-primary35: #8d353a;
-	--md-ref-palette-primary40: #9c4145;
-	--md-ref-palette-primary50: #bb585c;
-	--md-ref-palette-primary60: #db7174;
-	--md-ref-palette-primary70: #fb8b8d;
-	--md-ref-palette-primary80: #ffb3b3;
-	--md-ref-palette-primary90: #ffdad9;
-	--md-ref-palette-primary95: #ffedec;
-	--md-ref-palette-primary98: #fff8f7;
-	--md-ref-palette-primary99: #fffbff;
-	--md-ref-palette-primary100: #ffffff;
+	--palette-primary0: #000000;
+	--palette-primary10: #400009;
+	--palette-primary20: #5f131b;
+	--palette-primary25: #6e1e25;
+	--palette-primary30: #7e2a2f;
+	--palette-primary35: #8d353a;
+	--palette-primary40: #9c4145;
+	--palette-primary50: #bb585c;
+	--palette-primary60: #db7174;
+	--palette-primary70: #fb8b8d;
+	--palette-primary80: #ffb3b3;
+	--palette-primary90: #ffdad9;
+	--palette-primary95: #ffedec;
+	--palette-primary98: #fff8f7;
+	--palette-primary99: #fffbff;
+	--palette-primary100: #ffffff;
 
 	/* secondary */
-	--md-ref-palette-secondary0: #000000;
-	--md-ref-palette-secondary10: #2c1515;
-	--md-ref-palette-secondary20: #442929;
-	--md-ref-palette-secondary25: #503434;
-	--md-ref-palette-secondary30: #5d3f3f;
-	--md-ref-palette-secondary35: #6a4a4a;
-	--md-ref-palette-secondary40: #775656;
-	--md-ref-palette-secondary50: #916e6e;
-	--md-ref-palette-secondary60: #ad8887;
-	--md-ref-palette-secondary70: #c9a2a1;
-	--md-ref-palette-secondary80: #e6bdbc;
-	--md-ref-palette-secondary90: #ffdad9;
-	--md-ref-palette-secondary95: #ffedec;
-	--md-ref-palette-secondary98: #fff8f7;
-	--md-ref-palette-secondary99: #fffbff;
-	--md-ref-palette-secondary100: #ffffff;
+	--palette-secondary0: #000000;
+	--palette-secondary10: #2c1515;
+	--palette-secondary20: #442929;
+	--palette-secondary25: #503434;
+	--palette-secondary30: #5d3f3f;
+	--palette-secondary35: #6a4a4a;
+	--palette-secondary40: #775656;
+	--palette-secondary50: #916e6e;
+	--palette-secondary60: #ad8887;
+	--palette-secondary70: #c9a2a1;
+	--palette-secondary80: #e6bdbc;
+	--palette-secondary90: #ffdad9;
+	--palette-secondary95: #ffedec;
+	--palette-secondary98: #fff8f7;
+	--palette-secondary99: #fffbff;
+	--palette-secondary100: #ffffff;
 
 	/* tertiary */
-	--md-ref-palette-tertiary0: #000000;
-	--md-ref-palette-tertiary10: #281800;
-	--md-ref-palette-tertiary20: #422c05;
-	--md-ref-palette-tertiary25: #4e370f;
-	--md-ref-palette-tertiary30: #5b421a;
-	--md-ref-palette-tertiary35: #684e24;
-	--md-ref-palette-tertiary40: #755a2f;
-	--md-ref-palette-tertiary50: #907245;
-	--md-ref-palette-tertiary60: #ab8c5c;
-	--md-ref-palette-tertiary70: #c8a674;
-	--md-ref-palette-tertiary80: #e5c18d;
-	--md-ref-palette-tertiary90: #ffddae;
-	--md-ref-palette-tertiary95: #ffeeda;
-	--md-ref-palette-tertiary98: #fff8f3;
-	--md-ref-palette-tertiary99: #fffbff;
-	--md-ref-palette-tertiary100: #ffffff;
+	--palette-tertiary0: #000000;
+	--palette-tertiary10: #281800;
+	--palette-tertiary20: #422c05;
+	--palette-tertiary25: #4e370f;
+	--palette-tertiary30: #5b421a;
+	--palette-tertiary35: #684e24;
+	--palette-tertiary40: #755a2f;
+	--palette-tertiary50: #907245;
+	--palette-tertiary60: #ab8c5c;
+	--palette-tertiary70: #c8a674;
+	--palette-tertiary80: #e5c18d;
+	--palette-tertiary90: #ffddae;
+	--palette-tertiary95: #ffeeda;
+	--palette-tertiary98: #fff8f3;
+	--palette-tertiary99: #fffbff;
+	--palette-tertiary100: #ffffff;
 
 	/* neutral */
-	--md-ref-palette-neutral0: #000000;
-	--md-ref-palette-neutral10: #201a1a;
-	--md-ref-palette-neutral20: #362f2e;
-	--md-ref-palette-neutral25: #413a39;
-	--md-ref-palette-neutral30: #4d4545;
-	--md-ref-palette-neutral35: #595050;
-	--md-ref-palette-neutral40: #655c5c;
-	--md-ref-palette-neutral50: #7f7574;
-	--md-ref-palette-neutral60: #998e8e;
-	--md-ref-palette-neutral70: #b4a9a8;
-	--md-ref-palette-neutral80: #d0c4c3;
-	--md-ref-palette-neutral90: #ece0df;
-	--md-ref-palette-neutral95: #fbeeed;
-	--md-ref-palette-neutral98: #fff8f7;
-	--md-ref-palette-neutral99: #fffbff;
-	--md-ref-palette-neutral100: #ffffff;
+	--palette-neutral0: #000000;
+	--palette-neutral10: #201a1a;
+	--palette-neutral20: #362f2e;
+	--palette-neutral25: #413a39;
+	--palette-neutral30: #4d4545;
+	--palette-neutral35: #595050;
+	--palette-neutral40: #655c5c;
+	--palette-neutral50: #7f7574;
+	--palette-neutral60: #998e8e;
+	--palette-neutral70: #b4a9a8;
+	--palette-neutral80: #d0c4c3;
+	--palette-neutral90: #ece0df;
+	--palette-neutral95: #fbeeed;
+	--palette-neutral98: #fff8f7;
+	--palette-neutral99: #fffbff;
+	--palette-neutral100: #ffffff;
 
 	/* neutral-variant */
-	--md-ref-palette-neutral-variant0: #000000;
-	--md-ref-palette-neutral-variant10: #251818;
-	--md-ref-palette-neutral-variant20: #3b2d2d;
-	--md-ref-palette-neutral-variant25: #463838;
-	--md-ref-palette-neutral-variant30: #524343;
-	--md-ref-palette-neutral-variant35: #5f4f4e;
-	--md-ref-palette-neutral-variant40: #6b5a5a;
-	--md-ref-palette-neutral-variant50: #857372;
-	--md-ref-palette-neutral-variant60: #a08c8c;
-	--md-ref-palette-neutral-variant70: #bba6a6;
-	--md-ref-palette-neutral-variant80: #d7c1c1;
-	--md-ref-palette-neutral-variant90: #f4dddc;
-	--md-ref-palette-neutral-variant95: #ffedec;
-	--md-ref-palette-neutral-variant98: #fff8f7;
-	--md-ref-palette-neutral-variant99: #fffbff;
-	--md-ref-palette-neutral-variant100: #ffffff;
+	--palette-neutral-variant0: #000000;
+	--palette-neutral-variant10: #251818;
+	--palette-neutral-variant20: #3b2d2d;
+	--palette-neutral-variant25: #463838;
+	--palette-neutral-variant30: #524343;
+	--palette-neutral-variant35: #5f4f4e;
+	--palette-neutral-variant40: #6b5a5a;
+	--palette-neutral-variant50: #857372;
+	--palette-neutral-variant60: #a08c8c;
+	--palette-neutral-variant70: #bba6a6;
+	--palette-neutral-variant80: #d7c1c1;
+	--palette-neutral-variant90: #f4dddc;
+	--palette-neutral-variant95: #ffedec;
+	--palette-neutral-variant98: #fff8f7;
+	--palette-neutral-variant99: #fffbff;
+	--palette-neutral-variant100: #ffffff;
 
 	/* error */
-	--md-ref-palette-error0: #000000;
-	--md-ref-palette-error10: #410002;
-	--md-ref-palette-error20: #690005;
-	--md-ref-palette-error25: #7e0007;
-	--md-ref-palette-error30: #93000a;
-	--md-ref-palette-error35: #a80710;
-	--md-ref-palette-error40: #ba1a1a;
-	--md-ref-palette-error50: #de3730;
-	--md-ref-palette-error60: #ff5449;
-	--md-ref-palette-error70: #ff897d;
-	--md-ref-palette-error80: #ffb4ab;
-	--md-ref-palette-error90: #ffdad6;
-	--md-ref-palette-error95: #ffedea;
-	--md-ref-palette-error98: #fff8f7;
-	--md-ref-palette-error99: #fffbff;
-	--md-ref-palette-error100: #ffffff;
+	--palette-error0: #000000;
+	--palette-error10: #410002;
+	--palette-error20: #690005;
+	--palette-error25: #7e0007;
+	--palette-error30: #93000a;
+	--palette-error35: #a80710;
+	--palette-error40: #ba1a1a;
+	--palette-error50: #de3730;
+	--palette-error60: #ff5449;
+	--palette-error70: #ff897d;
+	--palette-error80: #ffb4ab;
+	--palette-error90: #ffdad6;
+	--palette-error95: #ffedea;
+	--palette-error98: #fff8f7;
+	--palette-error99: #fffbff;
+	--palette-error100: #ffffff;
 
 	/* light */
 	--color-primary-light: 156 65 69;
@@ -174,7 +174,7 @@
 	--color-scrim-dark: 0 0 0;
 
 	/* display - large */
-	--typescale-display-large-font-family-name: Outfit;
+	--typescale-display-large-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-display-large-font-family-style: Regular;
 	--typescale-display-large-font-weight: 400;
 	--typescale-display-large-font-size: 57px;
@@ -182,7 +182,7 @@
 	--typescale-display-large-letter-spacing: -0.25px;
 
 	/* display - medium */
-	--typescale-display-medium-font-family-name: Outfit;
+	--typescale-display-medium-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-display-medium-font-family-style: Regular;
 	--typescale-display-medium-font-weight: 400;
 	--typescale-display-medium-font-size: 45px;
@@ -190,7 +190,7 @@
 	--typescale-display-medium-letter-spacing: 0px;
 
 	/* display - small */
-	--typescale-display-small-font-family-name: Outfit;
+	--typescale-display-small-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-display-small-font-family-style: Regular;
 	--typescale-display-small-font-weight: 400;
 	--typescale-display-small-font-size: 36px;
@@ -198,7 +198,7 @@
 	--typescale-display-small-letter-spacing: 0px;
 
 	/* headline - large */
-	--typescale-headline-large-font-family-name: Outfit;
+	--typescale-headline-large-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-headline-large-font-family-style: Regular;
 	--typescale-headline-large-font-weight: 400;
 	--typescale-headline-large-font-size: 32px;
@@ -206,7 +206,7 @@
 	--typescale-headline-large-letter-spacing: 0px;
 
 	/* headline - medium */
-	--typescale-headline-medium-font-family-name: Outfit;
+	--typescale-headline-medium-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-headline-medium-font-family-style: Regular;
 	--typescale-headline-medium-font-weight: 400;
 	--typescale-headline-medium-font-size: 28px;
@@ -214,7 +214,7 @@
 	--typescale-headline-medium-letter-spacing: 0px;
 
 	/* headline - small */
-	--typescale-headline-small-font-family-name: Outfit;
+	--typescale-headline-small-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-headline-small-font-family-style: Regular;
 	--typescale-headline-small-font-weight: 400;
 	--typescale-headline-small-font-size: 24px;
@@ -222,7 +222,7 @@
 	--typescale-headline-small-letter-spacing: 0px;
 
 	/* body - large */
-	--typescale-body-large-font-family-name: Outfit;
+	--typescale-body-large-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-body-large-font-family-style: Regular;
 	--typescale-body-large-font-weight: 400;
 	--typescale-body-large-font-size: 18px;
@@ -230,7 +230,7 @@
 	--typescale-body-large-letter-spacing: 0.5px;
 
 	/* body - medium */
-	--typescale-body-medium-font-family-name: Outfit;
+	--typescale-body-medium-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-body-medium-font-family-style: Regular;
 	--typescale-body-medium-font-weight: 300;
 	--typescale-body-medium-font-size: 16px;
@@ -238,7 +238,7 @@
 	--typescale-body-medium-letter-spacing: 0.25px;
 
 	/* body - small */
-	--typescale-body-small-font-family-name: Outfit;
+	--typescale-body-small-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-body-small-font-family-style: Regular;
 	--typescale-body-small-font-weight: 300;
 	--typescale-body-small-font-size: 14px;
@@ -246,7 +246,7 @@
 	--typescale-body-small-letter-spacing: 0.4px;
 
 	/* label - large */
-	--typescale-label-large-font-family-name: Outfit;
+	--typescale-label-large-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-label-large-font-family-style: Medium;
 	--typescale-label-large-font-weight: 500;
 	--typescale-label-large-font-size: 14px;
@@ -254,7 +254,7 @@
 	--typescale-label-large-letter-spacing: 0.1px;
 
 	/* label - medium */
-	--typescale-label-medium-font-family-name: Outfit;
+	--typescale-label-medium-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-label-medium-font-family-style: Medium;
 	--typescale-label-medium-font-weight: 500;
 	--typescale-label-medium-font-size: 12px;
@@ -262,7 +262,7 @@
 	--typescale-label-medium-letter-spacing: 0.5px;
 
 	/* label - small */
-	--typescale-label-small-font-family-name: Outfit;
+	--typescale-label-small-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-label-small-font-family-style: Medium;
 	--typescale-label-small-font-weight: 500;
 	--typescale-label-small-font-size: 11px;
@@ -270,7 +270,7 @@
 	--typescale-label-small-letter-spacing: 0.5px;
 
 	/* title - large */
-	--typescale-title-large-font-family-name: Outfit;
+	--typescale-title-large-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-title-large-font-family-style: Regular;
 	--typescale-title-large-font-weight: 400;
 	--typescale-title-large-font-size: 22px;
@@ -278,7 +278,7 @@
 	--typescale-title-large-letter-spacing: 0px;
 
 	/* title - medium */
-	--typescale-title-medium-font-family-name: Outfit;
+	--typescale-title-medium-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-title-medium-font-family-style: Medium;
 	--typescale-title-medium-font-weight: 500;
 	--typescale-title-medium-font-size: 16px;
@@ -286,22 +286,10 @@
 	--typescale-title-medium-letter-spacing: 0.15px;
 
 	/* title - small */
-	--typescale-title-small-font-family-name: Outfit;
+	--typescale-title-small-font-family-name: Outfit, system-ui, sans-serif;
 	--typescale-title-small-font-family-style: Medium;
 	--typescale-title-small-font-weight: 500;
 	--typescale-title-small-font-size: 14px;
 	--typescale-title-small-line-height: 20px;
 	--typescale-title-small-letter-spacing: 0.1px;
-
-	/* light */
-	--typescale-font-weight-light: 300;
-
-	/* regular */
-	--typescale-font-weight-regular: 400;
-
-	/* medium */
-	--typescale-font-weight-medium: 500;
-
-	/* bold */
-	--typescale-font-weight-bold: 700;
 }

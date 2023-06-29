@@ -1,0 +1,116 @@
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 100;
+	src: url('outfit-v11-latin_latin-ext-100.eot');
+	src: url('outfit-v11-latin_latin-ext-100.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-100.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-100.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-100.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-100.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 200;
+	src: url('outfit-v11-latin_latin-ext-200.eot');
+	src: url('outfit-v11-latin_latin-ext-200.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-200.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-200.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-200.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-200.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 300;
+	src: url('outfit-v11-latin_latin-ext-300.eot');
+	src: url('outfit-v11-latin_latin-ext-300.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-300.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-300.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-300.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-300.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 400;
+	src: url('outfit-v11-latin_latin-ext-regular.eot');
+	src: url('outfit-v11-latin_latin-ext-regular.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-regular.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-regular.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-regular.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-regular.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 500;
+	src: url('outfit-v11-latin_latin-ext-500.eot');
+	src: url('outfit-v11-latin_latin-ext-500.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-500.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-500.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-500.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-500.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 600;
+	src: url('outfit-v11-latin_latin-ext-600.eot');
+	src: url('outfit-v11-latin_latin-ext-600.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-600.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-600.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-600.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-600.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 700;
+	src: url('outfit-v11-latin_latin-ext-700.eot');
+	src: url('outfit-v11-latin_latin-ext-700.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-700.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-700.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-700.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-700.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 800;
+	src: url('outfit-v11-latin_latin-ext-800.eot');
+	src: url('outfit-v11-latin_latin-ext-800.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-800.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-800.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-800.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-800.svg#Outfit') format('svg');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Outfit';
+	font-style: normal;
+	font-weight: 900;
+	src: url('outfit-v11-latin_latin-ext-900.eot');
+	src: url('outfit-v11-latin_latin-ext-900.eot?#iefix') format('embedded-opentype'),
+		url('outfit-v11-latin_latin-ext-900.woff2') format('woff2'),
+		url('outfit-v11-latin_latin-ext-900.woff') format('woff'),
+		url('outfit-v11-latin_latin-ext-900.ttf') format('truetype'),
+		url('outfit-v11-latin_latin-ext-900.svg#Outfit') format('svg');
+}
