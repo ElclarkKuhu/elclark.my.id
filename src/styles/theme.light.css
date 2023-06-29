@@ -45,9 +45,9 @@
 	--color-surface-4: rgb(var(--color-primary-light) / 0.12);
 	--color-surface-5: rgb(var(--color-primary-light) / 0.14);
 
-	--color-surface-1-solid: rgb(250, 241, 246);
-	--color-surface-2-solid: rgb(247, 236, 240);
-	--color-surface-3-solid: rgb(244, 230, 235);
-	--color-surface-4-solid: rgb(243, 228, 232);
-	--color-surface-5-solid: rgb(241, 225, 229);
+	--color-surface-1s: rgb(250, 241, 246);
+	--color-surface-2s: rgb(247, 236, 240);
+	--color-surface-3s: rgb(244, 230, 235);
+	--color-surface-4s: rgb(243, 228, 232);
+	--color-surface-5s: rgb(241, 225, 229);
 }
