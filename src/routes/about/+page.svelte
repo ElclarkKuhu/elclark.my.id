@@ -145,6 +145,10 @@
 <Footer />
 
 <style>
+	.container {
+		padding: 0 0.75rem;
+	}
+
 	li {
 		margin-bottom: 0.25rem;
 	}

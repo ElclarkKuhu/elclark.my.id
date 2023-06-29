@@ -13,7 +13,7 @@
 	}
 </script>
 
-<header class="container">
+<header>
 	<div class="left">
 		<a href="/">
 			<span class="title headline-large">Elclark</span>

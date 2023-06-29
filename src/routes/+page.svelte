@@ -11,10 +11,14 @@
 	keywords={['landing', 'home', 'homepage']}
 />
 
-<Header />
-
 <main class="container">
+	<Header />
 	<Card />
+	<Footer />
 </main>
 
-<Footer />
+<style>
+	main {
+		padding: 0 0.5rem;
+	}
+</style>
