@@ -2,6 +2,7 @@
 
 @import url(styles/modules/colors.module.css);
 @import url(styles/modules/typography.module.css);
+@import url(styles/modules/container.module.css);
 
 @import url(styles/theme.light.css) (prefers-color-scheme: light);
 @import url(styles/theme.dark.css) (prefers-color-scheme: dark);
@@ -65,6 +66,10 @@ strong {
 	line-height: var(--typescale-body-medium-line-height);
 	text-transform: var(--typescale-body-medium-text-transform);
 	text-decoration: var(--typescale-body-medium-text-decoration);
+}
+
+.strip-margin {
+	margin: 0;
 }
 
 .antialiased {
