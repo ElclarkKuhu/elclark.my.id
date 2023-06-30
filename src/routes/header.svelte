@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	const time = new Date().getHours();
 	let greeting = 'Good Day';
 
@@ -11,6 +11,9 @@
 	} else {
 		greeting = 'Good Night';
 	}
+
+	let user: Data.User | null = null;
+	// TODO: Get user data if logged in
 </script>
 
 <header>
@@ -21,9 +24,13 @@
 		<span class="greet">Hi, {greeting}!</span>
 	</div>
 
-	<button>
-		<img src="https://static.elclark.my.id/image/elclark.webp" alt="Elclark's Profile" />
-	</button>
+	{#if user}
+		<button>
+			<img src="https://static.elclark.my.id/image/elclark.webp" alt="Elclark's Profile" />
+		</button>
+	{:else}
+		<a href="/signin" class="sign-in font-500">Sign In</a>
+	{/if}
 </header>
 
 <style>
@@ -83,8 +90,7 @@
 		background-position: 0% 95%;
 		border-radius: 0.25rem;
 
-		transition: color 200ms ease-in-out, background-size 200ms ease-in-out,
-			padding 200ms ease-in-out;
+		transition: all 200ms ease-in-out;
 	}
 
 	.title:hover {
@@ -96,6 +102,21 @@
 
 	.greet {
 		margin-left: 0.1rem;
+	}
+
+	.sign-in {
+		border-radius: 2rem;
+		padding: 0.5rem 1.25rem;
+
+		color: var(--color-on-primary);
+		background-color: var(--color-primary);
+
+		transition: all 200ms ease;
+	}
+
+	.sign-in:hover {
+		color: var(--color-on-primary-container);
+		background-color: var(--color-primary-container);
 	}
 
 	a:hover {

@@ -1,25 +1,14 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-// and what to do when importing types
 
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}
-	interface PageData {
-		data: Post;
-	}
+	// interface PageData {}
 	// interface Platform {}
+}
 
-	interface Post {
-		title: string;
-		featured_image?: string;
-		author: string | User;
-		date: string;
-		slug: string;
-		updated?: string;
-		content?: string;
-	}
-
+declare namespace Data {
 	interface User {
 		username: string;
 		email: string;
@@ -29,5 +18,15 @@ declare namespace App {
 		created: string;
 		updated?: string;
 		banned: boolean;
+	}
+
+	interface Post {
+		title: string;
+		featured_image?: string;
+		author: string | User;
+		date: string;
+		slug: string;
+		updated?: string;
+		content?: string;
 	}
 }
