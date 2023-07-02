@@ -8,7 +8,13 @@ export const GET = async ({ cookies }) => {
 		const connection = connect({
 			host: DATABASE_HOST,
 			username: DATABASE_USERNAME,
-			password: DATABASE_PASSWORD
+			password: DATABASE_PASSWORD,
+			fetch: (url: RequestInfo | URL, init: RequestInit | undefined) => {
+				if (init) {
+					delete init['cache']
+				}
+				return fetch(url, init)
+			}
 		})
 
 		const sessionQuery = await connection.execute('SELECT * FROM sessions WHERE token = ?', [token])
