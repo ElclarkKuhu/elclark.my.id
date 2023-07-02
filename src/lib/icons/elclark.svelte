@@ -1,10 +1,10 @@
 <script lang="ts">
-	export let size: string | undefined = undefined;
-	export let width = size;
-	export let height = size;
-	export let color = 'currentColor';
-	export let viewBox = '0 0 1200 1200';
-	export let style = '';
+	export let size: string | undefined = undefined
+	export let width = size
+	export let height = size
+	export let color = 'currentColor'
+	export let viewBox = '0 0 1200 1200'
+	export let style = ''
 </script>
 
 <svg {width} {height} {viewBox} {style}>

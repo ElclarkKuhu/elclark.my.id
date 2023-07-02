@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { version, dev } from '$app/environment';
-	import { PUBLIC_PREVIEW } from '$env/static/public';
+	import { version, dev } from '$app/environment'
+	import { PUBLIC_PREVIEW } from '$env/static/public'
 </script>
 
 <footer class="body-medium">

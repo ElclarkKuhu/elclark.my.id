@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Meta from '$lib/components/meta.svelte';
+	import Meta from '$lib/components/meta.svelte'
 
-	import Header from './header.svelte';
-	import Card from './about.svelte';
-	import Footer from '$lib/components/footer.svelte';
+	import Header from './header.svelte'
+	import Card from './about.svelte'
+	import Footer from '$lib/components/footer.svelte'
 </script>
 
 <Meta

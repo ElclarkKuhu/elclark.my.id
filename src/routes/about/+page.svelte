@@ -1,7 +1,7 @@
 <script>
-	import Meta from '$lib/components/meta.svelte';
+	import Meta from '$lib/components/meta.svelte'
 
-	import Footer from '$lib/components/footer.svelte';
+	import Footer from '$lib/components/footer.svelte'
 </script>
 
 <Meta
