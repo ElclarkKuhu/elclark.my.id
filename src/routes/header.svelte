@@ -1,19 +1,18 @@
 <script lang="ts">
-	const time = new Date().getHours();
-	let greeting = 'Good Day';
+	import { user } from '$lib/stores/user'
+
+	const time = new Date().getHours()
+	let greeting = 'Good Day'
 
 	if (time >= 0 && time < 12) {
-		greeting = 'Good Morning';
+		greeting = 'Good Morning'
 	} else if (time >= 12 && time < 18) {
-		greeting = 'Good Afternoon';
+		greeting = 'Good Afternoon'
 	} else if (time >= 18 && time < 24) {
-		greeting = 'Good Evening';
+		greeting = 'Good Evening'
 	} else {
-		greeting = 'Good Night';
+		greeting = 'Good Night'
 	}
-
-	let user: Data.User | null = null;
-	// TODO: Get user data if logged in
 </script>
 
 <header>
@@ -24,10 +23,11 @@
 		<span class="greet">Hi, {greeting}!</span>
 	</div>
 
-	{#if user}
-		<button>
-			<img src="https://static.elclark.my.id/image/elclark.webp" alt="Elclark's Profile" />
-		</button>
+	{#if $user}
+		<button type="button" on:click={user.signout}>Logout</button>
+		<a href={`/user/${$user.username}`} class="profile">
+			<img src={$user.avatar} alt="Elclark's Profile" />
+		</a>
 	{:else}
 		<a href="/signin" class="sign-in font-500">Sign In</a>
 	{/if}
@@ -44,7 +44,7 @@
 		padding: 1rem 0.5rem;
 	}
 
-	button {
+	.profile {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -61,15 +61,15 @@
 		background-color: var(--color-surface-1);
 	}
 
-	button:hover {
+	.profile:hover {
 		background-color: var(--color-surface-5);
 	}
 
-	button:active {
+	.profile:active {
 		background-color: var(--color-surface-2);
 	}
 
-	button img {
+	.profile img {
 		width: 100%;
 		height: 100%;
 
