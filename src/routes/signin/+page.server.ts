@@ -78,7 +78,6 @@ export const actions = {
 
 		const identifierRegex = RegExp('^[a-zA-Z0-9-_.@]+$')
 		if (!identifierRegex.test(identifier)) {
-			console.log('Invalid identifier.')
 			return {
 				error: 'Invalid username or password.',
 				identifier: identifier ?? ''
@@ -92,7 +91,6 @@ export const actions = {
 		)
 
 		if (userQuery.rows.length === 0) {
-			console.log('User not found.')
 			return {
 				error: 'Invalid username or password.',
 				identifier: identifier ?? ''
@@ -109,9 +107,6 @@ export const actions = {
 			.join('')
 
 		if (user.password !== hash) {
-			console.log('Invalid password.')
-			console.log(user.password, hash)
-
 			return {
 				error: 'Invalid username or password.',
 				identifier: identifier ?? ''

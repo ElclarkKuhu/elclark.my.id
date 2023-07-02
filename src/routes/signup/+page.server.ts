@@ -160,14 +160,12 @@ export const actions: Actions = {
 				.map((b) => b.toString(16).padStart(2, '0'))
 				.join('')
 
-			console.log(name, username, hash, email, now, now, salt)
 			const newUserQuery = await connection.execute(
 				'INSERT INTO users (username, name, password, email, joined, updated, salt) VALUES (?, ?, ?, ?, ?, ?, ?)',
 				[username, name, hash, email, now, now, salt]
 			)
 
 			const token = crypto.randomUUID()
-			console.log(newUserQuery.insertId, token, now, now + Number(TOKEN_EXPIRATION))
 			await connection.execute(
 				'INSERT INTO sessions (user_id, token, created, expires) VALUES (?, ?, ?, ?)',
 				[newUserQuery.insertId, token, now, now + Number(TOKEN_EXPIRATION)]
