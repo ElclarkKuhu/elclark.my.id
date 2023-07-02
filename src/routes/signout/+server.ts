@@ -1,8 +1,11 @@
-import { connect } from '@planetscale/database'
-import { DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD } from '$env/static/private'
 import { redirect } from '@sveltejs/kit'
 
-export const GET = async ({ cookies, request, url, getClientAddress }) => {
+import { connect } from '@planetscale/database'
+import { DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD } from '$env/static/private'
+
+import type { RequestHandler } from './$types'
+
+export const GET: RequestHandler = async ({ request, url, cookies, getClientAddress }) => {
 	const token = cookies.get('token')
 
 	if (token) {

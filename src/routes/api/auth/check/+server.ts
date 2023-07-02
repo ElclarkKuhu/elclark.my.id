@@ -1,7 +1,9 @@
 import { connect } from '@planetscale/database'
 import { DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD } from '$env/static/private'
 
-export const GET = async ({ cookies }) => {
+import type { RequestHandler } from './$types'
+
+export const GET: RequestHandler = async ({ cookies }) => {
 	const token = cookies.get('token')
 
 	if (token) {

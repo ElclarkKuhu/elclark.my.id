@@ -7,6 +7,8 @@ import {
 	TOKEN_EXPIRATION
 } from '$env/static/private'
 
+import type { PageServerLoad, Actions } from './$types'
+
 const config = {
 	host: DATABASE_HOST,
 	username: DATABASE_USERNAME,
@@ -19,7 +21,7 @@ const config = {
 	}
 }
 
-export const load = async ({ url, cookies }) => {
+export const load: PageServerLoad = async ({ url, cookies }) => {
 	const token = cookies.get('token')
 
 	if (token) {
@@ -58,7 +60,7 @@ export const load = async ({ url, cookies }) => {
 	return {}
 }
 
-export const actions = {
+export const actions: Actions = {
 	default: async ({ url, request, cookies }) => {
 		try {
 			const form = await request.formData()
