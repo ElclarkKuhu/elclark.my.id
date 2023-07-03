@@ -63,7 +63,7 @@ export const load = async ({ url, cookies }) => {
 }
 
 export const actions = {
-	default: async ({ url, request, cookies }) => {
+	default: async ({ url, request, cookies, getClientAddress }) => {
 		const form = await request.formData()
 
 		const identifier = form.get('identifier') as string
@@ -117,10 +117,16 @@ export const actions = {
 		const token = crypto.randomUUID()
 		const expires = now + Number(TOKEN_EXPIRATION)
 
-		await connection.execute(
-			'INSERT INTO sessions (user_id, token, created, expires) VALUES (?, ?, ?, ?)',
-			[user.id, token, now, expires]
-		)
+		const newSessionQuery =
+			'INSERT INTO sessions (user_id, token, created, expires) VALUES (?, ?, ?, ?)'
+		const newSession = connection.execute(newSessionQuery, [user.id, token, now, expires])
+
+		const ip = request.headers.get('CF-Connecting-IP') ?? getClientAddress()
+
+		const newActivityQuery = 'INSERT INTO activities (ip, user_id, type, time) VALUES (?, ?, ?, ?)'
+		const newActivity = await connection.execute(newActivityQuery, [ip, user.id, 1, Date.now()])
+
+		await Promise.all([newSession, newActivity])
 
 		cookies.set('token', token, {
 			maxAge: Number(TOKEN_EXPIRATION),

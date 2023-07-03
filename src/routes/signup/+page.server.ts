@@ -55,13 +55,15 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
 
 			throw redirect(303, '/')
 		}
+
+		cookies.delete('token')
 	}
 
 	return {}
 }
 
 export const actions: Actions = {
-	default: async ({ url, request, cookies }) => {
+	default: async ({ url, request, cookies, getClientAddress }) => {
 		try {
 			const form = await request.formData()
 
@@ -169,6 +171,12 @@ export const actions: Actions = {
 			await connection.execute(
 				'INSERT INTO sessions (user_id, token, created, expires) VALUES (?, ?, ?, ?)',
 				[newUserQuery.insertId, token, now, now + Number(TOKEN_EXPIRATION)]
+			)
+
+			const ip = request.headers.get('CF-Connecting-IP') ?? getClientAddress()
+			await connection.execute(
+				'INSERT INTO activities (ip, user_id, type, time) VALUES (?, ?, ?, ?)',
+				[ip, newUserQuery.insertId, 3, Date.now()]
 			)
 
 			cookies.set('token', token, {
