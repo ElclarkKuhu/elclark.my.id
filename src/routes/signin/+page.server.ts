@@ -1,11 +1,16 @@
-import { connect } from '@planetscale/database'
 import { redirect } from '@sveltejs/kit'
+import { connect } from '@planetscale/database'
+
+import validate from '$lib/validations'
+
 import {
 	DATABASE_HOST,
 	DATABASE_USERNAME,
 	DATABASE_PASSWORD,
 	TOKEN_EXPIRATION
 } from '$env/static/private'
+
+import type { PageServerLoad, Actions } from './$types'
 
 const config = {
 	host: DATABASE_HOST,
@@ -19,32 +24,41 @@ const config = {
 	}
 }
 
-export const load = async ({ url, cookies }) => {
+export const load: PageServerLoad = async ({ url, cookies }) => {
 	const token = cookies.get('token')
+	const expiration = cookies.get('expiration')
 
 	if (token) {
 		const connection = connect(config)
-		const sessionQuery = await connection.execute('SELECT * FROM sessions WHERE token = ?', [token])
 
-		if (sessionQuery.rows.length > 0) {
-			const session = sessionQuery.rows[0] as Data.Session
+		if (expiration) {
+			const expires = Number(expiration)
 
-			if (session.expires < Date.now()) {
-				await connection.execute('DELETE FROM sessions WHERE token = ?', [session.token])
-
+			if (expires < Date.now()) {
 				cookies.delete('token')
+				cookies.delete('expiration')
+				await connection.execute('DELETE FROM sessions WHERE token = ?', [token])
 
-				const userQuery = await connection.execute('SELECT * FROM users WHERE id = ?', [
-					session.user_id
-				])
-
-				if (userQuery.rows.length > 0) {
-					const user = userQuery.rows[0] as Data.User
-					return {
-						identifier: user.username
-					}
-				}
+				return {}
 			}
+		}
+
+		const check = await validate.auth.session(connection, token)
+
+		if (check.valid) {
+			const session = check.session as Data.Session
+			const maxAge = session.expires - Date.now()
+
+			cookies.set('token', token, {
+				maxAge,
+				path: '/'
+			})
+
+			cookies.set('expiration', session.expires.toString(), {
+				maxAge,
+				httpOnly: false,
+				path: '/'
+			})
 
 			const redirect_uri = url.searchParams.get('redirect_uri')
 			if (redirect_uri) {
@@ -54,15 +68,27 @@ export const load = async ({ url, cookies }) => {
 			}
 
 			throw redirect(303, '/')
-		}
+		} else if (check.user_id) {
+			const userQuery = await connection.execute('SELECT username FROM users WHERE id = ?', [
+				check.user_id
+			])
 
-		cookies.delete('token')
+			const userRow = userQuery.rows[0] as { username: string }
+			const username = userRow.username
+
+			return {
+				identifier: username
+			}
+		}
 	}
+
+	cookies.delete('token')
+	cookies.delete('expiration')
 
 	return {}
 }
 
-export const actions = {
+export const actions: Actions = {
 	default: async ({ url, request, cookies, getClientAddress }) => {
 		const form = await request.formData()
 
@@ -76,8 +102,7 @@ export const actions = {
 			}
 		}
 
-		const identifierRegex = RegExp('^[a-zA-Z0-9-_.@]+$')
-		if (!identifierRegex.test(identifier)) {
+		if (!validate.input.identifier(identifier)) {
 			return {
 				error: 'Invalid username or password.',
 				identifier: identifier ?? ''
@@ -85,28 +110,9 @@ export const actions = {
 		}
 
 		const connection = connect(config)
-		const userQuery = await connection.execute(
-			'SELECT * FROM users WHERE username = ? OR email = ?',
-			[identifier, identifier]
-		)
+		const user = await validate.auth.user(connection, identifier, password)
 
-		if (userQuery.rows.length === 0) {
-			return {
-				error: 'Invalid username or password.',
-				identifier: identifier ?? ''
-			}
-		}
-
-		const user = userQuery.rows[0] as Data.User
-
-		const encoder = new TextEncoder()
-		const data = encoder.encode(password + user.salt)
-		const hashBuffer = await crypto.subtle.digest('SHA-256', data)
-		const hash = Array.from(new Uint8Array(hashBuffer))
-			.map((b) => b.toString(16).padStart(2, '0'))
-			.join('')
-
-		if (user.password !== hash) {
+		if (!user) {
 			return {
 				error: 'Invalid username or password.',
 				identifier: identifier ?? ''
@@ -122,13 +128,18 @@ export const actions = {
 		const newSession = connection.execute(newSessionQuery, [user.id, token, now, expires])
 
 		const ip = request.headers.get('CF-Connecting-IP') ?? getClientAddress()
-
 		const newActivityQuery = 'INSERT INTO activities (ip, user_id, type, time) VALUES (?, ?, ?, ?)'
 		const newActivity = await connection.execute(newActivityQuery, [ip, user.id, 1, Date.now()])
 
 		await Promise.all([newSession, newActivity])
 
 		cookies.set('token', token, {
+			maxAge: Number(TOKEN_EXPIRATION),
+			path: '/'
+		})
+
+		cookies.set('expiration', expires.toString(), {
+			httpOnly: false,
 			maxAge: Number(TOKEN_EXPIRATION),
 			path: '/'
 		})

@@ -1,11 +1,79 @@
-import { writable } from 'svelte/store'
 import { browser } from '$app/environment'
+import { writable } from 'svelte/store'
 
 const store = writable(null as Data.User | null, () => {
 	check()
 })
 
-const set = (user: Data.User, expiration: number) => {
+const check = () => {
+	if (browser) {
+		store.update((user) => {
+			const expiration = getExpiration()
+
+			if (!user && expiration) {
+				if (expiration < Date.now()) {
+					localStorage.removeItem('user')
+					window.location.href = '/signin'
+
+					return null
+				}
+
+				const localUser = localStorage.getItem('user')
+
+				if (localUser) {
+					return JSON.parse(localUser) as Data.User
+				}
+
+				const xhr = new XMLHttpRequest()
+				xhr.open('GET', '/api/auth/check', false)
+				xhr.send()
+
+				if (xhr.status >= 200 && xhr.status < 300) {
+					const data = JSON.parse(xhr.responseText)
+
+					if (data.user) {
+						localStorage.setItem('user', JSON.stringify(data.user))
+						return data.user
+					} else {
+						localStorage.removeItem('user')
+						document.cookie = 'expiration=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+
+						return null
+					}
+				}
+			}
+
+			return user
+		})
+	}
+}
+
+const signout = async () => {
+	if (browser) {
+		store.set(null)
+
+		localStorage.removeItem('user')
+
+		const redirect_uri = window.location.pathname
+		const signoutUrl = new URL('/signout', window.location.origin)
+		signoutUrl.searchParams.set('redirect_uri', redirect_uri)
+
+		window.location.href = signoutUrl.href
+	}
+}
+
+function getExpiration() {
+	const cookies = document.cookie.split(';')
+	const expirationCookie = cookies.find((cookie) => cookie.trim().startsWith('expiration='))
+
+	if (expirationCookie) {
+		return Number(expirationCookie.split('=')[1])
+	}
+
+	return null
+}
+
+export function getAvatar(user: Data.User) {
 	if (!user.avatar) {
 		const avatarUrl = new URL('https://ui-avatars.com/api/')
 		avatarUrl.searchParams.set('name', user.name)
@@ -14,62 +82,10 @@ const set = (user: Data.User, expiration: number) => {
 		avatarUrl.searchParams.set('color', '5f131b')
 		avatarUrl.searchParams.set('font-size', '0.5')
 
-		user.avatar = avatarUrl.href
+		return avatarUrl.href
 	}
 
-	store.set(user)
-
-	localStorage.setItem('user', JSON.stringify(user))
-	localStorage.setItem('expiration', String(expiration))
-}
-
-const check = async () => {
-	if (browser) {
-		const localUser = localStorage.getItem('user')
-		const localExpiration = localStorage.getItem('expiration')
-
-		if (localUser && localExpiration) {
-			const expiration = Number(localExpiration)
-
-			if (Date.now() < expiration) {
-				const user = JSON.parse(localUser) as Data.User
-				set(user, expiration)
-				return user
-			} else {
-				localStorage.removeItem('user')
-				localStorage.removeItem('expiration')
-
-				return null
-			}
-		}
-
-		const response = await fetch('/api/auth/check')
-		if (response.ok) {
-			const data = await response.json()
-
-			if (data.user) {
-				set(data.user, data.expiration)
-				return data.user
-			}
-		}
-	}
-
-	return null
-}
-
-const signout = async () => {
-	if (browser) {
-		store.set(null)
-
-		localStorage.removeItem('user')
-		localStorage.removeItem('expiration')
-
-		const redirect_uri = window.location.pathname
-		const signoutUrl = new URL('/signout', window.location.origin)
-		signoutUrl.searchParams.set('redirect_uri', redirect_uri)
-
-		window.location.href = signoutUrl.href
-	}
+	return user.avatar
 }
 
 export const user = {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { user } from '$lib/stores/user'
+	import { user, getAvatar } from '$lib/stores/user'
 
 	const time = new Date().getHours()
 	let greeting = 'Good Day'
@@ -26,7 +26,7 @@
 	{#if $user}
 		<button type="button" on:click={user.signout}>Logout</button>
 		<a href={`/user/${$user.username}`} class="profile">
-			<img src={$user.avatar} alt="Elclark's Profile" />
+			<img src={getAvatar($user)} alt="Elclark's Profile" />
 		</a>
 	{:else}
 		<a href="/signin" class="sign-in font-500">Sign In</a>
