@@ -1,5 +1,5 @@
 import { connect } from '@planetscale/database'
-import { session as validateSession } from '$lib/validations/auth'
+import { session as validate } from '$lib/validations/auth'
 import { DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD } from '$env/static/private'
 
 import type { RequestHandler } from './$types'
@@ -20,7 +20,7 @@ export const GET: RequestHandler = async ({ cookies }) => {
 			}
 		})
 
-		const check = await validateSession(connection, token)
+		const check = await validate(connection, token)
 
 		if (check.valid) {
 			const session = check.session as Data.Session
