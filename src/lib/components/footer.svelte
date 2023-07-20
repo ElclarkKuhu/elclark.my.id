@@ -2,7 +2,7 @@
 	import { version, dev } from '$app/environment'
 </script>
 
-<footer class="body-medium">
+<footer class="body-medium container body-small">
 	<p>
 		<a
 			href="https://github.com/ElclarkKuhu/elclark.my.id"
@@ -24,13 +24,13 @@
 			<span>Production</span>
 		{/if}
 	</p>
-	<p>Copyright &copy; 2023 <a href="https://elclark.my.id/">Elclark</a>.</p>
+	<p>Copyright &copy; 2023 <a href="https://elclark.my.id/">Elclark</a></p>
 </footer>
 
 <style>
 	footer {
 		text-align: center;
-		margin: 1rem;
+		margin: 1rem auto;
 	}
 
 	a {

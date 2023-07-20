@@ -79,3 +79,13 @@ strong {
 	-webkit-font-smoothing: auto;
 	-moz-osx-font-smoothing: auto;
 }
+
+::-moz-selection {
+	color: var(--color-on-primary);
+	background: var(--color-primary);
+}
+
+::selection {
+	color: var(--color-on-primary);
+	background: var(--color-primary);
+}
