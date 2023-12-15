@@ -1,0 +1,7 @@
+@import 'styles/colors.css';
+@import 'styles/containers.css';
+
+::selection {
+	color: var(--color-on-primary);
+	background: var(--color-primary);
+}

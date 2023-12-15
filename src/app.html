@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="margin: 0; padding: 0">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
@@ -11,24 +11,252 @@
 				box-sizing: border-box;
 			}
 
-			html {
-				margin: 0;
-				padding: 0;
+			:root {
+				color-scheme: light;
+
+				--color-primary: rgb(156, 65, 69);
+				--color-on-primary: rgb(255, 255, 255);
+				--color-primary-container: rgb(255, 218, 217);
+				--color-on-primary-container: rgb(64, 0, 9);
+
+				--color-secondary: rgb(119, 86, 86);
+				--color-on-secondary: rgb(255, 255, 255);
+				--color-secondary-container: rgb(255, 218, 217);
+				--color-on-secondary-container: rgb(44, 21, 21);
+
+				--color-tertiary: rgb(117, 90, 47);
+				--color-on-tertiary: rgb(255, 255, 255);
+				--color-tertiary-container: rgb(255, 221, 174);
+				--color-on-tertiary-container: rgb(40, 24, 0);
+
+				--color-error: rgb(186, 26, 26);
+				--color-error-container: rgb(255, 218, 214);
+				--color-on-error: rgb(255, 255, 255);
+				--color-on-error-container: rgb(65, 0, 2);
+
+				--color-background: rgb(255, 251, 255);
+				--color-on-background: rgb(32, 26, 26);
+
+				--color-surface: rgb(255, 251, 255);
+				--color-on-surface: rgb(32, 26, 26);
+				--color-surface-variant: rgb(244, 221, 220);
+				--color-on-surface-variant: rgb(82, 67, 67);
+
+				--color-inverse-on-surface: rgb(251, 238, 237);
+				--color-inverse-surface: rgb(54, 47, 46);
+				--color-inverse-primary: rgb(255, 179, 179);
+
+				--color-shadow: rgb(0, 0, 0);
+				--color-outline: rgb(133, 115, 114);
+				--color-surface-tint: rgb(156, 65, 69);
+				--color-outline-variant: rgb(215, 193, 193);
+				--color-scrim: rgb(0, 0, 0);
+
+				--color-surface-1: rgba(156, 65, 69, 0.05);
+				--color-surface-2: rgba(156, 65, 69, 0.08);
+				--color-surface-3: rgba(156, 65, 69, 0.11);
+				--color-surface-4: rgba(156, 65, 69, 0.12);
+				--color-surface-5: rgba(156, 65, 69, 0.14);
+
+				--color-surface-1s: rgb(250, 241, 246);
+				--color-surface-2s: rgb(247, 236, 240);
+				--color-surface-3s: rgb(244, 230, 235);
+				--color-surface-4s: rgb(243, 228, 232);
+				--color-surface-5s: rgb(241, 225, 229);
+
+				--font-family: Outfit, system-ui, sans-serif;
 			}
 
-			body {
-				margin: 0;
-				width: 100%;
+			h1 {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 32px;
+				line-height: 40px;
+				letter-spacing: 0px;
 			}
+
+			h2 {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 28px;
+				line-height: 36px;
+				letter-spacing: 0px;
+
+				margin: 1rem 0;
+			}
+
+			h3 {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 32px;
+				letter-spacing: 0px;
+
+				margin: 0.75rem 0;
+			}
+
+			b,
+			strong {
+				font-family: var(--font-family);
+				font-weight: 500;
+			}
+
+			.text-display-large {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 57px;
+				line-height: 64px;
+				letter-spacing: -0.25px;
+			}
+
+			.text-display-medium {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 45px;
+				line-height: 52px;
+				letter-spacing: 0px;
+			}
+
+			.text-display-small {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 36px;
+				line-height: 44px;
+				letter-spacing: 0px;
+			}
+
+			.text-headline-large {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 32px;
+				line-height: 40px;
+				letter-spacing: 0px;
+			}
+
+			.text-headline-medium {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 28px;
+				line-height: 36px;
+				letter-spacing: 0px;
+			}
+
+			.text-headline-small {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 24px;
+				line-height: 32px;
+				letter-spacing: 0px;
+			}
+
+			.text-body-large {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 24px;
+				letter-spacing: 0.5px;
+			}
+
+			.text-body-medium {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.25px;
+			}
+
+			.text-body-small {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 18px;
+				letter-spacing: 0.4px;
+			}
+
+			.text-label-large {
+				font-family: var(--font-family);
+				font-style: Medium;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				letter-spacing: 0.1px;
+			}
+
+			.text-label-medium {
+				font-family: var(--font-family);
+				font-style: Medium;
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 16px;
+				letter-spacing: 0.5px;
+			}
+
+			.text-label-small {
+				font-family: var(--font-family);
+				font-style: Medium;
+				font-weight: 600;
+				font-size: 11px;
+				line-height: 16px;
+				letter-spacing: 0.5px;
+			}
+
+			.text-title-large {
+				font-family: var(--font-family);
+				font-style: Regular;
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 28px;
+				letter-spacing: 0px;
+			}
+
+			.text-title-medium {
+				font-family: var(--font-family);
+				font-style: Medium;
+				font-weight: 600;
+				font-size: 16px;
+				line-height: 24px;
+				letter-spacing: 0.15px;
+			}
+
+			.text-title-small {
+				font-family: var(--font-family);
+				font-style: Medium;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				letter-spacing: 0.1px;
+			}
+
+			@import url('styles/dark.css') (prefers-color-scheme: dark);
 		</style>
 
 		%sveltekit.head%
 
-		<!-- TODO: Load Only Needed CSS -->
-		<link rel="stylesheet" href="/style.css" />
-		<link rel="stylesheet" href="/fonts/outfit/stylesheet.css" />
+		<link rel="stylesheet" href="%sveltekit.assets%/fonts/outfit/stylesheet.css" />
 	</head>
 	<body
+		style="
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100vh;
+			height: 100dvh;
+			color: var(--color-on-background);
+			background-color: var(--color-background);
+			-webkit-tap-highlight-color: transparent;
+		"
 		data-sveltekit-preload-data="hover"
 		class="body-medium antialiased background on-background-text"
 	>
