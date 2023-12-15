@@ -1,6 +1,8 @@
 @import 'styles/colors.css';
 @import 'styles/containers.css';
 
+@import url('styles/dark.css') (prefers-color-scheme: dark);
+
 ::selection {
 	color: var(--color-on-primary);
 	background: var(--color-primary);

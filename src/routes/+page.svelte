@@ -9,7 +9,7 @@
 />
 
 <section class="first">
-	<div class="container">
+	<div class="container center">
 		<div class="hero">
 			<span class="greeting body-large font-500 primary-text">Hello, it's me</span>
 			<h1 class="name">Elclark Kuhu<span class="primary-text">.</span></h1>

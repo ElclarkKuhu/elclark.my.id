@@ -1,5 +1,5 @@
-<!-- <script lang="ts">
+<script lang="ts">
 	import '../app.css'
-</script> -->
+</script>
 
 <slot />
