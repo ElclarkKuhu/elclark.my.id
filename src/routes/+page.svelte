@@ -1,6 +1,22 @@
 <script lang="ts">
-	import Meta from '$lib/components/meta.svelte'
-	import Footer from '$lib/components/footer.svelte'
+	import Meta from '$lib/meta.svelte'
+	import Footer from '$lib/footer.svelte'
+	import Elclark from '$lib/icons/elclark.svelte'
+	import Share from '$lib/icons/share.svelte'
+	import At from '$lib/icons/at.svelte'
+
+	const time = new Date().getHours()
+	let greeting = 'Good Day'
+
+	if (time >= 5 && time < 12) {
+		greeting = 'Good Morning'
+	} else if (time >= 12 && time < 18) {
+		greeting = 'Good Afternoon'
+	} else if (time >= 18 && time < 21) {
+		greeting = 'Good Evening'
+	} else {
+		greeting = 'Good Night'
+	}
 </script>
 
 <Meta
@@ -8,168 +24,161 @@
 	keywords={['landing', 'home', 'homepage']}
 />
 
-<section class="first">
-	<div class="container center">
-		<div class="hero">
-			<span class="greeting body-large font-500 primary-text">Hello, it's me</span>
-			<h1 class="name">Elclark Kuhu<span class="primary-text">.</span></h1>
-			<p class="about">
-				I'm a full-stack developer and designer. I'm passionate about technology and enjoy gaming
-				and music in my free time. My goals is coming up with awesome solutions and using technology
-				to help out those who need it.
-			</p>
+<header>
+	<div class="header container center">
+		<div class="header-left">
+			<a class="header-brand" href="/">
+				<div class="header-brand-text text-headline-large">Elclark</div>
+			</a>
+			<span class="header-greet" style="font-weight: 300; margin-left: 0.1rem;"
+				>Hi, {greeting}!</span
+			>
+		</div>
 
-			<div class="buttons">
-				<button class="primary">Contact Me</button>
-				<button>Learn More</button>
+		<div class="header-right">
+			<a class="header-right-button" href="mailto:contact@elclark.my.id">
+				<At size="2rem" />
+			</a>
+			<a class="header-right-button" href="/">
+				<!-- TODO: Share -->
+				<Share size="2rem" />
+			</a>
+		</div>
+	</div>
+</header>
+
+<section class="about-section">
+	<a href="/about" class="about container center">
+		<div class="about-profile">
+			<div class="about-profile-image">
+				<Elclark color="var(--color-on-primary)" size="100%" />
+			</div>
+
+			<div class="about-profile-name">
+				<h2 class="text-headline-medium" style="margin: 0;">Elclark Kuhu</h2>
+				<p class="text-body-medium" style="margin: 0; font-weight: 300;">Developer & Designer</p>
 			</div>
 		</div>
 
-		<div class="logo">
-			<svg viewBox="0 0 1024 1024">
-				<path
-					d="M882.603 279.109L768.795 344.792C775.931 355.672 782.366 366.997 788.059 378.698L901.948 312.942C895.998 301.363 889.55 290.085 882.603 279.109ZM239.099 650.633L125.313 716.338C131.379 727.874 137.942 739.088 145 749.982L258.896 684.233C251.593 673.463 244.98 662.241 239.099 650.633ZM818.75 512.558C818.75 681.666 681.616 818.75 512.5 818.75C458.739 818.831 405.912 804.696 359.375 777.778L234.17 850.06C312.458 914.803 410.909 950.153 512.5 950C754.124 950 950 754.124 950 512.5C950.009 488.281 948.021 464.103 944.057 440.21L818.75 512.558ZM206.301 518.012C206.301 516.175 206.25 514.367 206.25 512.5C206.25 343.334 343.333 206.25 512.5 206.25C568.151 206.163 622.764 221.313 670.416 250.059L794.79 178.25C715.918 111.441 615.864 74.8456 512.5 75.0005C270.876 75.0005 75 270.876 75 512.5C74.9891 538.444 77.273 564.338 81.825 589.879L206.301 518.012Z"
-					fill="#FFB3B3"
-				/>
-			</svg>
+		<div class="about-bio">
+			<p style="margin: 0;">
+				Hey, I'm a full-stack developer and designer. I'm passionate about technology and enjoy
+				gaming and music in my free time. My goals is coming up with awesome solutions and using
+				technology to help out those who need it.
+			</p>
 		</div>
-	</div>
+	</a>
+</section>
+
+<section class="socials-section">
+	<!-- TODO -->
 </section>
 
 <Footer />
 
 <style>
-	.container {
-		display: grid;
-		grid-template-rows: 1fr;
-		grid-template-columns: 1fr 1fr;
-
-		gap: 0.5rem;
-		padding: 0.5rem;
+	header {
+		padding: 1rem 0.5rem;
 	}
 
-	.first {
+	.header {
 		display: flex;
-		flex-direction: column;
-		align-items: start;
-		justify-content: center;
+		align-items: flex-end;
+		justify-content: space-between;
 
-		position: relative;
-
+		gap: 1rem;
 		width: 100%;
-		max-width: 100vw;
-		max-width: 100svw;
-		height: 100vh;
-		height: 100svh;
-
-		overflow: hidden;
+		padding: 0 0.5rem;
 	}
 
-	.logo {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		width: 100%;
-		height: 100%;
+	.header-brand {
+		color: unset;
+		text-decoration: none;
 	}
 
-	svg {
-		width: 32rem;
-		height: 32rem;
-
-		filter: drop-shadow(0 0 1.5rem var(--color-primary));
-		animation: spinnin 40s linear infinite;
-	}
-
-	.hero {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: start;
-
+	.header-brand-text {
 		width: max-content;
-		margin: 0;
-		padding: 2.5rem 0;
+		border-radius: 0.25rem;
+		transition: padding 200ms ease-in-out, color 200ms ease-in-out,
+			background-color 200ms ease-in-out;
 	}
 
-	/* .greeting {
-		filter: drop-shadow(0 0 0.5rem var(--color-primary));
-	} */
-
-	.name {
-		margin: 0.5rem 0 0 0;
-
-		font-size: 4rem;
-		line-height: 4rem;
-		font-weight: 700;
-		letter-spacing: 1px;
-	}
-
-	.about {
-		margin: 0.5rem 0;
-		max-width: 45ch;
-
-		text-align: justify;
-	}
-
-	.buttons {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: flex-start;
-
-		gap: 0.5rem;
-		margin-top: 1rem;
-	}
-
-	button {
-		font: inherit;
-		font-weight: 500;
-
-		margin-top: 1rem;
-		padding: 0.5rem 1.5rem;
-
-		border: none;
-		border-radius: 0.5rem;
-
-		color: inherit;
-		background-color: var(--color-surface-2);
-		box-shadow: 0 0 0.25rem 1px var(--color-surface-2);
-
-		transition: all 400ms ease;
-	}
-
-	button:hover {
-		cursor: pointer;
-		box-shadow: 0 0 0.75rem 0.15rem var(--color-surface-2);
-		background-color: var(--color-surface-5);
-	}
-
-	button:active {
-		transform: scale(0.98);
-		transition: none;
-	}
-
-	button.primary {
-		box-shadow: 0 0 0.25rem 1px var(--color-primary);
-
+	.header-brand:hover .header-brand-text {
+		padding: 0 0.5rem;
 		color: var(--color-on-primary);
 		background-color: var(--color-primary);
 	}
 
-	button.primary:hover {
-		background-color: var(--color-primary);
-		box-shadow: 0 0 0.75rem 0.15rem var(--color-primary);
+	.header-right {
+		display: flex;
+		gap: 0.5rem;
 	}
 
-	@keyframes spinnin {
-		0% {
-			transform: rotate(0deg);
-		}
+	.header-right-button {
+		color: unset;
+		text-decoration: none;
 
-		100% {
-			transform: rotate(360deg);
-		}
+		display: flex;
+		padding: 0.5rem;
+		border-radius: 0.75rem;
+		color: var(--color-primary);
+		background-color: var(--color-surface-5);
+		transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
+	}
+
+	.header-right-button:hover {
+		color: var(--color-on-primary);
+		background-color: var(--color-primary);
+	}
+
+	.about-section {
+		padding: 0 0.5rem;
+	}
+
+	.about {
+		color: unset;
+		text-decoration: none;
+
+		display: grid;
+		border-radius: 1rem;
+		grid-template-rows: max-content 1fr;
+		background-color: var(--color-surface-2);
+		transition: background-color 200ms ease-in-out;
+	}
+
+	.about:hover {
+		background-color: var(--color-surface-4);
+	}
+
+	.about:active {
+		background-color: var(--color-surface-3);
+	}
+
+	.about:hover .about-profile {
+		background-color: var(--color-surface-4);
+	}
+
+	.about-profile {
+		gap: 1rem;
+		display: grid;
+		padding: 0.75rem;
+		align-items: center;
+		border-radius: 1rem;
+		background-color: var(--color-surface-2);
+		grid-template-columns: max-content 1fr;
+		transition: background-color 200ms ease-in-out;
+	}
+
+	.about-profile-image {
+		width: 5rem;
+		height: 5rem;
+
+		padding: 0.5rem;
+		border-radius: 0.75rem;
+		background-color: var(--color-primary);
+	}
+
+	.about-bio {
+		padding: 0.5rem 1rem 1rem 1rem;
 	}
 </style>

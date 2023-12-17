@@ -8,10 +8,7 @@
 	margin-right: auto;
 }
 
-.min-s,
-.min-m,
-.min-l,
-.min-xl {
+.min-s {
 	display: none;
 }
 
@@ -21,32 +18,8 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.container {
-		max-width: 768px;
-	}
+/* 768px */
 
-	.min-m {
-		display: unset;
-	}
-}
+/* 1024px */
 
-@media (min-width: 1024px) {
-	.container {
-		max-width: 1024px;
-	}
-
-	.min-l {
-		display: unset;
-	}
-}
-
-@media (min-width: 1280px) {
-	.container {
-		max-width: 1280px;
-	}
-
-	.min-xl {
-		display: unset;
-	}
-}
+/* 1280px */

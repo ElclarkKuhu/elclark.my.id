@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let size: string | undefined = undefined
+	export let size: string | undefined = '24px'
 	export let width = size
 	export let height = size
 	export let color = 'currentColor'
