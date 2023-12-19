@@ -9,7 +9,7 @@
 	keywords={['about', 'me']}
 />
 
-<div class="container">
+<div class="container center">
 	<h1>
 		<a href="/">About Me</a>
 	</h1>

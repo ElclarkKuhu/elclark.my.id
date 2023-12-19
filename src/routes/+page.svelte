@@ -30,9 +30,9 @@
 			<a class="header-brand" href="/">
 				<div class="header-brand-text text-headline-large">Elclark</div>
 			</a>
-			<span class="header-greet" style="font-weight: 300; margin-left: 0.1rem;"
-				>Hi, {greeting}!</span
-			>
+			<span class="header-greet" style="font-weight: 300; margin-left: 0.1rem;">
+				Hi, {greeting}!
+			</span>
 		</div>
 
 		<div class="header-right">
@@ -61,10 +61,10 @@
 		</div>
 
 		<div class="about-bio">
-			<p style="margin: 0;">
+			<p style="margin: 0; font-weight: 300; line-height: 1.5rem;">
 				Hey, I'm a full-stack developer and designer. I'm passionate about technology and enjoy
-				gaming and music in my free time. My goals is coming up with awesome solutions and using
-				technology to help out those who need it.
+				gaming and music in my free time. My goals is to make create cool stuff that people can use
+				and enjoy.
 			</p>
 		</div>
 	</a>
