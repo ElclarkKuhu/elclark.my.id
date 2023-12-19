@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { version, dev } from '$app/environment';
-	import { PUBLIC_PREVIEW } from '$env/static/public';
+	import { version, dev } from '$app/environment'
 </script>
 
-<footer class="body-medium">
+<footer class="body-medium container body-small">
 	<p>
 		<a
 			href="https://github.com/ElclarkKuhu/elclark.my.id"
@@ -19,21 +18,19 @@
 
 		&bull;
 
-		{#if !dev && PUBLIC_PREVIEW !== 'yes'}
-			<span>Production</span>
-		{:else if PUBLIC_PREVIEW === 'yes'}
-			<span>Public Preview</span>
-		{:else}
+		{#if dev}
 			<span>Development</span>
+		{:else}
+			<span>Production</span>
 		{/if}
 	</p>
-	<p>Copyright &copy; 2023 <a href="https://elclark.my.id/">Elclark</a>.</p>
+	<p>Copyright &copy; 2023 <a href="https://elclark.my.id/">Elclark</a></p>
 </footer>
 
 <style>
 	footer {
 		text-align: center;
-		margin: 1rem;
+		margin: 1rem auto;
 	}
 
 	a {

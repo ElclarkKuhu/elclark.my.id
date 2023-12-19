@@ -1,7 +1,6 @@
 <script>
-	import Meta from '$lib/components/meta.svelte';
-
-	import Footer from '$lib/components/footer.svelte';
+	import Meta from '$lib/meta.svelte'
+	import Footer from '$lib/footer.svelte'
 </script>
 
 <Meta
@@ -10,7 +9,7 @@
 	keywords={['about', 'me']}
 />
 
-<div class="container">
+<div class="container center">
 	<h1>
 		<a href="/">About Me</a>
 	</h1>

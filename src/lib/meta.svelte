@@ -30,7 +30,7 @@
 		'technology',
 		'science',
 		'collaboration'
-	];
+	]
 
 	const defaultCategorys = [
 		'Technology',
@@ -40,29 +40,29 @@
 		'System Administration',
 		'science',
 		'portfolio'
-	];
+	]
 
-	export let type = 'website';
-	export let title = 'Elclark - Software Engineer & Web Developer based in Manado, Indonesia';
-	export let image: string | undefined = undefined;
+	export let type = 'website'
+	export let title = 'Elclark - Software Engineer & Web Developer based in Manado, Indonesia'
+	export let image: string | undefined = undefined
 	export let description =
-		'Elclark is a versatile tech professional. He specializes in Web & UI/UX. He stays informed about the latest technological trends and eager to take on new challenges.';
+		'Elclark is a versatile tech professional. He specializes in Web & UI/UX. He stays informed about the latest technological trends and eager to take on new challenges.'
 
-	export let path = '/';
-	export let domain = 'elclark.my.id';
+	export let path = '/'
+	export let domain = 'elclark.my.id'
 
-	export let keywords: Array<string> = [];
-	keywords = defaultKeywords.concat(keywords);
-	export let categorys: Array<string> = [];
-	categorys = categorys.concat(defaultCategorys);
+	export let keywords: Array<string> = []
+	keywords = defaultKeywords.concat(keywords)
+	export let categorys: Array<string> = []
+	categorys = categorys.concat(defaultCategorys)
 
-	export let publishedTime: string | undefined = undefined;
-	export let modifiedTime: string | undefined = undefined;
+	export let publishedTime: string | undefined = undefined
+	export let modifiedTime: string | undefined = undefined
 
-	export let authorName = 'Elclark Kuhu';
-	export let authorEmail = 'hello@elclark.my.id';
+	export let authorName = 'Elclark Kuhu'
+	export let authorEmail = 'hello@elclark.my.id'
 
-	export let twitterUsername = '@elclark_kuhu';
+	export let twitterUsername = '@elclark_kuhu'
 </script>
 
 <!-- <Meta

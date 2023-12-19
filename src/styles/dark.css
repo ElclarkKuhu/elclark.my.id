@@ -1,0 +1,53 @@
+:root {
+	color-scheme: dark;
+
+	--color-primary: rgb(255, 179, 179);
+	--color-on-primary: rgb(95, 19, 27);
+	--color-primary-container: rgb(126, 42, 47);
+	--color-on-primary-container: rgb(255, 218, 217);
+
+	--color-secondary: rgb(230, 189, 188);
+	--color-on-secondary: rgb(68, 41, 41);
+	--color-secondary-container: rgb(93, 63, 63);
+	--color-on-secondary-container: rgb(255, 218, 217);
+
+	--color-tertiary: rgb(229, 193, 141);
+	--color-on-tertiary: rgb(66, 44, 5);
+	--color-tertiary-container: rgb(91, 66, 26);
+	--color-on-tertiary-container: rgb(255, 221, 174);
+
+	--color-error: rgb(255, 180, 171);
+	--color-error-container: rgb(147, 0, 10);
+	--color-on-error: rgb(105, 0, 5);
+	--color-on-error-container: rgb(255, 218, 214);
+
+	--color-background: rgb(32, 26, 26);
+	--color-on-background: rgb(236, 224, 223);
+
+	--color-surface: rgb(32, 26, 26);
+	--color-on-surface: rgb(236, 224, 223);
+	--color-surface-variant: rgb(82, 67, 67);
+	--color-on-surface-variant: rgb(215, 193, 193);
+
+	--color-inverse-on-surface: rgb(32, 26, 26);
+	--color-inverse-surface: rgb(236, 224, 223);
+	--color-inverse-primary: rgb(156, 65, 69);
+
+	--color-shadow: rgb(0, 0, 0);
+	--color-outline: rgb(160, 140, 140);
+	--color-surface-tint: rgb(255, 179, 179);
+	--color-outline-variant: rgb(82, 67, 67);
+	--color-scrim: rgb(0, 0, 0);
+
+	--color-surface-1: rgba(255, 179, 179, 0.05);
+	--color-surface-2: rgba(255, 179, 179, 0.08);
+	--color-surface-3: rgba(255, 179, 179, 0.11);
+	--color-surface-4: rgba(255, 179, 179, 0.12);
+	--color-surface-5: rgba(255, 179, 179, 0.14);
+
+	--color-surface-1s: rgb(43, 34, 34);
+	--color-surface-2s: rgb(49, 38, 38);
+	--color-surface-3s: rgb(56, 43, 43);
+	--color-surface-4s: rgb(59, 45, 45);
+	--color-surface-5s: rgb(63, 47, 47);
+}
