@@ -1,7 +1,7 @@
 {
 	"name": "elclark.my.id",
 	"description": "This is my personal website build using SvelteKit",
-	"version": "4.5.0",
+	"version": "4.6.0",
 	"author": {
 		"name": "Elclark",
 		"email": "mail@elclark.my.id",
@@ -22,12 +22,12 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@typescript-eslint/eslint-plugin": "^6.14.0",
-		"@typescript-eslint/parser": "^6.14.0",
-		"eslint": "^8.55.0",
+		"@sveltejs/adapter-auto": "^3.0.1",
+		"@sveltejs/kit": "^2.0.4",
+		"@sveltejs/vite-plugin-svelte": "^3.0.1",
+		"@typescript-eslint/eslint-plugin": "^6.15.0",
+		"@typescript-eslint/parser": "^6.15.0",
+		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
 		"prettier": "^2.8.8",
