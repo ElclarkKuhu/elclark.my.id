@@ -6,6 +6,7 @@
 	<p>
 		<a
 			href="https://github.com/ElclarkKuhu/elclark.my.id"
+			aria-label="Source Code"
 			target="_blank"
 			rel="noopener noreferrer"
 		>

@@ -27,7 +27,7 @@
 <header>
 	<div class="header container center">
 		<div class="header-left">
-			<a class="header-brand" href="/">
+			<a class="header-brand" href="/" aria-label="Elclark">
 				<div class="header-brand-text text-headline-large">Elclark</div>
 			</a>
 			<span class="header-greet" style="font-weight: 300; margin-left: 0.1rem;">
@@ -36,10 +36,14 @@
 		</div>
 
 		<div class="header-right">
-			<a class="header-right-button" href="mailto:contact@elclark.my.id">
+			<a
+				class="header-right-button"
+				href="mailto:contact@elclark.my.id"
+				aria-label="Send Email to contact@elclark.my.id"
+			>
 				<At size="2rem" />
 			</a>
-			<a class="header-right-button" href="/">
+			<a class="header-right-button" href="/" aria-label="Share this page to your friends">
 				<!-- TODO: Share -->
 				<Share size="2rem" />
 			</a>
@@ -48,7 +52,7 @@
 </header>
 
 <section class="about-section">
-	<a href="/about" class="about container center">
+	<a href="/about" class="about container center" aria-label="About Elclark">
 		<div class="about-profile">
 			<div class="about-profile-image">
 				<Elclark color="var(--color-on-primary)" size="100%" />
