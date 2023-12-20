@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
+
 	import Meta from '$lib/meta.svelte'
 	import Footer from '$lib/footer.svelte'
 	import Elclark from '$lib/icons/elclark.svelte'
@@ -7,6 +9,22 @@
 
 	const time = new Date().getHours()
 	let greeting = 'Good Day'
+	let can_share = false
+
+	function share() {
+		navigator.share({
+			title: 'Elclark',
+			text: 'Elclark Kuhu - Developer & Designer',
+			url: 'https://elclark.my.id'
+		})
+	}
+
+	onMount(() => {
+		// @ts-ignore
+		if (navigator.share) {
+			can_share = true
+		}
+	})
 
 	if (time >= 5 && time < 12) {
 		greeting = 'Good Morning'
@@ -43,10 +61,11 @@
 			>
 				<At size="2rem" />
 			</a>
-			<a class="header-right-button" href="/" aria-label="Share this page to your friends">
-				<!-- TODO: Share -->
-				<Share size="2rem" />
-			</a>
+			{#if can_share}
+				<button class="header-right-button" on:click={share} aria-label="Share this page to your friends">
+					<Share size="2rem" />
+				</button>
+			{/if}
 		</div>
 	</div>
 </header>
@@ -119,7 +138,9 @@
 	}
 
 	.header-right-button {
+		font: unset;
 		color: unset;
+		border: none;
 		text-decoration: none;
 
 		display: flex;
