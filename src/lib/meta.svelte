@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { page } from '$app/stores'
+
 	const defaultKeywords = [
 		'Elclark',
 		'website',
@@ -48,8 +50,8 @@
 	export let description =
 		'Elclark is a versatile tech professional. He specializes in Web & UI/UX. He stays informed about the latest technological trends and eager to take on new challenges.'
 
-	export let path = '/'
-	export let domain = 'elclark.my.id'
+	export let path = $page.url.pathname
+	export let domain = $page.url.hostname
 
 	export let keywords: Array<string> = []
 	keywords = defaultKeywords.concat(keywords)
