@@ -1,7 +1,7 @@
 {
 	"name": "elclark.my.id",
 	"description": "This is my personal website build using SvelteKit",
-	"version": "4.6.0",
+	"version": "4.6.1",
 	"author": {
 		"name": "Elclark",
 		"email": "mail@elclark.my.id",
