@@ -62,7 +62,7 @@
 				<At size="2rem" />
 			</a>
 			{#if can_share}
-				<button class="header-right-button" on:click={share} aria-label="Share Elclark">
+				<button class="header-right-button" on:click={share} aria-label="Share this page to your friends">
 					<Share size="2rem" />
 				</button>
 			{/if}
