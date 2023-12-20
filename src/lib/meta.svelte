@@ -60,7 +60,7 @@
 	export let modifiedTime: string | undefined = undefined
 
 	export let authorName = 'Elclark Kuhu'
-	export let authorEmail = 'hello@elclark.my.id'
+	export let authorEmail = 'contact@elclark.my.id'
 
 	export let twitterUsername = '@elclark_kuhu'
 </script>
