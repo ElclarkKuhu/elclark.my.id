@@ -62,7 +62,11 @@
 				<At size="2rem" />
 			</a>
 			{#if can_share}
-				<button class="header-right-button" on:click={share} aria-label="Share this page to your friends">
+				<button
+					class="header-right-button"
+					on:click={share}
+					aria-label="Share this page to your friends"
+				>
 					<Share size="2rem" />
 				</button>
 			{/if}
@@ -143,6 +147,7 @@
 		border: none;
 		text-decoration: none;
 
+		cursor: pointer;
 		display: flex;
 		padding: 0.5rem;
 		border-radius: 0.75rem;
