@@ -78,7 +78,7 @@
 </header>
 
 <section class="about-section">
-	<a href="/about" class="about container center" aria-label="About Elclark">
+	<a href="/about" class="about container center" aria-label="Elclark Kuhu">
 		<div class="about-profile">
 			<div class="about-profile-image">
 				<Elclark color="var(--color-on-primary)" size="100%" />
