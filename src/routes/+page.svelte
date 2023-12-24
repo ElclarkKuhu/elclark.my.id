@@ -91,7 +91,7 @@
 		</div>
 
 		<div class="about-bio">
-			<p style="margin: 0; font-weight: 300; line-height: 1.5rem;">
+			<p style="margin: 0; line-height: 1.5rem;">
 				Hey, I'm a full-stack developer and designer. I'm passionate about technology and enjoy
 				gaming and music in my free time. My goals is to make create cool stuff that people can use
 				and enjoy.
