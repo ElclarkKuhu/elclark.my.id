@@ -1,5 +1,6 @@
 @import 'styles/colors.css';
 @import 'styles/containers.css';
+@import 'styles/typography.css';
 
 @import url('styles/dark.css') (prefers-color-scheme: dark);
 
