@@ -12,11 +12,14 @@
 	let can_share = false
 
 	function share() {
-		navigator.share({
-			title: 'Elclark',
-			text: 'Elclark Kuhu - Developer & Designer',
-			url: 'https://elclark.my.id'
-		})
+		// @ts-ignore
+		if (navigator.share) {
+			navigator.share({
+				title: 'Elclark',
+				text: 'Elclark Kuhu - Developer & Designer',
+				url: 'https://elclark.my.id'
+			})
+		}
 	}
 
 	onMount(() => {
