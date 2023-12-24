@@ -11,10 +11,6 @@ const config = {
 		adapter: adapter(),
 		version: {
 			name: process.env.npm_package_version
-		},
-		prerender: {
-			crawl: true,
-			entries: ['*']
 		}
 	}
 }
